@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi "> 
+<title>光纤宽带售后</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.js"></script>
+	<script type="text/javascript">
+//		function toXianshi(){
+//			document.getElementById('touming').style.display='block';
+//			console.log(this.id);
+//		}
+		$(function(){
+			$('.sjhm_xiala').click(function(){
+//				alert($(this).id);
+//				alert('1');
+				$('.touming').show();
+				$('.touming').children('.xuanzeguzhang').children('.xuanzeguzhang_1').children('.xuanzeguzhang_2').click(function(){
+//					alert('1');
+//					console.log($(this).attr('class'));
+//					alert($(this).next('.xuanzeguzhang_3').html());
+					var c = $(this).next('.xuanzeguzhang_3').html();
+					$('.sjhm_right1').children('input').attr('value',c);
+					$('.touming').hide();
+				})
+				
+			})
+		})
+//		function toYincang(){
+//			document.getElementById('touming').style.display='none';
+//		}
+	
+	</script>
+</head>
+
+<body>
+<div class="page">
+	<ul class="header">
+		<li class="header_left"><a href=""><img src="images/guanbi.png" alt=""></a></li>
+		<li class="header_center">光纤宽带宽带售后</li>
+		<li class="header_right"><a href=""><img src="images/gengduo.png" alt=""></a></li>
+		<div class="clearfix"></div>
+	</ul>
+	<div class="shouhou">
+		<ul class="tianxie">
+			<li class="tianxie_right_1">填写详细信息预约售后排障</li>
+		</ul>
+		<ul class="sjhm">
+			<li class="sjhm_tb"><img src="images/xinghao.jpg" alt=""></li>
+			<li class="sjhm_left">宽带账号</li>
+			<li class="sjhm_diandian">:</li>
+			<li class="sjhm_right"><input type="text" placeholder="请输入您的宽带账号"></li>
+			<div class="clearfix"></div>
+		</ul>
+		<ul class="sjhm">
+			<li class="sjhm_tb"><img src="images/xinghao.jpg" alt=""></li>
+			<li class="sjhm_left">故障类型</li>
+			<li class="sjhm_diandian">:</li>
+			<li class="sjhm_right sjhm_right1"><input type="text" value="" placeholder="请选择故障类型"></li>
+			<li class="sjhm_xiala"><img src="images/xiala.png" alt=""></li>
+			<div class="clearfix"></div>
+		</ul>
+		<ul class="sjhm">
+			<li class="sjhm_tb"><img src="images/xinghao.jpg" alt=""></li>
+			<li class="sjhm_left">故障详情</li>
+			<li class="sjhm_diandian">:</li>
+			<li class="sjhm_right"><input type="text" placeholder="请输入故障详情描述"></li>
+			<div class="clearfix"></div>
+		</ul>
+		<ul class="sjhm">
+			<li class="sjhm_left">设备指示灯</li>
+			<li class="sjhm_diandian_1">:</li>
+			<li class="sjhm_right"><input type="text" placeholder="请拍照上传"></li>
+			<li class="sjhm_xiala_2"><img src="images/shangchuan.png" alt="" id="one"></li>
+			<input type="file" id="one1" style="display: none;" accept="image/*">
+			<div class="clearfix"></div>
+		</ul>
+		<ul class="sjhm">
+			<li class="sjhm_tb"><img src="images/xinghao.jpg" alt=""></li>
+			<li class="sjhm_left">联系电话</li>
+			<li class="sjhm_diandian">:</li>
+			<li class="sjhm_right"><input type="text" value="15805398888"></li>
+			<div class="clearfix"></div>
+		</ul>
+		<ul class="renzhen">
+			<li class="renzhen_wenzi"><div class="renzhen_tb"><img src="images/xinghao-2.jpg" alt=""></div>为必须填写信息请认真填写</li>
+			<li class="renzhen_anniu_1"><input type="button" value="预约售后排障"></li>
+		</ul>
+		<div class="touming">
+		<div class="xuanzeguzhang">
+		<div class="xuanzeguzhang_1">
+		<div class="xuanzeguzhang_2"><img src="images/xuanze-1.png" alt=""></div>
+		<div class="xuanzeguzhang_3">请选择故障</div>
+		<div class="clearfix"></div>
+		</div>
+		<div class="xuanzeguzhang_1">
+		<div class="xuanzeguzhang_2"><img src="images/xuanze-2.png" alt=""></div>
+		<div class="xuanzeguzhang_3">无法上网</div>
+		<div class="clearfix"></div>
+		</div>
+		<div class="xuanzeguzhang_1">
+		<div class="xuanzeguzhang_2"><img src="images/xuanze-2.png" alt=""></div>
+		<div class="xuanzeguzhang_3">网速慢</div>
+		<div class="clearfix"></div>
+		</div>
+		<div class="xuanzeguzhang_1">
+		<div class="xuanzeguzhang_2"><img src="images/xuanze-2.png" alt=""></div>
+		<div class="xuanzeguzhang_3">互联网电视无法看</div>
+		<div class="clearfix"></div>
+		</div>
+		<div class="xuanzeguzhang_1">
+		<div class="xuanzeguzhang_2"><img src="images/xuanze-2.png" alt=""></div>
+		<div class="xuanzeguzhang_3">互联网电视卡顿</div>
+		<div class="clearfix"></div>
+		</div>
+	</div>
+		<script>
+			$(function(){
+				$(".xuanzeguzhang_2").click(function(){
+					var src1= $(this).children('img').attr('src');
+		//			console.log(src1.charAt(14));
+					if(src1.charAt(14)=='1'){
+						var c1=src1.split("");
+		//				console.log(c1);
+						c1.splice(14,1,'2');
+		//				console.log(c1);
+						var c2=c1.join("");
+		//				console.log(c2);
+						$(this).children('img').attr('src',c2);
+
+					}else if(src1.charAt(14)=='2'){
+						var c1=src1.split("");
+		//				console.log(c1);
+						c1.splice(14,1,'1');
+		//				console.log(c1);
+						var c2=c1.join("");
+		//				console.log(c2);
+						$(this).children('img').attr('src',c2);
+						$(this).parent('.xuanzeguzhang_1').siblings('.xuanzeguzhang_1').children('.xuanzeguzhang_2').children('img').attr('src',"images/xuanze-2.png");
+					}
+				})
+			})
+		</script>
+		</div>
+		<div class="footer_2">技术支持：尚泽网络</div>
+	</div>
+	<script>
+	$('#one').click(function(){
+		$('#one1').click();
+	});
+	</script>
+</div>
+</body>
+</html>

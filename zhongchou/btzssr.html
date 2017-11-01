@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi "> 
+<title>帮他证实</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.js"></script>
+<script type="text/javascript">
+//		function toXianshi(){
+//			document.getElementById('touming').style.display='block';
+//			console.log(this.id);
+//		}
+		$(function(){
+			$('.shuru2').click(function(){
+//			alert('a');
+//				alert('1');
+				$('.touming').show();
+				$('.touming').children('.touming1').children('.xuanzechenshi').children('.xuanzechenshi_1').children('.xuanzechenshi_2').click(function(){
+//					alert('1');
+//					console.log($(this).attr('class'));
+//					alert($(this).next('.xuanzeguzhang_3').html());
+					var c = $(this).next('.xuanzechenshi_3').html();
+					$('.shuru3').children('input').attr('value',c);
+					$('.touming').hide();
+				})
+				
+			})
+		})
+//		function toYincang(){
+//			document.getElementById('touming').style.display='none';
+//		}
+	
+	</script>
+</head>
+
+<body>
+	<header class="header">
+		<div class="header_left">
+			<img src="images/guanbi.png" alt="">
+		</div>
+		<div class="header_zi">
+			心连心爱心筹
+		</div>
+		<div class="header_right">
+			<img src="images/gengduo.png" alt="">
+		</div>
+	</header>
+	<div class="header_gaodu"></div>
+	<div class="btzs">
+		<a href="javascript:history.go(-1);">
+			<div class="btzs1">
+				<img src="images/fh.png" alt="" style="width: 100%;">
+			</div>
+		</a>
+		<div class="btzs2">
+			帮TA证实
+		</div>
+	</div>
+	<form action="">
+		<div class="shuru">
+			<div class="shuru1">与受助人的关系</div>
+			<div class="shuru2">
+				<div class="shuru3">
+					<input name="请选择" type="text" value="" placeholder="请选择" size="5" disabled="true">
+				</div>
+				<div class="shuru4"><img src="images/zk.png" alt=""></div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="zhengshineirong">
+			证实内容
+		</div>
+		<div class="shuruneirong">
+			<textarea name="请输入您要介绍的一些详细内容" id="" cols="" rows="" placeholder="请输入您要介绍的一些详细内容" class="shuruneirong1"></textarea>
+		</div>
+		<div class="gaodu"></div>
+		<button type="submit" class="bangtazhengshi">帮他证实</button>
+	</form>
+	<div class="touming">
+		<div class="touming1">
+			<div class="xuanzechenshi">
+				<div class="xuanzechenshi_1">
+					<div class="xuanzechenshi_2"><img src="images/xuanze-1.png" alt=""></div>
+					<div class="xuanzechenshi_3">请选择</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="xuanzechenshi_1">
+					<div class="xuanzechenshi_2"><img src="images/xuanze-2.png" alt=""></div>
+					<div class="xuanzechenshi_3">亲人</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="xuanzechenshi_1">
+					<div class="xuanzechenshi_2"><img src="images/xuanze-2.png" alt=""></div>
+					<div class="xuanzechenshi_3">朋友</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="xuanzechenshi_1">
+					<div class="xuanzechenshi_2"><img src="images/xuanze-2.png" alt=""></div>
+					<div class="xuanzechenshi_3">邻居</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="xuanzechenshi_1">
+					<div class="xuanzechenshi_2"><img src="images/xuanze-2.png" alt=""></div>
+					<div class="xuanzechenshi_3">同事</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="xuanzechenshi_1">
+					<div class="xuanzechenshi_2"><img src="images/xuanze-2.png" alt=""></div>
+					<div class="xuanzechenshi_3">老师</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="xuanzechenshi_1">
+					<div class="xuanzechenshi_2"><img src="images/xuanze-2.png" alt=""></div>
+					<div class="xuanzechenshi_3">同学</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="xuanzechenshi_1">
+					<div class="xuanzechenshi_2"><img src="images/xuanze-2.png" alt=""></div>
+					<div class="xuanzechenshi_3">志愿者</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="xuanzechenshi_1">
+					<div class="xuanzechenshi_2"><img src="images/xuanze-2.png" alt=""></div>
+					<div class="xuanzechenshi_3">参与者</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="xuanzechenshi_1">
+					<div class="xuanzechenshi_2"><img src="images/xuanze-2.png" alt=""></div>
+					<div class="xuanzechenshi_3">其他</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+	$(function(){
+		$(".xuanzechenshi_2").click(function(){
+			var src1= $(this).children('img').attr('src');
+//			console.log(src1.charAt(14));
+			if(src1.charAt(14)=='1'){
+				var c1=src1.split("");
+//				console.log(c1);
+				c1.splice(14,1,'2');
+//				console.log(c1);
+				var c2=c1.join("");
+//				console.log(c2);
+				$(this).children('img').attr('src',c2);
+				
+			}else if(src1.charAt(14)=='2'){
+				var c1=src1.split("");
+//				console.log(c1);
+				c1.splice(14,1,'1');
+//				console.log(c1);
+				var c2=c1.join("");
+//				console.log(c2);
+				$(this).children('img').attr('src',c2);
+				$(this).parent('.xuanzechenshi_1').siblings('.xuanzechenshi_1').children('.xuanzechenshi_2').children('img').attr('src',"images/xuanze-2.png");
+			}
+		})
+	})
+</script>
+</body>
+</html>

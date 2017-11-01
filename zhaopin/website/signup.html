@@ -1,0 +1,177 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi ">
+<title>会员中心-报名</title>
+<link rel="stylesheet" href="css/swiper.min.css">
+<script src="js/swiper.min.js"></script>
+<script src="js/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/area.js"></script>
+<script src="js/select.js"></script>
+</head>
+
+<body>
+<div style="min-height:100%">
+	<!--头部-->
+	<div class="erjitoubu">
+		报名
+		<a href="javascript:history.go(-1);">
+			<img src="images/fanhui.png" alt="">
+		</a>
+	</div>
+	<!--报名-->
+	<div class="worries">
+		<div class="worries_left">
+			<img src="images/sign-logo.png" alt="">
+		</div>
+		<div class="worries_right">
+			<div class="worries_right_text1">高薪就业　　出国无忧</div>
+			<div class="worries_right_text2">
+				无忧托管费用安全放心有保障随时退款急速到账
+				办理周期内未能安排成功就业100%退还中介费
+				全程一对一就业指导出国就业很简单
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="gaodu"></div>
+	<div>
+		<div class="bm_header">高薪急聘近海远洋船员包食宿</div>
+		<form action="">
+			<table class="bm_bd">
+				<tr>
+					<td align="right" class="bm_bt">姓名：</td>
+					<td><input type="text" value="" placeholder="请输入姓名" class="bm_shuru required" id="yourname"></td>
+					<td class="zhongdian">*</td>
+				</tr>
+				<tr>
+					<td align="right" class="bm_bt">性别：</td>
+					<td>
+					<input type="radio" id="nan" name="xb" class="bm_xk">
+					<label for="nan" class="bm_xk_lable">
+						男
+					</label>
+					<input type="radio" id="nv" name="xb" class="bm_xk">
+					<label for="nv" class="bm_xk_lable">
+						女
+					</label>
+					</td>
+					<td class="zhongdian">*</td>
+				</tr>
+				<tr>
+					<td align="right" class="bm_bt">身份证：</td>
+					<td><input type="text" value="" placeholder="请输入身份证号" class="bm_shuru required" id="sfz"></td>
+					<td class="zhongdian">*</td>
+				</tr>
+				<tr>
+					<td align="right" class="bm_bt">出生年月：</td>
+					<td>
+						<select name="year" id="year" class="bm_nianye">
+							<option value="">选择年</option>
+						</select>
+						<select name="month" id="month" class="bm_nianye2">
+							<option value="">选择月</option>
+						</select>
+					</td>
+					<td class="zhongdian">*</td>
+				</tr>
+				<tr>
+					<td align="right" class="bm_bt">籍贯：</td>
+					<td>
+						<select id="s_province" name="s_province" class="bm_nianye3">
+						</select>
+						<select id="s_city" name="s_city" class="bm_nianye4">
+						</select>
+						<select id="s_county" name="s_county" class="bm_nianye5">
+						</select>
+						<script type="text/javascript">_init_area();</script>
+					</td>
+					<td class="zhongdian">*</td>
+				</tr>
+				<tr>
+					<td align="right" class="bm_bt">学历：</td>
+					<td>
+						<select class="bm_nianye6">
+						  <option value ="高中">高中</option>
+						  <option value ="初中">初中</option>
+						  <option value="小学">小学</option>
+						  <option value="无学历">无学历</option>
+						</select>
+					</td>
+					<td class="zhongdian">*</td>
+				</tr>
+				<tr>
+					<td align="right" class="bm_bt">推荐号：</td>
+					<td><input type="text" value="" placeholder="没有可不填" class="bm_shuru"></td>
+					<td class="zhongdian">*</td>
+				</tr>
+				<tr>
+					<td align="right" class="bm_bt">有无护照：</td>
+					<td>
+					<input type="radio" id="you" name="hz" class="bm_xk">
+					<label for="you" class="bm_xk_lable">
+						有
+					</label>
+					<input type="radio" id="wu" name="hz" class="bm_xk">
+					<label for="wu" class="bm_xk_lable">
+						无
+					</label>
+					</td>
+					<td class="zhongdian">*</td>
+				</tr>
+				<tr>
+					<td align="right" class="bm_bt">常住地址：</td>
+					<td><input type="text" value="" placeholder="请填写常住地址" class="bm_shuru required" id="czdd"></td>
+					<td class="zhongdian">*</td>
+				</tr>
+				<tr>
+					<td align="right" class="bm_bt">手机号：</td>
+					<td><input type="text" value="" placeholder="请填写手机号" class="bm_shuru required" id="tel"></td>
+					<td class="zhongdian">*</td>
+				</tr>
+			</table>
+		</form>
+		<div class="bm_bd1">
+			<div class="bm_bottom">
+				<input type="checkbox" checked>
+			</div>
+			<div class="bm_bottom2">
+				我已阅读并同意<a href="yhzcxy.html"><span>《用户注册协议》</span></a>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="bm_bd3">
+			<button checked class="bm_sign" id="send1">普通报名</button>
+			<button checked class="bm_sign1" id="send2">申请无忧报名</button>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!--底部通用-->
+<div class="home-bottom">
+	<div class="home-bottom3">
+		网站资质  |  备案   |   法律声明 ｜ <a href="yinsiquan.html">隐私权政策</a><br>
+		未经同意，不得转载本网站之所有招聘信息及作品<br>
+		火星人才网版权所有©2017-3017  |  地址：沈阳市沈河区<br>
+		服务热线：400-024-5880  邮箱：175969151@163.com
+	</div>
+</div>
+<script type="text/javascript">
+		$(function(){
+			$("#date").selectDate()
+			
+			$("#days").focusout(function(){
+				var year = $("#year option:selected").html()
+				var month = $("#month option:selected").html()
+				var day = $("#days option:selected").html()
+				console.log(year+month+day)
+			})
+			
+		})
+		
+	</script>
+</body>
+</html>

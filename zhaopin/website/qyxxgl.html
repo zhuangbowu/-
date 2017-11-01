@@ -1,0 +1,128 @@
+<head>
+<meta charset="UTF-8">
+ <!-- 优先使用 IE 最新版本和 Chrome -->
+ <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<!-- 页面描述 -->
+<meta name="description" content="不超过150个字符"/>
+<!-- 页面关键词 -->
+<meta name="keywords" content=""/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+<meta name="format-detection" content="telphone=no, email=no"/>
+<title>企业信息管理</title>
+<link rel="stylesheet" type="text/css" href="css/cssreset.css"/>
+<link rel="stylesheet" type="text/css" href="css/index.css"/>
+</head>
+<body>
+	<div id="findpassword">
+	<div class="erjitoubu">
+		企业信息管理
+		<a href="javascript:history.go(-1);">
+			<img src="images/fanhui.png" alt="">
+		</a>
+		<div class="toubu">
+			小明 <a href="sign.html">退出</a> | <a href="index.html">首页</a>
+		</div>
+	</div>
+		<div class="list">
+			<p>
+				<a href="#">火星人才网</a><span>》</span>
+				<a href="#">会员中心  </a><span>》</span>
+				<a href="#" class="gray">企业信息管理  </a>      
+			</p>
+		</div>
+		<div class="wrap">
+			<div class="toux fl">
+				<img src="images/touxiang.png" style="width: 1.6rem; height: 1.6rem; "/>
+			</div>	
+			<div class="contant fr clearfix">
+				<div class="contant_top">
+					<span>尚泽</span>
+					<b>公司负责人：谭某某</b>
+					<a href="fabuzhiwei.html">发布职位</a>
+				</div>
+				<div class="contant_middle fl ">
+					<img src="images/shouji.png" style="width:0.4rem; height:0.4rem; " class="fl"/>
+					<span class="fl">15589645123</span>
+				</div>
+				<div class="contant_middle fl ">
+					<img src="images/shouji.png" style="width:0.4rem; height:0.4rem; " class="fl"/>
+					<span class="fl">15589645123</span>
+				</div>
+				<div class="contant_bottom">
+					<img src="images/dingwei.png" style="width:0.21rem; height:0.3rem; margin-top: 0.1rem;"/>
+					<span>山东省临沂市兰山区XXX</span>
+				</div>
+			</div>	
+		</div>
+		
+		<div class="line01"></div>
+		<div class="task">
+			<p>企业信息管理</p>
+		</div>
+		<ul class="qy-list">
+			<li>
+				<b>公司名称：</b>临沂尚泽网络传媒有限公司<span>修改</span>
+			</li>
+			<li>
+				<b>负责人：</b>王鹏<span>修改</span>
+			</li>
+			<li>
+				<b>联系电话：</b> 0539-1234567<span>修改</span>
+			</li>
+			<li>
+				<b>手机号：</b>15261552465<span>修改</span>
+			</li>
+			<li>
+				<b>所在地：</b>山东临沂市兰山区<span>修改</span>
+			</li>
+			<li>
+				<b>地址：</b>蒙山大道与北苑路交汇<span>修改</span>
+			</li>
+		</ul>
+		
+	
+		
+		
+		
+	<div class="footer">
+		<p>
+			<a href="#">网站资质</a><span>|</span>
+			<a href="#">备案</a><span>|</span>
+			<a href="#">法律声明</a><span>|</span>
+			<a href="yinsiquan.html">隐私权政策</a>
+		</p>
+		<p>未经同意，不得转载本网站之所有招聘信息及作品</p>
+		<p>火星人才网版权所有©2017-3017  |  地址：沈阳市沈河区</p>
+		<p> 服务热线：400-024-5880  邮箱：175969151@163.com</p>
+	</div>	
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript">
+    	
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   			
+   		});
+   		 var doc = document;
+        var win = window;
+        function initFontSize(){
+            var docEl = doc.documentElement;
+           //判断窗口有没有orientationchange这个方法，有就赋值给一个变量，没有就返回resize方法。
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                //获取设计图的尺寸--750px
+                fontSizeRate = (clientWidth / 750);
+                //设置大小--目前的设备大小是
+                var baseFontSize = 100*fontSizeRate;
+                docEl.style.fontSize = baseFontSize + 'px';
+              //  console.log(baseFontSize);
+            };
+            recalc();
+         
+        }
+        initFontSize();
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi "> 
+<title>众创云购</title>
+<link rel="stylesheet" href="css/zhongchuangyungou.css">
+<script src="jq/jquery.js"></script>
+<script>
+	$(document).ready(function(){
+//获得文本框对象
+   var t = $(".jiage2_2");
+//初始化数量为1,并失效减
+$('.jiage2_1').attr('disabled',true);
+    //数量增加操作
+    $(".jiage2_3").click(function(){ 
+//			alert(1);
+        t.val(parseInt(t.val())+1)
+        if (parseInt(t.val())!=1){
+            $('.jiage2_1').attr('disabled',false);
+        }
+
+    }) 
+    //数量减少操作
+    $(".jiage2_1").click(function(){
+        if (parseInt(t.val())==1){
+//				alert(1);
+           $('.jiage2_1').attr('disabled',true);
+				return;
+        }
+			t.val(parseInt(t.val())-1);
+
+    })
+
+});
+	</script>
+</head>
+
+<body>
+<div class="tongping">
+<div class="header">
+	<div class="header_1"><img src="images/renzheng.png" alt=""></div>
+	<div class="header_2"><input type="text" value="众创云购"></div>
+	<div class="header_3"><img src="images/sx.png" alt=""></div>
+	<div class="clearfix"></div>
+</div>
+ 
+<div class="banner-t">
+       <a href="javascript:history.go(-1);"><div class="fanhui"><img src="images/fh2.png" alt=""></div></a>
+        <ul class="slider-main">
+            <li class="slider-panel">
+                <a href="#" target="_blank"><img src="images/xiangqing-1.jpg"></a>
+            </li>
+            <li class="slider-panel">
+                <a href="#" target="_blank"><img src="images/xiangqing-1.jpg"></a>
+            </li>
+            <li class="slider-panel">
+                <a href="#" target="_blank"><img src="images/xiangqing-1.jpg"></a>
+            </li>
+            <li class="slider-panel">
+                <a href="h#" target="_blank"><img src="images/xiangqing-1.jpg"></a>
+            </li>
+        </ul>
+        <div class="slider-extra">
+            <ul class="slider-nav">
+                <li class="slider-item"></li>
+                <li class="slider-item"></li>
+                <li class="slider-item"></li>
+                <li class="slider-item"></li>
+            </ul>
+        </div>
+    </div>
+
+
+<div class="jieshao">夏季新款波西米亚刺绣流苏系带收腰V领球球连衣裙夏季流苏系带收腰V领球球连衣裙</div>
+<div class="jiage">
+	<div class="jiage1">
+		<h2 class="jiage1_1">￥66.00</h2>
+		<h2 class="jiage1_4">22<span class="jifen">积分</span></h2>
+	</div>
+	<div class="jiage2">
+		<div class="jiage2_1"><img src="images/jian.png" alt=""></div>
+			<input type="text" value="1" class="jiage2_2">
+		<div class="jiage2_3" style=""><img src="images/jia.png" alt="" style="width: 100%;"></div>
+		
+		
+	</div>
+	<div class="clearfix"></div>
+</div>
+<div class="kuaidi">
+	<h3 class="kuaidi_1">快递：0.00</h3>
+	<h3 class="kuaidi_2">剩余：999</h3>
+	<div class="clearfix"></div>
+</div>
+<div class="song">
+<div class="song1">
+	<div class="song1_2"><img src="images/song.png" alt=""></div>
+	<h2 class="song1_3">30积分</h2>
+</div>
+<div class="song1">
+		<div class="song1_2"><img src="images/qd.png" alt=""></div>
+	<h2 class="song1_3">品质保证</h2>
+</div>
+<div class="song1">
+		<div class="song1_2"><img src="images/qd.png" alt=""></div>
+	<h2 class="song1_3">担保交易</h2>
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="jiange1"></div>
+<h1 class="tuwen">图文详情</h1>
+<!--<div class="chima1">
+	<div class="chima_1">尺码</div>
+	<div class="chima_1">裙长</div>
+	<div class="chima_1">肩宽</div>
+	<div class="chima_1">胸围</div>
+	<div class="chima_1">袖长</div>
+	<div class="clearfix"></div>
+</div>
+<div class="chima2">
+	<div class="chima_1">均码</div>
+	<div class="chima_1">前75 后82</div>
+	<div class="chima_1">46</div>
+	<div class="chima_1">102</div>
+	<div class="chima_1">31</div>
+	<div class="clearfix"></div>
+</div>-->
+<div class="banner"><img src="images/tuwenxiangqing.jpg" alt=""></div>
+<div class="banner"><img src="images/xiangqing-1.jpg" alt=""></div>
+<div class="banner"><img src="images/xiangqing-1-1.jpg" alt=""></div>
+<div class="gaodu"></div>
+</div>
+<a href="lijizhifu.html"><div class="lijigoumai">
+	立即购买
+</div></a>
+<script src="jq/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            var length,
+                    currentIndex = 0,
+                    interval,
+                    hasStarted = false, //是否已经开始轮播
+                    t = 3000; //轮播时间间隔
+            length = $('.slider-panel').length;
+            //将除了第一张图片隐藏
+            $('.slider-panel:not(:first)').hide();
+            //将第一个slider-item设为激活状态
+            $('.slider-item:first').addClass('slider-item-selected');
+            //隐藏向前、向后翻按钮
+            $('.slider-page').hide();
+            //鼠标上悬时显示向前、向后翻按钮,停止滑动，鼠标离开时隐藏向前、向后翻按钮，开始滑动
+            $('.slider-panel, .slider-pre, .slider-next').hover(function() {
+                stop();
+                $('.slider-page').show();
+            }, function() {
+                $('.slider-page').hide();
+                start();
+            });
+            $('.slider-item').hover(function(e) {
+                stop();
+                var preIndex = $(".slider-item").filter(".slider-item-selected").index();
+                currentIndex = $(this).index();
+                play(preIndex, currentIndex);
+            }, function() {
+                start();
+            });
+            $('.slider-pre').unbind('click');
+            $('.slider-pre').bind('click', function() {
+                pre();
+            });
+            $('.slider-next').unbind('click');
+            $('.slider-next').bind('click', function() {
+                next();
+            });
+            /**
+             * 向前翻页
+             */
+            function pre() {
+                var preIndex = currentIndex;
+                currentIndex = (--currentIndex + length) % length;
+                play(preIndex, currentIndex);
+            }
+            /**
+             * 向后翻页
+             */
+            function next() {
+                var preIndex = currentIndex;
+                currentIndex = ++currentIndex % length;
+                play(preIndex, currentIndex);
+            }
+            /**
+             * 从preIndex页翻到currentIndex页
+             * preIndex 整数，翻页的起始页
+             * currentIndex 整数，翻到的那页
+             */
+            function play(preIndex, currentIndex) {
+                $('.slider-panel').eq(preIndex).fadeOut(500)
+                        .parent().children().eq(currentIndex).fadeIn(1000);
+                $('.slider-item').removeClass('slider-item-selected');
+                $('.slider-item').eq(currentIndex).addClass('slider-item-selected');
+            }
+            /**
+             * 开始轮播
+             */
+            function start() {
+                if(!hasStarted) {
+                    hasStarted = true;
+                    interval = setInterval(next, t);
+                }
+            }
+            /**
+             * 停止轮播
+             */
+            function stop() {
+                clearInterval(interval);
+                hasStarted = false;
+            }
+            //开始轮播
+            start();
+        });
+    </script>  
+</body>
+</html>

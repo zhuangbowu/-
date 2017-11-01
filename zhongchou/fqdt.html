@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi "> 
+<title>帮他证实</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.js"></script>
+<script type="text/javascript" src="js/tpcs.js"></script>
+</head>
+
+<body>
+	<header class="header">
+		<div class="header_left">
+			<img src="images/guanbi.png" alt="">
+		</div>
+		<div class="header_zi">
+			心连心爱心筹
+		</div>
+		<div class="header_right">
+			<img src="images/gengduo.png" alt="">
+		</div>
+	</header>
+	<div class="header_gaodu"></div>
+	<div class="btzs">
+		<a href="javascript:history.go(-1);">
+			<div class="btzs1">
+				<img src="images/fh.png" alt="" style="width: 100%;">
+			</div>
+		</a>
+		<div class="btzs2">
+			发布动态
+		</div>
+	</div>
+	<div style="height:20px;"></div>
+	<form action="">
+		<div class="shuruneirong">
+			<textarea name="请输入您要介绍的一些详细内容" id="" cols="" rows="" placeholder="请输入您要介绍的一些详细内容" class="shuruneirong1"></textarea>
+		</div>
+		<div class="shangchuan">
+			<div class="shangchuan1">
+				<div class="shangchuan2" id="preview">
+					<img src="images/sc.png" alt="" id="imghead" border="0" onClick="$('#previewImg').click();" width="50" height="50">
+				</div>
+				<input type="file" onChange="previewImage(this)" class="shangchuan3" id="previewImg">
+			</div>
+			<div class="shangchuan1">
+				<div class="shangchuan2" id="preview1">
+					<img src="images/sc.png" alt="" id="imghead1" border="0" onClick="$('#previewImg1').click();" width="50" height="50">
+				</div>
+				<input type="file" onChange="previewImage1(this)" class="shangchuan3" id="previewImg1">
+			</div>
+			<div class="shangchuan1">
+				<div class="shangchuan2" id="preview2">
+					<img src="images/sc.png" alt="" id="imghead2" border="0" onClick="$('#previewImg2').click();" width="50" height="50">
+				</div>
+				<input type="file" onChange="previewImage2(this)" class="shangchuan3" id="previewImg2">
+			</div>
+			<div class="shangchuan1">
+				<div class="shangchuan2" id="preview3">
+					<img src="images/sc.png" alt="" id="imghead3" border="0" onClick="$('#previewImg3').click();" width="50" height="50">
+				</div>
+				<input type="file" onChange="previewImage3(this)" class="shangchuan3" id="previewImg3">
+			</div>
+			<div class="shangchuan1">
+				<div class="shangchuan2" id="preview4">
+					<img src="images/sc.png" alt="" id="imghead4" border="0" onClick="$('#previewImg4').click();" width="50" height="50">
+				</div>
+				<input type="file" onChange="previewImage4(this)" class="shangchuan3" id="previewImg4">
+			</div>
+			<div class="shangchuan1">
+				<div class="shangchuan2" id="preview5">
+					<img src="images/sc.png" alt="" id="imghead5" border="0" onClick="$('#previewImg5').click();" width="50" height="50">
+				</div>
+				<input type="file" onChange="previewImage5(this)" class="shangchuan3" id="previewImg5">
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="gaodu"></div>
+		<button type="submit" class="bangtazhengshi">发布动态</button>
+	</form>
+
+</body>
+</html>

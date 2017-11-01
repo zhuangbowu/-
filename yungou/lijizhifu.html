@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi "> 
+<title>众创云购</title>
+<link rel="stylesheet" href="css/zhongchuangyungou.css">
+<script src="jq/jquery.js"></script>
+</head>
+
+<body>
+<div class="tongping_1">
+<div class="dingbu">
+<div class="fukuan">代付款订单</div>
+<div class="fanhui_1"><img src="images/fh3.png" alt=""></div>
+</div>
+<div class="gaodu_1"></div>
+<div class="dizhi">
+	<a href="shouhuo.html"><div class="dizhi1"><img src="images/xinzeng.png" alt=""></div>
+	<div class="dizhi2">新增收货地址</div>
+	<div class="dizhi3"><img src="images/zhankai.png" alt=""></div></a>
+	<div class="clearfix"></div>
+</div>
+<div class="jiange1"></div>
+<div class="shijian">
+	<h3 class="shijian1">2017-06-28-12:20</h3>
+	<h3 class="shijian2">删除</h3>
+	<div class="clearfix"></div>
+	
+</div>
+
+<div class="xiangqing">
+	<div class="xiangqing1">
+		<img src="images/tupian1-1.png" alt="">
+	</div>
+	<div class="xiangqing2">
+		<h1 class="xiangqing21">流苏系带收腰V领球球连...</h1>
+		<div class="xiangqing22">
+		<div class="xiangqing23">
+			<h2 class="xiangqing231">￥66.00</h2>
+			<h2 class="xiangqing232">22<span class="xiangqing233">积分</span></h2>
+		</div>
+		<div class="xiangqing24">
+			<div class="xiangqing241"><img src="images/jian.png" alt=""></div>
+			<div><input class="xiangqing242" type="text" value="1"></div>
+			<div class="xiangqing243"><img src="images/jia.png" alt=""></div>
+		</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</div>
+<div class="jiange1"></div>
+<div class="peisong">
+	<h2 class="peisong1">配送方式</h2>
+	<h2 class="peisong2">快递　免邮</h2>
+	<div class="clearfix"></div>
+</div>
+<div class="peisong">
+	<h2 class="peisong1">积分购</h2>
+	<h2 class="peisong2">-22积分</h2>
+	<div class="clearfix"></div>
+</div>
+<div class="peisong">
+	<h2 class="peisong1">合计</h2>
+	<h2 class="peisong2"><span class="secai">￥66.00</span></h2>
+	<div class="clearfix"></div>
+</div>
+</div>
+<div class="tijiao">
+<div class="tijiao5">
+	<div class="tijiao1">合计：<span class="tijiao11">66.00</span></div>
+	<div class="tijiao2">提交订单</div>
+</div>
+</div>
+<div class="lijizhifu">
+<form action="">
+	<div class="lijizhifu1">
+		<div class="peisong">
+			<h2 class="peisong1">支付金额</h2>
+			<h2 class="peisong2"><span class="secai">￥66.00元</span></h2>
+			<div class="clearfix"></div>
+		</div>
+		<div class="peisong">
+			<h2 class="peisong1">支付积分</h2>
+			<h2 class="peisong2">22积分</h2>
+			<div class="clearfix"></div>
+		</div>
+		<div class="lijizhifu2">
+			<div class="lijizhifu21">
+			<div class="lijizhifu22" style="position: relative;">
+				<input type="radio" name="1" style="opacity: 0;" value="1">
+				<img src="images/xz-2.png" alt="" style="position: absolute;top: 10px;width: 20px;height: 20px;">
+			</div>
+			<h2 class="lijizhifu23">支付方式</h2>
+			</div>
+			<h2 class="lijizhifu24">支付宝安全支付</h2>
+			<div class="lijizhifu_tupian"><img src="images/zf2.png" alt=""></div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="lijizhifu2">
+			<div class="lijizhifu21">
+			<div class="lijizhifu22" style="position: relative;"><input type="radio" name="1" style="opacity: 0;" value="2"><img src="images/xz-1.png" alt="" style="position: absolute;top: 10px;width: 20px;height: 20px;"></div>
+			<h2 class="lijizhifu23">支付方式</h2>
+			</div>
+			<h2 class="lijizhifu24">微信安全支付</h2>
+			<div class="lijizhifu_tupian"><img src="images/zf1.png" alt=""></div>
+			<div class="clearfix"></div>
+		</div>
+		<button type="submit" class="lijizhifu_bottom">立即支付</button>
+	</div>
+</form>
+</div>
+<script>
+	$(function(){
+		// 点击提交订单，出现遮罩层
+		$('.tijiao2').click(function(event) {
+			/*$('.lijizhifu').animate({
+				height:'100%'
+			},1000)*/
+			$('.lijizhifu').fadeIn(100);
+		});
+		// 点击切换选择radio
+		$('.lijizhifu22').click(function(){
+			// console.log($(this).children('img').attr('src').charAt(10));
+			if($(this).children('img').attr('src').charAt(10)=='2'){
+				$(this).children('img').attr('src','images/xz-1.png');
+				$(this).parent('.lijizhifu21').parent('.lijizhifu2').siblings('.lijizhifu2').children('.lijizhifu21').children('.lijizhifu22').children('img').attr('src','images/xz-2.png')
+			}else{
+				$(this).children('img').attr('src','images/xz-2.png');
+				$(this).parent('.lijizhifu21').parent('.lijizhifu2').siblings('.lijizhifu2').children('.lijizhifu21').children('.lijizhifu22').children('img').attr('src','images/xz-1.png')
+				
+			}
+		})
+	})
+	// 点击遮罩层外边，立即支付消失
+	var lijizhifu = document.querySelector('.lijizhifu');
+	var lijizhifu1 = document.querySelector('.lijizhifu1');
+	lijizhifu.addEventListener('click',function(event){
+		if(event.target.classList[0]==='lijizhifu'){
+			$('.lijizhifu').fadeOut(100);
+			return;
+		}else{
+			console.log('选择的不在遮罩层内');
+		}
+	})
+</script>
+<script>
+	w
+	</script>
+</body>
+</html>

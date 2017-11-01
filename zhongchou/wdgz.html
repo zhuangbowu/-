@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi "> 
+<title>我的关注</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<header class="header">
+		<div class="header_left">
+			<img src="images/guanbi.png" alt="">
+		</div>
+		<div class="header_zi">
+			我的关注
+		</div>
+		<div class="header_right">
+			<img src="images/gengduo.png" alt="">
+		</div>
+	</header>
+	<div class="header_gaodu"></div>
+	<div class="wdgz">
+		<div class="wdgz1">
+			<a href="javascript:history.go(-1);">
+				<img src="images/fh.png" alt="" style="width: 100%;">
+			</a>
+		</div>
+		<div class="wdgz2">
+			<div class="wdgz3" id="qb" onClick="dianji()">
+				全部
+			</div>
+			<div class="wdgz4" id="ck" onClick="dianji1()">
+				筹款中
+			</div>
+			<div class="wdgz4" id="js" onClick="dianji2()">
+				已结束
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="aixinbaozhu1" id="choukuan">
+		<a href="aixinchou-xqy.html">
+			<div class="aixinbaozhu2">
+				<div class="aixinbaozhu3">
+					<img src="images/tx-5.png" alt="">
+				</div>
+				<div class="aixinbaozhu4">
+					<div class="aixinbaozhu5">发起人昵称</div>
+					<div class="aixinbaozhu6">2017-07-20　09:06</div>
+				</div>
+				<div class="aixinbaozhu7">
+					<img src="images/zk.png" alt="">
+				</div>
+				<div class="aixinbaozhu8">
+					<div class="aixinbaozhu9">个人求助</div>
+					<div class="aixinbaozhu10">筹款中</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</a>
+		<div class="bangzhu">
+			<div class="bangzhu1">
+				<div class="bangzhu4">爱心帮助</div>
+				<div class="bangzhu5">￥666666</div>
+			</div>
+			<div class="bangzhu2">
+				<div class="bangzhu4">帮助次数</div>
+				<div class="bangzhu5">21581</div>
+			</div>
+			<div class="bangzhu3">
+				<div class="bangzhu4">目标金额</div>
+				<div class="bangzhu5">￥666666</div>
+			</div>
+		</div>
+	</div>
+	<div class="jiange" id="choukuan1"></div>
+	<div class="aixinbaozhu1" id="jieshu">
+		<a href="aixinchou-xqy.html">
+			<div class="aixinbaozhu2">
+				<div class="aixinbaozhu3">
+					<img src="images/tx-5.png" alt="">
+				</div>
+				<div class="aixinbaozhu4">
+					<div class="aixinbaozhu5">发起人昵称</div>
+					<div class="aixinbaozhu6">2017-07-20　09:06</div>
+				</div>
+				<div class="aixinbaozhu7">
+					<img src="images/zk.png" alt="">
+				</div>
+				<div class="aixinbaozhu8">
+					<div class="aixinbaozhu9">个人求助</div>
+					<div class="aixinbaozhu11">已结束</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</a>
+		<div class="bangzhu">
+			<div class="bangzhu1">
+				<div class="bangzhu4">爱心帮助</div>
+				<div class="bangzhu5">￥666666</div>
+			</div>
+			<div class="bangzhu2">
+				<div class="bangzhu4">帮助次数</div>
+				<div class="bangzhu5">21581</div>
+			</div>
+			<div class="bangzhu3">
+				<div class="bangzhu4">目标金额</div>
+				<div class="bangzhu5">￥666666</div>
+			</div>
+		</div>
+	</div>
+	<div class="jiange" id="jieshu1"></div>
+	<div class="header_gaodu"></div>
+	<div class="footer">
+		<a href="index.html">
+			<div class="footer1">
+				<div class="footer2">
+					<img src="images/aixinchou-1.png" alt="">
+				</div>
+				<div class="footer3">
+					爱心筹
+				</div>
+			</div>
+		</a>
+		<a href="fqzc.html">
+			<div class="footer1">
+				<div class="footer2">
+					<img src="images/fq-2.png" alt="">
+				</div>
+				<div class="footer3">
+					发起众筹
+				</div>
+			</div>
+		</a>
+		<a href="grzx.html">
+			<div class="footer1">
+				<div class="footer2">
+					<img src="images/grzx-1.png" alt="">
+				</div>
+				<div class="footer3_1">
+					个人中心
+				</div>
+			</div>
+		</a>
+		<div class="clearfix"></div>
+	</div>
+	<script>
+		function dianji(){
+			box=document.getElementById('qb')
+			box1=document.getElementById('ck');
+			box2=document.getElementById('js');
+			box3=document.getElementById('choukuan');
+			box4=document.getElementById('choukuan1');
+			box5=document.getElementById('jieshu');
+			box6=document.getElementById('jieshu1');
+			box.style.color="#fd6b6b";
+			box.style.borderBottom="solid 1px #fd6b6b";
+			box1.style.color="#666";
+			box1.style.borderBottom="none";
+			box2.style.color="#666";
+			box2.style.borderBottom="none";
+			box3.style.display="block";
+			box4.style.display="block";
+			box5.style.display="block";
+			box6.style.display="block";
+		}
+		function dianji1(){
+			box=document.getElementById('qb');
+			box1=document.getElementById('ck');
+			box2=document.getElementById('js');
+			box3=document.getElementById('choukuan');
+			box4=document.getElementById('choukuan1');
+			box5=document.getElementById('jieshu');
+			box6=document.getElementById('jieshu1');
+			box.style.color="#666";
+			box.style.borderBottom="none";
+			box1.style.color="#fd6b6b";
+			box1.style.borderBottom="solid 1px #fd6b6b";
+			box2.style.color="#666";
+			box2.style.borderBottom="none";
+			box3.style.display="block";
+			box4.style.display="block";
+			box5.style.display="none";
+			box6.style.display="none";
+		}
+		function dianji2(){
+			box=document.getElementById('qb');
+			box1=document.getElementById('ck');
+			box2=document.getElementById('js');
+			box3=document.getElementById('choukuan');
+			box4=document.getElementById('choukuan1');
+			box5=document.getElementById('jieshu');
+			box6=document.getElementById('jieshu1');
+			box.style.color="#666";
+			box.style.borderBottom="none";
+			box1.style.color="#666";
+			box1.style.borderBottom="none";
+			box2.style.color="#fd6b6b";
+			box2.style.borderBottom="solid 1px #fd6b6b";
+			box3.style.display="none";
+			box4.style.display="none";
+			box5.style.display="block";
+			box6.style.display="block";
+		}
+		
+	</script>
+</body>
+</html>

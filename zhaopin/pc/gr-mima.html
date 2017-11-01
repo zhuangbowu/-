@@ -1,0 +1,269 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>个人中心-密码管理</title>
+<link rel="stylesheet" href="css/index.css"/>
+<script src="js/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="js/index.js" type="text/javascript"></script>
+<style type="text/css">
+	.contact *:focus{outline :none;}
+	.contact{width: 700px;margin: 40px auto;padding: 10px;}
+	.contact ul {width: 650px;margin: 0 auto;}
+	.contact ul li{list-style: none;padding: 12px;}
+	.contact ul li label {width: 120px;display: inline-block;float: left;}
+	.contact ul li input[type=text],.contact ul li input[type=password]{width: 220px;height: 25px;border :1px solid #aaa;padding: 3px 8px;border-radius: 5px;}
+	.contact ul li input:focus{border-color: #c00;}
+	.contact ul li input[type=text]{transition: padding .25s;-o-transition: padding .25s;-moz-transition: padding  .25s;-webkit-transition: padding  .25s;}
+	.contact ul li input[type=password]{transition: padding  .25s;-o-transition: padding  .25s;-moz-transition: padding  .25s;-webkit-transition: padding  .25s;}
+	.contact ul li input:focus{padding-right: 70px;}
+	.btn{position: relative;left: 300px;}
+	.tips{color: rgba(0, 0, 0, 0.5);padding-left: 10px;}
+	.tips_true,.tips_false{padding-left: 10px;}
+	.tips_true{color: green;}
+	.tips_false{color: red;}
+</style>
+<script type="text/javascript">
+	  //验证密码 
+		function checkpsd3(){  
+			psd1=form1.yourpass1.value;
+			var flagZM=false ;
+			var flagSZ=false ;
+			var flagQT=false ;
+			if(psd1.length<6 || psd1.length>12){
+				divpassword3.innerHTML='<font class="tips_false">长度错误</font>';
+			}else
+				{
+				  for(i=0;i < psd1.length;i++)
+					{
+						if((psd1.charAt(i) >= 'A' && psd1.charAt(i)<='Z') || (psd1.charAt(i)>='a' && psd1.charAt(i)<='z'))
+						{
+							flagZM=true;
+						}
+						else if(psd1.charAt(i)>='0' && psd1.charAt(i)<='9')
+						{
+							flagSZ=true;
+						}else
+						{
+							flagQT=true;
+						}
+					} 
+					if(!flagZM||!flagSZ||flagQT){
+					divpassword3.innerHTML='<font class="tips_false">密码必须是字母数字的组合</font>';
+					}else{
+					divpassword3.innerHTML='<font class="tips_true">输入正确</font>';
+					}
+				}
+		}
+	  //验证密码 
+		function checkpsd1(){  
+			psd1=form1.yourpass.value;
+			var flagZM=false ;
+			var flagSZ=false ;
+			var flagQT=false ;
+			if(psd1.length<6 || psd1.length>12){
+				divpassword1.innerHTML='<font class="tips_false">长度错误</font>';
+			}else
+				{
+				  for(i=0;i < psd1.length;i++)
+					{
+						if((psd1.charAt(i) >= 'A' && psd1.charAt(i)<='Z') || (psd1.charAt(i)>='a' && psd1.charAt(i)<='z'))
+						{
+							flagZM=true;
+						}
+						else if(psd1.charAt(i)>='0' && psd1.charAt(i)<='9')
+						{
+							flagSZ=true;
+						}else
+						{
+							flagQT=true;
+						}
+					} 
+					if(!flagZM||!flagSZ||flagQT){
+					divpassword1.innerHTML='<font class="tips_false">密码必须是字母数字的组合</font>';
+					}else{
+					divpassword1.innerHTML='<font class="tips_true">输入正确</font>';
+					}
+				}
+		}
+		//验证确认密码
+		function checkpsd2(){
+			if(form1.yourpass.value!=form1.yourpass2.value){
+				  divpassword2.innerHTML='<font class="tips_false">您两次输入的密码不一样</font>';
+				}else{
+				  divpassword2.innerHTML='<font class="tips_true">输入正确</font>';
+				}
+		}
+  </script>
+</head>
+
+<body>
+<div class="wuyoujianli_header">
+	<div class="wuyoujianli_nav">
+		<span class="wuyoujianli_nav1">小明</span>　<a href="dlym.html">退出</a>　|　<a href="index.html">首页</a>　|　<a href="gr-jindu.html">个人中心</a>
+	</div>
+</div>
+<div class="header-b">
+	<div class="inner">
+	  <a href="index.html">
+		<div class="logo">
+		   <img src="images/header_03.jpg">
+	   </div>
+	  </a>
+	   <div class="tel" style="float: right;">
+		   <img src="images/header_14.jpg">
+	   </div>
+	</div>
+</div>
+<div class="daohang" style="margin-bottom: 40px;">
+	<ul class="daohang1">
+	   <a href="index.html"><li>首页</li></a>
+	  <a href="zzgz.html"><li>查找工作</li></a>
+	  <a href="xmhz.html"><li>项目合作</li></a>
+	  <a href="gr-jindu.html"><li class="xuanzhong">会员中心</li></a>
+	  <a href="flyz.html"><li>法律援助</li></a>
+	  <a href="sqdk.html"><li>申请贷款</li></a>
+	  <a href="zzfw.html"><li>增值服务</li></a>
+	  <div class="clearfix"></div>  
+	</ul>
+</div>
+<div class="inner">	
+	<div class="small_nav">
+		<div class="small_nav_title">个人中心</div>
+		<a href="gr-jindu.html"><div class="small_nav_word">已报名职位</div></a>
+		<a href="gr-jlgl.html"><div class="small_nav_word">简历管理</div></a>
+		<a href="gr-tgzj.html"><div class="small_nav_word">财务管理</div></a>
+		<a href="gr-zhgl.html"><div class="small_nav_word">账户管理</div></a>
+		<a href="gr-mima.html"><div class="small_nav_word small_nav_color">密码管理</div></a>
+	</div>
+	<div class="content">
+		<div class="data">
+			<div class="data1">
+				<img src="images/touxiang.png" alt="">
+			</div>
+			<div class="data2">
+				<div class="data3">尚泽</div>
+				<div class="data4">
+					<div class="data5">男</div>
+					<div class="data6">
+						<img src="images/shuxian.jpg" alt="">
+					</div>
+					<div class="data5">28岁</div>
+					<div class="data7">
+						<img src="images/shuxian.jpg" alt="">
+					</div>
+					<div class="data8">
+						<img src="images/dingwei.png" alt="">
+					</div>
+					<div class="data5">临沂</div>
+				</div>
+				<div class="gekai"></div>
+				<div class="data9">15589645123</div>
+				<input type="text" class="data10" value="15589645123" id="beigai" readonly size="15">
+				<div class="data11" id="xiugai">【修改】</div>
+				<div class="data11" id="baocun" style="display: none;">【保存】</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="remind">
+			<div class="remind1">
+				<img src="images/xiaxian.jpg" alt="">
+				就业风险提醒
+			</div>
+			<!--新的-->
+			<table height="200" class="cailiao" cellpadding="0" cellspacing="0" width="700">
+				<tr>
+					<td class="cailiao3">　　一、骗取报名费：收费报名、拖延不退。</td>
+					<td class="cailiao3">　　二、骗取考试费：收费考试、不予通过。</td>
+				</tr>
+				<tr>
+					<td>　　三、骗取培训费：虚假职位、收费培训。</td>
+					<td>　　四、骗取资料费：虚假职位、收费办证。</td>
+				</tr>
+				<tr>
+					<td class="cailiao3">　　五、骗取个人信息：办高息贷款、银行信用卡。</td>
+					<td class="cailiao3">　　六、大包落地：前期不收费、下了飞机、身不由己。</td>
+				</tr>
+				<tr>
+					<td>　　七、碰签模式：广收护照碰运气、谁的通过收谁钱。</td>
+					<td>　　八、无息借款：虚假职位100%退款、至少半年给予退还。</td>
+				</tr>
+				<tr>
+					<td class="cailiao1"></td>
+					<td class="cailiao2" style="">　　　客服咨询电话:</td>
+				</tr>
+			</table>
+		</div>
+		<div class="remind">
+			<div class="remind1">
+				<img src="images/xiaxian.jpg" alt="" class="bd-img">
+				<p class="rem-p1 shenf">密码修改</p>
+			</div>
+				<div class="contact" >
+					<form name="form1" method="post">
+						<ul>
+							<li>
+								<label>原密码：</label>
+								<input type="password" name="yourpass1" placeholder="请输入你的密码" onblur="checkpsd3()" required/><span class="tips" id="divpassword3">密码必须由字母和数字组成</span>
+							</li>
+							<li>
+								<label>密码：</label>
+								<input type="password" name="yourpass" placeholder="请输入你的密码" onblur="checkpsd1()" required/><span class="tips" id="divpassword1">密码必须由字母和数字组成</span>
+							</li>
+							<li>
+								<label>确认密码：</label>
+								<input type="password" name="yourpass2" placeholder="请再次输入你的密码" onblur="checkpsd2()" required/><span class="tips" id="divpassword2">两次密码需要相同</span>
+							</li>
+						</ul>
+						<span class="btn"></span><input type="submit" class="yh-btn" value="提交"/>
+					</form>
+				</div>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</div>
+<div class="dibu">
+		<div class="dibu1">
+			<div class="dibu2">
+				<img src="images/footer_29.jpg" alt="">
+			</div>
+			<div class="dibu3">
+				<div>网站资质　|　备案　|　法律声明　｜　<a href="yinsiquan.html">隐私权政策</a></div>
+				<div>未经同意，不得转载本网站之所有招聘信息及作品　|　火星人才网版权所有©2017-3017</div>
+				<div>地址：沈阳市沈河区　服务热线：400-024-5880　邮箱：175969151@163.com</div>
+			</div>
+		<div class="clearfix"></div>
+		</div>
+	</div>
+<script>
+		var xiugai=document.getElementById('xiugai');
+		var beigai=document.getElementById('beigai');
+		var baocun=document.getElementById('baocun');
+		var reg = /^[\u4E00-\u9FA5]+$/;
+	var dian=function(){
+		beigai.readOnly=false;
+		beigai.style.borderBottom="solid 1px #aaa";
+		xiugai.style.display="none";
+		baocun.style.display="block"; 
+	}
+	var ji=function(){
+		beigai.style="readOnly";
+		beigai.style.borderBottom="none";
+		xiugai.style.display="block";
+		baocun.style.display="none";
+	}
+	xiugai.onclick=function(){
+		dian()
+	}
+	baocun.onclick=function(){
+		if(beigai.value.length<11){
+			alert('请输入号码');
+		}else if(beigai.value.length>11){
+			alert('请输入正确的号码');
+		}else{
+		ji();
+		}
+	}
+</script>
+</body>
+</html>

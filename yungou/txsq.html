@@ -1,0 +1,158 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi "> 
+<title>众创云购</title>
+<link rel="stylesheet" href="css/zhongchuangyungou.css">
+<script src="jq/jquery.js"></script>
+<style>
+	.lijitixian{position: fixed;width: 100%;height: 100%;background-color: rgba(0,0,0,0.5);top: 0;left: 0;}
+	.lijitixian1{width: 300px;height: 180px;position: absolute;top: 200px;left: 50%;margin-left:-150px;background-color: #fff;padding-top: 20px;}
+	.lijitixian2{width: -webkit-calc(100% - 20px);padding: 0 10px;border-bottom: 1px solid #eee;}
+	.lijitixian21{float: left;width: 30%;}
+	.lijitixian22{width: 20%;float: left;padding-top: 8px;padding-right: 10px;}
+	.lijitixian22 img{width: 100%;}
+	.lijitixian23{float: left;font-size: 14px;color: #666;line-height: 40px;}
+	.lijitixian24{float: right;font-size: 14px;color: #666;line-height: 40px;padding-left: 10px;;}
+	.lijitixian_bottom{width:80px;margin: 0 auto; font-size: 16px;line-height: 30px;color: #fff;background-color: #e26e47;text-align: center;border-radius: 2px;margin-top: 30px;}
+	.lijitixian_tupian{float: right;width: 4%;padding-top: 10px;}
+	.lijitixian_tupian img{width: 100%;}
+	</style>
+</head>
+
+<body>
+<div class="tongping">
+	<div class="dingbu">
+		<div class="fukuan">
+			提现申请
+		</div>
+		<div class="fanhui_1">
+			<a href="javascript:history.go(-1);">
+				<img src="images/fh3.png" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="gaodu_1"></div>
+	<div class="daqianbao">
+		<img src="images/qianbao2.png" alt="">
+	</div>
+	<h2 class="wodelingqian">我的零钱&#40;<span class="wodelingqian1">￥1元＝1金币</span>&#41;</h2>
+	<h2 class="wodelingqian2">提现5%手续费</h2>
+	<h1 class="wodelingqian3">￥666元</h1>
+	<form action="" class="wodelingqian4">￥
+		<input type="text" placeholder="请输入金额">
+	</form>
+	<div class="chongzhi">
+		<a href="">
+			<div class="chongzhi1">充值</div>
+		</a>
+		<a href="#">
+			<div class="chongzhi2">提现</div>
+		</a>
+	</div>
+	<div class="gaodu"></div>
+</div>
+<div class="caidan">
+	<a href="index.html">
+		<div class="caidan_1">
+			<div class="caidan_1_1">
+				<img src="images/sc2.png" alt="">
+			</div>
+			<h1 class="caidan_2_2">
+			商城
+			</h1>
+		</div>
+	</a>
+	<a href="ruanwen.html">
+		<div class="caidan_1">
+			<div class="caidan_1_1">
+				<img src="images/wz2.png" alt="">
+			</div>
+			<h1 class="caidan_2_2">
+				美文分享
+			</h1>
+		</div>
+	</a>
+	<a href="">
+		<div class="caidan_1">
+			<div class="caidan_1_1">
+				<img src="images/zs2.png" alt="">
+			</div>
+			<h1 class="caidan_2_2">
+				招商中心
+			</h1>
+		</div>
+	</a>
+	<a href="gerenzhongxinfenxiaohuiyuan.html">
+		<div class="caidan_1">
+			<div class="caidan_1_1">
+				<img src="images/grzx1.png" alt="">
+			</div>
+			<h1 class="caidan_2_2">
+				<span class="caidan_1_2">
+				个人中心
+				</span>
+			</h1>
+		</div>
+	</a>
+</div>
+<div class="lijitixian">
+	<div class="lijitixian1">
+		<div class="lijitixian2">
+			<div class="lijitixian21">
+			<div class="lijitixian22"><img src="images/xz-2.png" alt=""></div>
+			<h2 class="lijitixian23">提现方式</h2>
+			</div>
+			<h2 class="lijitixian24">支付宝安全提现</h2>
+			<div class="lijitixian_tupian"><img src="images/zf2.png" alt=""></div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="lijitixian2">
+			<div class="lijitixian21">
+			<div class="lijitixian22"><img src="images/xz-1.png" alt=""></div>
+			<h2 class="lijitixian23">提现方式</h2>
+			</div>
+			<h2 class="lijitixian24">微信安全提现</h2>
+			<div class="lijitixian_tupian"><img src="images/zf1.png" alt=""></div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="lijitixian_bottom">立即提现</div>
+	</div>
+</div>
+<script>
+	$(function(){
+		// 点击提交订单，出现遮罩层
+		$('.chongzhi2').click(function(event) {
+			/*$('.lijitixian').animate({
+				height:'100%'
+			},1000)*/
+			$('.lijitixian').fadeIn(100);
+		});
+		// 点击切换选择radio
+		$('.lijitixian22').click(function(){
+			// console.log($(this).children('img').attr('src').charAt(10));
+			if($(this).children('img').attr('src').charAt(10)=='2'){
+				$(this).children('img').attr('src','images/xz-1.png');
+				$(this).parent('.lijitixian21').parent('.lijitixian2').siblings('.lijitixian2').children('.lijitixian21').children('.lijitixian22').children('img').attr('src','images/xz-2.png')
+			}else{
+				$(this).children('img').attr('src','images/xz-2.png');
+				$(this).parent('.lijitixian21').parent('.lijitixian2').siblings('.lijitixian2').children('.lijitixian21').children('.lijitixian22').children('img').attr('src','images/xz-1.png')
+				
+			}
+		})
+	})
+	// 点击遮罩层外边，立即支付消失
+	var lijitixian = document.querySelector('.lijitixian');
+	var lijitixian1 = document.querySelector('.lijitixian1');
+	lijitixian.addEventListener('click',function(event){
+		if(event.target.classList[0]==='lijitixian'){
+			$('.lijitixian').fadeOut(100);
+			return;
+		}else{
+			console.log('选择的不在遮罩层内');
+		}
+	})
+</script>
+</body>
+</html>

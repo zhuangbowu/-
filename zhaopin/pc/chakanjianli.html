@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>查看简历</title>
+<link rel="stylesheet" href="css/index.css"/>
+<script src="js/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/index.js"></script>
+</head>
+
+
+<body>
+<div class="wuyoujianli_header">
+	<div class="wuyoujianli_nav">
+		<span class="wuyoujianli_nav1">小明</span>　<a href="dlym.html">退出</a>　|　<a href="index.html">首页</a>　|　<a href="qy-cwgl.html">个人中心</a>
+	</div>
+</div>
+<div class="header-b">
+   <div class="inner">
+		<a href="index.html">
+			<div class="logo">
+			   <img src="images/header_03.jpg">
+		   </div>
+		</a>
+	   <div class="tel" style="float: right;">
+		   <img src="images/header_14.jpg">
+	   </div>
+   </div>
+</div>
+<div class="wuyou_xian"></div>
+<div class="inner">
+	<div class="form">
+		<div class="form1">个人简历<span>应聘岗位：</span><input type="text"></div>
+		<div class="form1da">
+			<div class="form2">姓名</div>
+			<div class="form3"><input type="text"></div>
+			<div class="form2">性别</div>
+			<div class="form3_1">
+				<input type="radio" name="xb"> 男
+				<input type="radio" name="xb" style="margin-left: 10px;"> 女
+			</div>
+			<div class="form2">民族</div>
+			<div class="form3"><input type="text"></div>
+			<div class="clearfix"></div>
+			<div class="form2">年龄</div>
+			<div class="form3"><input type="text"></div>
+			<div class="form2">籍贯</div>
+			<div class="form3_2"><input type="text"></div>
+			<div class="form2">婚姻状况</div>
+			<div class="form3"><input type="text"></div>
+			<div class="clearfix"></div>
+			<div class="form2">身高</div>
+			<div class="form3"><input type="text"></div>
+			<div class="form2">体重</div>
+			<div class="form3_2"><input type="text"></div>
+			<div class="form2">学历</div>
+			<div class="form3"><input type="text"></div>
+			<div class="clearfix"></div>
+			<div class="form2">专业</div>
+			<div class="form3"><input type="text"></div>
+			<div class="form2">电子邮箱</div>
+			<div class="form3_2"><input type="text"></div>
+			<div class="form2">QQ号</div>
+			<div class="form3"><input type="text"></div>
+			<div class="clearfix"></div>
+			<div class="form2">血型</div>
+			<div class="form3"><input type="text"></div>
+			<div class="form2">政治面貌</div>
+			<div class="form3_1">
+			<input type="radio" name="mm">团员
+			<input type="radio" name="mm">党员
+			<input type="radio" name="mm">群众
+			</div>
+			<div class="form2">健康状况</div>
+			<div class="form3"><input type="text"></div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="form4">
+		<div id="preview">
+			<img src="images/shangchuanzhaopian.jpg" alt="" id="imghead" onClick="$('#previewImg').click();">
+		</div>
+		<input type="file" onChange="previewImage(this)" style="opacity: 0;" id="previewImg" class="form4_file">
+		</div>
+		<div class="form1da">
+			<div class="form5">职业等级</div>
+			<div class="form6"><input type="text"></div>
+			<div class="form5">语言能力</div>
+			<div class="form6"><input type="text"></div>
+		</div>
+		<div class="form7"></div>
+		<div class="clearfix"></div>
+		<div class="form1da">
+			<div class="form5">手机</div>
+			<div class="form6"><input type="text"></div>
+			<div class="form5">护照编号</div>
+			<div class="form6"><input type="text"></div>
+		</div>
+		<div class="form7"></div>
+		<div class="clearfix"></div>
+		<div class="form1da">
+			<div class="form5">就业状况</div>
+			<div class="form6_1">
+			<input type="radio" name="" id=""> 待业
+			<input type="radio" name="" id="" style="margin-left: 10px;"> 在岗
+			</div>
+			<div class="form5">到岗时间</div>
+			<div class="form6"><input type="text"></div>
+		</div>
+		<div class="form7"></div>
+		<div class="clearfix"></div>
+		<div class="form1da">
+			<div class="form5">身份证号</div>
+			<div class="form6"><input type="text"></div>
+			<div class="form5">家庭住址</div>
+			<div class="form6"><input type="text"></div>
+		</div>
+		<div class="form7"></div>
+		<div class="clearfix"></div>
+		<div class="form1da">
+			<div class="form8">紧急联络人姓名</div>
+			<div class="form9"><input type="text"></div>
+			<div class="form5">电话</div>
+			<div class="form6"><input type="text"></div>
+		</div>
+		<div class="form7"></div>
+		<div class="clearfix"></div>
+		<div class="form1da_1">
+			<div class="form8">有无海外劳务经历</div>
+			<div class="form9"><input type="text"></div>
+			<div class="form11">国家</div>
+			<div class="form10"><input type="text"></div>
+			<div class="form11">时间</div>
+			<div class="form10"><input type="text"></div>
+			<div class="form11">职位</div>
+			<div class="form12"><input type="text"></div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="form13">教育情况</div>
+		<div class="form1da_1">
+			<div class="form14">时间</div>
+			<div class="form15">院校名称</div>
+			<div class="form14">专业</div>
+			<div class="form16">学历</div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="form1da_1">
+			<div class="form17"><input type="text"></div>
+			<div class="form18"><input type="text"></div>
+			<div class="form17"><input type="text"></div>
+			<div class="form19"><input type="text"></div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="form1da_1">
+			<div class="form17"><input type="text"></div>
+			<div class="form18"><input type="text"></div>
+			<div class="form17"><input type="text"></div>
+			<div class="form19"><input type="text"></div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="form13">家庭成员</div>
+		<div class="form1da_1">
+			<div class="form20">姓名</div>
+			<div class="form20">关系</div>
+			<div class="form20">年龄</div>
+			<div class="form20">职业</div>
+			<div class="form21">工作单位</div>
+			<div class="form22">联系电话</div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="form1da_1">
+			<div class="form23"><input type="text"></div>
+			<div class="form23"><input type="text"></div>
+			<div class="form23"><input type="text"></div>
+			<div class="form23"><input type="text"></div>
+			<div class="form24"><input type="text"></div>
+			<div class="form25"><input type="text"></div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="form1da_1">
+			<div class="form23"><input type="text"></div>
+			<div class="form23"><input type="text"></div>
+			<div class="form23"><input type="text"></div>
+			<div class="form23"><input type="text"></div>
+			<div class="form24"><input type="text"></div>
+			<div class="form25"><input type="text"></div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="form13">工作经历</div>
+		<div class="form1da_1">
+			<div class="form14">时间</div>
+			<div class="form15">单位</div>
+			<div class="form26">职位</div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="form1da_1">
+			<div class="form17"><input type="text"></div>
+			<div class="form18"><input type="text"></div>
+			<div class="form29"><input type="text"></div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="form1da_1">
+			<div class="form17"><input type="text"></div>
+			<div class="form18"><input type="text"></div>
+			<div class="form29"><input type="text"></div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="promise">承诺简历为本人亲自填写，所述内容全部真实有效。</div>
+		<div class="promise">承诺因简历内容存在虚假之处所带来的后果自愿由本人承担全部责任</div>
+		<div class="gaodu"></div>
+	</div>
+	<div class="submit">
+		<div class="submit_right">下载</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+<div class="dibu">
+		<div class="dibu1">
+			<div class="dibu2">
+				<img src="images/footer_29.jpg" alt="">
+			</div>
+			<div class="dibu3">
+				<div>网站资质　|　备案　|　法律声明　｜　<a href="yinsiquan.html">隐私权政策</a></div>
+				<div>未经同意，不得转载本网站之所有招聘信息及作品　|　火星人才网版权所有©2017-3017</div>
+				<div>地址：沈阳市沈河区　服务热线：400-024-5880　邮箱：175969151@163.com</div>
+			</div>
+		<div class="clearfix"></div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+</head>
+
+<body>
+<td width="73%"><input type="text" class="username" name="user.username" onblur="validateUserName(this)"/>&nbsp;<strong>*</strong><span class="tip"></span></td>
+<td height="50" align="center" valign="middle"><input type="submit" id="zcyz" value="注  册" style="width:80px;height:28px;
+    cursor:pointer;border:1px solid #cadcb2"/></td>
+<script>
+	function validateTelNumber(input){
+                 var telNumber = $.trim($(input).val());
+                 if(Ems.validateTelNumber(telNumber)){
+                     $("span.validate").text("");
+                     $("#zcyz").attr("disabled", false);
+                 }else{
+                     $("span.validate").text("号码不合法!");
+                     $("#zcyz").attr("disabled", true);
+                 }
+             }
+</script>
+
+</body>
+</html>

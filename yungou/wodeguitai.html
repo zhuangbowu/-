@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi "> 
+<title>众创云购</title>
+<link rel="stylesheet" href="css/zhongchuangyungou.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/index.css">
+<script src="jq/jquery.js"></script>
+<script src="js/city.js"></script>
+<script src="js/picker.min.js"></script>
+<script src="js/custominput.js"></script>
+</head>
+<body>
+	<div class="mutai">
+		<form action="" method="post">
+			<p>我要激活</p>
+			<hr/>
+			<div class="custom-radio"><input name="opinions" id="wubai" value="500" type="radio"><label for="wubai" class="">500增值柜</label></div>
+			<div class="custom-radio"><input name="opinions" id="yiqian" value="1000" checked="checked" type="radio"><label for="yiqian" class="checked">1000增值柜</label></div>
+			<div class="custom-radio"><input name="opinions" id="erqian" value="2000" type="radio"><label for="erqian" class="">2000增值柜</label></div>
+			<span>需要支付多少豆还是积分说明</span>
+			<button type="submit">立即激活</button>
+		</form>
+	</div>
+	<div class="mutai2">
+		<form action="" method="post">
+			<p>我要收取</p>
+			<hr>
+			<p>累计收益:500</p>
+			<p>已收取&nbsp;&nbsp;&nbsp;:300</p>
+			<p>可收取&nbsp;&nbsp;&nbsp;:200</p>
+			<button type="submit">立即收取</button>
+		</form>
+	</div>
+	<div class="mutai3">
+		<form action="" method="post">
+			<p>升级为</p>
+			<hr>
+			<div class="img-group">
+				<div class="item-img-group">
+					<img src="images/yingui.png" alt="银柜">
+					<text>银柜</text>
+				</div>
+				<div class="item-img-group">
+					<img src="images/jingui.png" alt="金柜">
+					<text>金柜</text>
+				</div>
+				<div class="item-img-group">
+					<img src="images/bojingui.png" alt="铂金柜">
+					<text>铂金柜</text>
+				</div>
+			</div>
+			<span>需要支付多少豆还是积分说明</span>
+			<button type="submit">立即升级</button>
+		</form>
+	</div>
+	<div class="mutai4">
+		<form action="" method="post">
+			<p>我要雇佣</p>
+			<hr>
+			<div class="custom-radio"><input name="opinions1" id="shixi" value="实习店员" type="radio"><label for="shixi" class="">实习店员</label></div>
+			<div class="custom-radio"><input name="opinions1" id="zhengshi" value="正式店员" checked="checked" type="radio"><label for="zhengshi" class="checked">正式店员</label></div>
+			<div class="custom-radio"><input name="opinions1" id="zishen" value="资深店员" type="radio"><label for="zishen" class="">资深店员</label></div>
+			<span>需要支付多少豆还是积分说明</span>
+			<button type="submit">立即雇佣</button>
+		</form>
+	</div>
+	<script>
+	$(function(){
+		$('input').customInput();
+	})
+	</script>
+	<div class="tongping_1" style="background: #fff;">
+		<div class="dingbu">
+			<div class="fukuan">
+				我的柜台
+			</div>
+			<div class="fanhui_1">
+				<a href="javascript:history.go(-1);">
+					<img src="images/fh3.png" alt="">
+				</a>
+			</div>
+			<a href="wodeguitaishouyijilu.html">
+				<div class="baocun1 baocun2">
+					收益记录
+				</div>
+			</a>
+		</div>
+		<div class="beijing beijing1"></div>
+		<div class="guitai">
+			<img src="images/tonggui.png" alt="">
+			<h3>铜柜<span>(1号柜)</span></h3>
+			<span>拆分率:10%|工作量0/0</span>
+			<span>工作中...</span>
+			<button class="btn_top">已购买</button>
+			<button class="btn_top">已激活</button>
+			<div class="hr"></div>
+			<button class="btn_btm shengji">升级</button>
+			<button class="btn_btm">已雇佣</button>
+			<button class="btn_btm shouqu">收取</button>
+		</div>
+		<div class="beijing"></div>
+		<div class="guitai">
+			<img src="images/jingui.png" alt="">
+			<h3>金柜<span>(2号柜)</span></h3>
+			<span>拆分率:-10%|手续费+10%</span>
+			<span>封存中...</span>
+			<button class="btn_top">已购买</button>
+			<button class="btn_top jihuo">激活</button>
+			<div class="hr"></div>
+			<button class="btn_btm shengji">升级</button>
+			<button class="btn_btm guyong">雇佣</button>
+			<button class="btn_btm shouqu">收取</button>
+		</div>
+		<div class="beijing"></div>
+		<div class="guitai">
+			<img src="images/jingui.png" alt="">
+			<h3>铜柜<span>(2号柜)</span></h3>
+			<span>100购买</span>
+			<span>未购买...</span>
+			<button class="btn_top goumai">购买</button>
+			<button class="btn_top jihuo">激活</button>
+			<div class="hr"></div>
+			<button class="btn_btm shengji">升级</button>
+			<button class="btn_btm guyong">雇佣</button>
+			<button class="btn_btm shouqu">收取</button>
+		</div>
+		<div class="beijing"></div>
+		<div class="guitai">
+			<img src="images/jingui.png" alt="">
+			<h3>铜柜<span>(2号柜)</span></h3>
+			<span>100购买</span>
+			<span>未购买...</span>
+			<button class="btn_top goumai">购买</button>
+			<button class="btn_top jihuo">激活</button>
+			<div class="hr"></div>
+			<button class="btn_btm shengji">升级</button>
+			<button class="btn_btm guyong">雇佣</button>
+			<button class="btn_btm shouqu">收取</button>
+		</div>
+	</div>
+<div class="caidan">
+	<a href="index.html">
+		<div class="caidan_1">
+			<div class="caidan_1_1">
+				<img src="images/sc2.png" alt="">
+			</div>
+			<h1 class="caidan_2_2">
+			商城
+			</h1>
+		</div>
+	</a>
+	<a href="ruanwen.html">
+		<div class="caidan_1">
+			<div class="caidan_1_1">
+				<img src="images/wz2.png" alt="">
+			</div>
+			<h1 class="caidan_2_2">
+				美文分享
+			</h1>
+		</div>
+	</a>
+	<a href="">
+		<div class="caidan_1">
+			<div class="caidan_1_1">
+				<img src="images/zs2.png" alt="">
+			</div>
+			<h1 class="caidan_2_2">
+				招商中心
+			</h1>
+		</div>
+	</a>
+	<a href="">
+		<div class="caidan_1">
+			<div class="caidan_1_1">
+				<img src="images/grzx1.png" alt="">
+			</div>
+			<h1 class="caidan_2_2">
+				<span class="caidan_1_2">
+				个人中心
+				</span>
+			</h1>
+		</div>
+	</a>
+</div>
+<div class="lijizhifu">
+	<div class="lijizhifu1">
+		<div class="peisong">
+			<h2 class="peisong1">支付金额</h2>
+			<h2 class="peisong2"><span class="secai">￥66.00元</span></h2>
+			<div class="clearfix"></div>
+		</div>
+		<div class="peisong">
+			<h2 class="peisong1">支付积分</h2>
+			<h2 class="peisong2">22积分</h2>
+			<div class="clearfix"></div>
+		</div>
+		<div class="lijizhifu2">
+			<div class="lijizhifu21">
+			<div class="lijizhifu22"><img src="images/xz-2.png" alt=""></div>
+			<h2 class="lijizhifu23">支付方式</h2>
+			</div>
+			<h2 class="lijizhifu24">支付宝安全支付</h2>
+			<div class="lijizhifu_tupian"><img src="images/zf2.png" alt=""></div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="lijizhifu2">
+			<div class="lijizhifu21">
+			<div class="lijizhifu22"><img src="images/xz-1.png" alt=""></div>
+			<h2 class="lijizhifu23">支付方式</h2>
+			</div>
+			<h2 class="lijizhifu24">微信安全支付</h2>
+			<div class="lijizhifu_tupian"><img src="images/zf1.png" alt=""></div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="lijizhifu_bottom">立即支付</div>
+	</div>
+</div>
+<script>
+	$(function(){
+		$('.jihuo').click(function(){
+			$('.mutai').show();
+		})
+		var mutai = document.querySelector('.mutai');
+		var form = document.querySelector('.mutai form');
+		mutai.addEventListener('click',function(e){
+			if(e.target.classList[0]==='mutai'){
+				// alert('1');
+				$('.mutai').hide();
+				return;
+			}else{
+				// alert('2');
+				console.log('form');
+			}
+		})
+		$('.shouqu').click(function(){
+			$('.mutai2').show();
+		})
+		var mutai2 = document.querySelector('.mutai2');
+		var form2= document.querySelector('.mutai2 form');
+		mutai2.addEventListener('click',function(e){
+			if(e.target.classList[0]==='mutai2'){
+				// alert('1');
+				$('.mutai2').hide();
+				return;
+			}else{
+				// alert('2');
+				console.log('form2');
+			}
+		})
+		$('.shengji').click(function() {
+			$('.mutai3').show();
+		});
+		var mutai3 = document.querySelector('.mutai3');
+		var form3 = document.querySelector('.mutai3 form');
+		mutai3.addEventListener('click',function(e){
+			if(e.target.classList[0]==='mutai3'){
+				// alert('1');
+				$('.mutai3').hide();
+				return;
+			}else{
+				// alert('2');
+				console.log('form3');
+			}
+		})
+		$('.guyong').click(function() {
+			$('.mutai4').show();
+		});
+		var mutai4 = document.querySelector('.mutai4');
+		var form4 = document.querySelector('.mutai4 form');
+		mutai4.addEventListener('click',function(e){
+			if(e.target.classList[0]==='mutai4'){
+				// alert('1');
+				$('.mutai4').hide();
+				return;
+			}else{
+				// alert('2');
+				console.log('form4');
+			}
+		})
+	})
+</script>
+<script>
+	$(function(){
+		// 点击提交订单，出现遮罩层
+		$('.goumai').click(function(event) {
+			/*$('.lijizhifu').animate({
+				height:'100%'
+			},1000)*/
+			$('.lijizhifu').fadeIn(100);
+		});
+		// 点击切换选择radio
+		$('.lijizhifu22').click(function(){
+			// console.log($(this).children('img').attr('src').charAt(10));
+			if($(this).children('img').attr('src').charAt(10)=='2'){
+				$(this).children('img').attr('src','images/xz-1.png');
+				$(this).parent('.lijizhifu21').parent('.lijizhifu2').siblings('.lijizhifu2').children('.lijizhifu21').children('.lijizhifu22').children('img').attr('src','images/xz-2.png')
+			}else{
+				$(this).children('img').attr('src','images/xz-2.png');
+				$(this).parent('.lijizhifu21').parent('.lijizhifu2').siblings('.lijizhifu2').children('.lijizhifu21').children('.lijizhifu22').children('img').attr('src','images/xz-1.png')
+				
+			}
+		})
+	})
+	// 点击遮罩层外边，立即支付消失
+	var lijizhifu = document.querySelector('.lijizhifu');
+	var lijizhifu1 = document.querySelector('.lijizhifu1');
+	lijizhifu.addEventListener('click',function(event){
+		if(event.target.classList[0]==='lijizhifu'){
+			$('.lijizhifu').fadeOut(100);
+			return;
+		}else{
+			console.log('选择的不在遮罩层内');
+		}
+	})
+</script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi "> 
+<title>众创云购</title>
+<link rel="stylesheet" href="css/zhongchuangyungou.css">
+<script src="js/picker.min.js"></script>
+<script src="js/city.js"></script>
+</head>
+
+<body style="background-color: #eee;">
+<div class="jy-header" style="background-color: #fff;">
+	<div class="fh">
+		<a href="javascript:history.go(-1);"><img src="images/fh3.png"></a>
+	</div>
+	<p>编辑收货地址</p>
+</div>
+<div class="sh-main">
+	<table>
+		<tr>
+			<td>收货人：</td>
+			<td><input type="text" placeholder="韩瑶"></td>
+		</tr>
+		<tr>
+			<td>联系电话：</td>
+			<td><input type="text" placeholder="18210815545"></td>
+		</tr>
+		<tr style="position: relative;">
+			<td>选择地区：</td>
+			<td>
+			   <a href="#" class="active top" role="button" id="sel_city">山东省&nbsp&nbsp临沂市&nbsp&nbsp费县</a>
+			   <a href="#"><img src="images/xiala.png"></a>
+			   
+			</td>
+		</tr>
+		<tr class="t3">
+			<td>详细地址：</td>
+			<td><textarea placeholder="临沂市兰山区银雀山路老交警队家属院"></textarea></td>
+		</tr>
+		<tr>
+			<td>邮政编码：</td>
+			<td><input type="text" placeholder="（选填）"></input></td>
+		</tr>
+	</table>
+</div>
+<div class="sh-main2">
+	<button class="btn1">保存</button>
+	<button class="btn2">删除收货地址</button>
+</div>
+
+<div class="gaodu"></div>
+<div class="caidan">
+	<a href="index.html">
+		<div class="caidan_1">
+			<div class="caidan_1_1">
+				<img src="images/sc2.png" alt="">
+			</div>
+			<h1 class="caidan_2_2">
+			商城
+			</h1>
+		</div>
+	</a>
+	<a href="ruanwen.html">
+		<div class="caidan_1">
+			<div class="caidan_1_1">
+				<img src="images/wz2.png" alt="">
+			</div>
+			<h1 class="caidan_2_2">
+				美文分享
+			</h1>
+		</div>
+	</a>
+	<a href="">
+		<div class="caidan_1">
+			<div class="caidan_1_1">
+				<img src="images/zs2.png" alt="">
+			</div>
+			<h1 class="caidan_2_2">
+				招商中心
+			</h1>
+		</div>
+	</a>
+	<a href="gerenzhongxinfenxiaohuiyuan.html">
+		<div class="caidan_1">
+			<div class="caidan_1_1">
+				<img src="images/grzx1.png" alt="">
+			</div>
+			<h1 class="caidan_2_2">
+				<span class="caidan_1_2">
+				个人中心
+				</span>
+			</h1>
+		</div>
+	</a>
+</div>
+<script type="text/javascript">
+	window.onload=function(){
+		var nameEl = document.getElementById('sel_city');
+
+var first = []; /* 省，直辖市 */
+var second = []; /* 市 */
+var third = []; /* 镇 */
+
+var selectedIndex = [0, 0, 0]; /* 默认选中的地区 */
+
+var checked = [0, 0, 0]; /* 已选选项 */
+
+function creatList(obj, list){
+  obj.forEach(function(item, index, arr){
+  var temp = new Object();
+  temp.text = item.name;
+  temp.value = index;
+  list.push(temp);
+  })
+}
+
+creatList(city, first);
+
+if (city[selectedIndex[0]].hasOwnProperty('sub')) {
+  creatList(city[selectedIndex[0]].sub, second);
+} else {
+  second = [{text: '', value: 0}];
+}
+
+if (city[selectedIndex[0]].sub[selectedIndex[1]].hasOwnProperty('sub')) {
+  creatList(city[selectedIndex[0]].sub[selectedIndex[1]].sub, third);
+} else {
+  third = [{text: '', value: 0}];
+}
+
+var picker = new Picker({
+    data: [first, second, third],
+  selectedIndex: selectedIndex,
+    title: '地址选择'
+});
+
+picker.on('picker.select', function (selectedVal, selectedIndex) {
+  var text1 = first[selectedIndex[0]].text;
+  var text2 = second[selectedIndex[1]].text;
+  var text3 = third[selectedIndex[2]] ? third[selectedIndex[2]].text : '';
+
+    nameEl.innerText = text1 + ' ' + text2 + ' ' + text3;
+});
+
+picker.on('picker.change', function (index, selectedIndex) {
+  if (index === 0){
+    firstChange();
+  } else if (index === 1) {
+    secondChange();
+  }
+
+  function firstChange() {
+    second = [];
+    third = [];
+    checked[0] = selectedIndex;
+    var firstCity = city[selectedIndex];
+    if (firstCity.hasOwnProperty('sub')) {
+      creatList(firstCity.sub, second);
+
+      var secondCity = city[selectedIndex].sub[0]
+      if (secondCity.hasOwnProperty('sub')) {
+        creatList(secondCity.sub, third);
+      } else {
+        third = [{text: '', value: 0}];
+        checked[2] = 0;
+      }
+    } else {
+      second = [{text: '', value: 0}];
+      third = [{text: '', value: 0}];
+      checked[1] = 0;
+      checked[2] = 0;
+    }
+
+    picker.refillColumn(1, second);
+    picker.refillColumn(2, third);
+    picker.scrollColumn(1, 0)
+    picker.scrollColumn(2, 0)
+  }
+
+  function secondChange() {
+    third = [];
+    checked[1] = selectedIndex;
+    var first_index = checked[0];
+    if (city[first_index].sub[selectedIndex].hasOwnProperty('sub')) {
+      var secondCity = city[first_index].sub[selectedIndex];
+      creatList(secondCity.sub, third);
+      picker.refillColumn(2, third);
+      picker.scrollColumn(2, 0)
+    } else {
+      third = [{text: '', value: 0}];
+      checked[2] = 0;
+      picker.refillColumn(2, third);
+      picker.scrollColumn(2, 0)
+    }
+  }
+
+});
+
+picker.on('picker.valuechange', function (selectedVal, selectedIndex) {
+  console.log(selectedVal);
+  console.log(selectedIndex);
+});
+
+nameEl.addEventListener('click', function () {
+    picker.show();
+});
+	}
+</script>
+</body>
+</html>

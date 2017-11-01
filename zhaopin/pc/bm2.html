@@ -1,0 +1,279 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>报名</title>
+<link rel="stylesheet" href="css/index.css"/>
+<link rel="stylesheet" href="css/daili.css"/>
+<style type="text/css">
+	.bm-main table td:first-child{width: 20%;}
+	.bm-main table td:nth-child(2){width: 40%;}
+	.bm-main table td:nth-child(3){padding-left:20px;color:red;font-size:14px;line-height: 30px;}
+	.bm-main table td .inp1{width: 100%;}
+	.yanzhengma input:nth-child(1){border:1px solid #bebebe;width:110px;padding-left:10px;line-height: 40px;height:40px;margin-left:122px;}
+	.yanzhengma input:nth-child(2){width:120px;line-height: 42px;height:42px;color:#fff;background-color:#4cd4fd;}
+	#duanxinyanzheninfo{font-size:14px;color:red;padding-left:20px;}
+</style>
+</head>
+
+<body style="background: #fefefe;">
+<div class="wuyoujianli_header">
+	<div class="wuyoujianli_nav">
+		小明　｜　<a href="dlym.html">退出</a>　｜　<a href="index.html">首页</a>　｜　<a href="gr-jindu.html">个人中心</a>
+	</div>
+</div>
+<div class="bm_header">
+	报 名
+</div>
+<div class="bm_tupian">
+	<div class="bm_tupian1">
+		<div class="bm_tupian2">
+			<img src="images/logo1.png" alt="">
+		</div>
+		<div class="bm_tupian3">
+			高薪就业   出国无忧
+		</div>
+		<div class="bm_tupian4">
+			无忧费用安全放心有保障随时退款急速到账<br>签出周期内未能安排成功就业100%退还中介费全程一对一就业指导出国就业很简单
+		</div>
+	</div>
+	<div class="biaodanda">
+		<div class="biaodan_header">
+			高薪急聘近海远洋船员包食宿
+		</div>
+		<div class="bm-main">
+			<div class="mar2">
+				<form method="post" action="http://taobao.com" onsubmit="return check()">
+					<table>
+						<tr>
+							<td class="bm_right"><label for="username">姓名：</label></td>
+							<td><input type="text" placeholder="请输入姓名" class="inp1 required" id="yourname" onblur="checkName()">
+							</td>
+							<td><span id="nameinfo">*</span></td>
+						</tr>
+						<tr>
+							<td class="bm_right"><label for="password">性别：</label></td>
+							<td><input type="radio" name="xingbie" class="biaodan"><span class="biaodan1">男</span>
+							<input type="radio" name="xingbie" class="biaodan"><span class="biaodan1">女</span>
+							</td>
+						</tr>
+						<tr>
+							<td class="bm_right"><label for="quere">身份证号：</label></td>
+							<td><input type="text" placeholder="请输入身份证号" value="" class="inp1 required" id="sfz" onblur="checkSfz()"></td>
+							<td><span id="sfzinfo">*</span></td>
+						</tr>
+						<tr>
+							<td class="bm_right"><label for="wx">推荐号：</label></td>
+							<td><input type="text" class="inp1 required" id="tuijian"></td>
+						</tr>
+						<tr>
+							<td class="bm_right"><label for="quere">常住地址：</label></td>
+							<td><input type="text" placeholder="请输入常住地址" value="" class="inp1 required" id="czdd" onblur="checkCzdd()"></td>
+							<td><span id="czddinfo">*</span></td>
+						</tr>
+						<tr>
+							<td class="bm_right"><label for="quere">手机号：</label></td>
+							<td><input type="text" placeholder="请输入手机号" value="" class="inp1 required" id="qu" onblur="checkQu()"></td>
+							<td><span id="quinfo">*</span></td>
+						</tr>
+					</table>
+					<div class="yanzhengma">
+						<input type="text" name="" value="" placeholder="" id="duanxinyanzhen" onblur="checkDuanxinyanzhen()"><input type="button" id="btn" class="zh-2-n2_input" value="获取短信验证码"><span id="duanxinyanzheninfo"></span>
+					</div>
+					<div class="queren">
+						<div class="que1">
+							<input type="checkbox" checked="checked">
+							<p>我已阅读并同意<a href="zhucexieyi.html"><span>《用户注册协议》</span></a></p>
+						</div>
+					</div>
+					<button class="tijiao" type="submit" id="send1">普通报名</button>
+					<button class="tijiao1" type="submit" id="send">申请无忧报名</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+<script type="text/javascript">  
+var wait=60;  
+function time(o) {  
+        if (wait == 0) {  
+            o.removeAttribute("disabled");            
+            o.value="免费获取验证码";  
+            wait = 60;  
+        } else {  
+            o.setAttribute("disabled", true);  
+            o.value="重新发送(" + wait + ")";  
+            wait--;  
+            setTimeout(function() {  
+                time(o)  
+            },  
+            1000)  
+        }  
+    }  
+document.getElementById("btn").onclick=function(){time(this);}  
+</script>
+<script type="text/javascript">
+	function check(){
+		var name=document.getElementById('yourname').value;
+		var sfz=document.getElementById('sfz').value;
+		var czdd=document.getElementById('czdd').value;
+		var qu=document.getElementById('qu').value;
+		var duanxinyanzhen=document.getElementById('duanxinyanzhen').value;
+
+		var nameinfo=document.getElementById('nameinfo');
+		var sfzinfo=document.getElementById('sfzinfo');
+		var czddinfo=document.getElementById('czddinfo');
+		var quinfo=document.getElementById('quinfo');
+		var duanxinyanzheninfo=document.getElementById('duanxinyanzheninfo');
+		// 验证姓名
+		if(name==""){
+			nameinfo.innerHTML="姓名不能为空";
+			return false;
+		}else if(name.length<2){
+			nameinfo.innerHTML="姓名长度不能小于2位";
+			return false;
+		}else if(name.length>6){
+			nameinfo.innerHTML="姓名长度不能大于6位";
+			return false;
+		}else{
+			nameinfo.innerHTML="输入正确";
+			nameinfo.style.color="green";
+		}
+		// 验证身份证号码
+		if(sfz==""){
+			sfzinfo.innerHTML="身份证号码不能为空";
+			return false;
+		}else if(sfz.length!==18){
+			sfzinfo.innerHTML="身份证格式输入不正确";
+			return false;
+		}else if(!(/^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{4}$/.test(sfz))){
+			sfzinfo.innerHTML="身份证格式输入不正确";
+			return false;
+		}else{
+			sfzinfo.innerHTML="输入正确";
+			sfzinfo.style.color="green";
+		}
+		// 验证常住地址
+		if(czdd==""){
+			czddinfo.innerHTML="常住地址不能为空";
+			return false;
+		}else{
+			czddinfo.innerHTML="输入正确";
+			czddinfo.style.color="green";
+		}
+		// 验证手机号码
+		if(qu==""){
+			quinfo.innerHTML="手机号码不能为空";
+			return false;
+		}else if(qu.length!==11){
+			quinfo.innerHTML="手机号码格式不正确";
+			return false;
+		}else if(!(/^1(3|4|5|7|8)\d{9}$/.test(qu))){
+			quinfo.innerHTML="手机号码格式不正确";
+			return false;
+		}else{
+			quinfo.innerHTML="输入正确";
+			quinfo.style.color="green";
+		}
+		// 短信验证码
+		if(duanxinyanzhen==""){
+			duanxinyanzheninfo.innerHTML="验证码不能为空";
+			return false;
+		}else if(duanxinyanzhen.length!==4){
+			duanxinyanzheninfo.innerHTML="验证码格式不正确";
+			return false;
+		}else if(!/^[0-9]*$/.test(duanxinyanzhen)){
+			duanxinyanzheninfo.innerHTML="验证码格式不正确";
+			return false;
+		}else{
+			duanxinyanzheninfo.innerHTML="输入正确";
+			duanxinyanzheninfo.style.color="green";
+		}
+	}
+	function checkName(){
+		var name=document.getElementById('yourname').value;
+		var nameinfo=document.getElementById('nameinfo');
+		// 验证姓名
+		if(name==""){
+			nameinfo.innerHTML="姓名不能为空";
+			return false;
+		}else if(name.length<2){
+			nameinfo.innerHTML="姓名长度不能小于2位";
+			return false;
+		}else if(name.length>6){
+			nameinfo.innerHTML="姓名长度不能大于6位";
+			return false;
+		}else{
+			nameinfo.innerHTML="输入正确";
+			nameinfo.style.color="green";
+		}
+	}
+	function checkSfz(){
+		var sfz=document.getElementById('sfz').value;
+		var sfzinfo=document.getElementById('sfzinfo');
+		// 验证身份证号码
+		if(sfz==""){
+			sfzinfo.innerHTML="身份证号码不能为空";
+			return false;
+		}else if(sfz.length!==18){
+			sfzinfo.innerHTML="身份证格式输入不正确";
+			return false;
+		}else if(!(/^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{4}$/.test(sfz))){
+			sfzinfo.innerHTML="身份证格式输入不正确";
+			return false;
+		}else{
+			sfzinfo.innerHTML="输入正确";
+			sfzinfo.style.color="green";
+		}
+	}
+	function checkCzdd(){
+		var czdd=document.getElementById('czdd').value;
+		var czddinfo=document.getElementById('czddinfo');
+		// 验证常住地址
+		if(czdd==""){
+			czddinfo.innerHTML="常住地址不能为空";
+			return false;
+		}else{
+			czddinfo.innerHTML="输入正确";
+			czddinfo.style.color="green";
+		}
+	}
+	function checkQu(){
+		var qu=document.getElementById('qu').value;
+		var quinfo=document.getElementById('quinfo');
+		// 验证手机号码
+		if(qu==""){
+			quinfo.innerHTML="手机号码不能为空";
+			return false;
+		}else if(qu.length!==11){
+			quinfo.innerHTML="手机号码格式不正确";
+			return false;
+		}else if(!(/^1(3|4|5|7|8)\d{9}$/.test(qu))){
+			quinfo.innerHTML="手机号码格式不正确";
+			return false;
+		}else{
+			quinfo.innerHTML="输入正确";
+			quinfo.style.color="green";
+		}
+	}
+	function checkDuanxinyanzhen(){
+		var duanxinyanzhen=document.getElementById('duanxinyanzhen').value;
+		var duanxinyanzheninfo=document.getElementById('duanxinyanzheninfo');
+		// 短信验证码
+		if(duanxinyanzhen==""){
+			duanxinyanzheninfo.innerHTML="验证码不能为空";
+			return false;
+		}else if(duanxinyanzhen.length!==4){
+			duanxinyanzheninfo.innerHTML="验证码格式不正确";
+			return false;
+		}else if(!/^[0-9]*$/.test(duanxinyanzhen)){
+			duanxinyanzheninfo.innerHTML="验证码格式不正确";
+			return false;
+		}else{
+			duanxinyanzheninfo.innerHTML="输入正确";
+			duanxinyanzheninfo.style.color="green";
+		}
+	}
+</script>
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi "> 
+<title>个人中心</title>
+<link rel="stylesheet" href="css/style.css">
+<style type="text/css">
+	.baoxian{width:calc(100% - 20px);margin:0px 10px;text-align: center;}
+	/* .baoxian>li{padding-top:30px; } */
+	.baoxian>li>p{background-color:#e4e4e4;font-size: 14px;color:#777;padding:5px 30px;display:inline-block;border-radius: 5px;}
+	.baoxian>li>.baoxian-btn{width: 100%;background-color:#fff;margin-top:20px;}
+	.baoxian>li>.baoxian-btn>.baoxian-one{width: 100%;position: relative;}
+	.baoxian>li>.baoxian-btn>.baoxian-one>.baoxian-xm{width:80px;font-size:15px;color:#333;line-height:50px;float: left;}
+	.baoxian>li>.baoxian-btn>.baoxian-one>input{height:50px;line-height: 50px;border:none;border-bottom:1px solid #dadada;float: left;padding-left:10px;width:calc(100% - 90px);outline: none;}
+	.baoxian>li>.baoxian-btn>.baoxian-one>img{width: 20px;height:20px;position: absolute;top:15px;right: 10px;}
+	.baoxian>li>.baoxian-btn>.baoxian-one:nth-child(4)>input{height:50px;line-height: 50px;border:none;float: left;padding-left:10px;width:calc(100% - 90px);outline: none;}
+	.shanchu{line-height: 50px;text-align: center;font-size:16px;color:#666;border-top:1px solid #dadada;}
+	.baoxian-jiaru{line-height: 50px;height:50px;border-top:1px solid #dadada;text-align:center;color:#fd6b6b;position: relative;background-color:#fff;width: calc(100% - 20px);margin:0 10px;}
+	.baoxian-jiaru>img{width:20px;height:20px;position:absolute;top:15px;left:50%;margin-left:-100px;}
+	.baoxian-zhifu{position: fixed;bottom:0px;left:0px;width: 100%;height:80px;border-top:1px solid #dadada;background-color:#fff;}
+	.baoxian-zhifu>button{margin: 0 auto;width: 90%;display: block; height: 50px;border-radius:5px; background: #fd6b6b;font-size:16px;color: #fff;text-align: center;line-height: 1.36rem;border: 0;outline: 0;margin-top:15px;}
+</style>
+<script type="text/javascript" src="js/jquery.js"></script>
+</head>
+
+<body style="background-color: #f3f3f3;">
+	<header class="header">
+		<div class="header_left">
+			<img src="images/guanbi.png" alt="">
+		</div>
+		<div class="header_zi">
+			心连心爱心筹
+		</div>
+		<div class="header_right">
+			<img src="images/gengduo.png" alt="">
+		</div>
+	</header>
+	<div class="header_gaodu"></div>
+	<ul class="baoxian" id="baoxianone">
+		<li class="baoxian-li">
+			<ul class="baoxian-btn">
+				<li class="baoxian-one">
+					<div class="baoxian-xm">
+						姓名
+					</div>
+					<input type="text" name="" value="" placeholder="为谁加入姓名，请输入TA姓名">
+					<div class="clearfix"></div>
+				</li>
+				<li class="baoxian-one">
+					<div class="baoxian-xm">
+						关系
+					</div>
+					<input type="text" name="" value="" placeholder="请输入双方关系">
+					<div class="clearfix"></div>
+				</li>
+				<li class="baoxian-one">
+					<div class="baoxian-xm">
+						身份证
+					</div>
+					<input type="text" name="" value="" placeholder="输入身份证号（忘记可不填）">
+					<div class="clearfix"></div>
+				</li>
+				<li class="baoxian-one">
+					<div class="baoxian-xm">
+						充值
+					</div>
+					<input type="text" name="" value="9元" placeholder="" readonly class="baoxian-jine">
+					<div class="clearfix"></div>
+				</li>
+				<li class="shanchu">删除</li>
+			</ul>
+		</li>
+	</ul>
+	<div class="baoxian-jiaru" id="btn2">
+		<img src="images/zenjia.png" alt="">为更多家人加入计划
+	</div>
+	<div style="height:160px;"></div>
+	<div class="baoxian-zhifu">
+		<button type="button" id="btn">微信支付9元</button>
+	</div>
+</body>
+
+<script type="text/javascript">
+	window.onload=function(){
+		var shuzhi=document.getElementById('btn');
+		var oBtn=document.getElementById('btn2');
+		var oUl=document.getElementById('baoxianone');
+		var aInp=document.getElementsByClassName('baoxian-jine');
+		var aLi=oUl.getElementsByClassName('baoxian-li')
+		var oPopup=document.getElementById('baoxian-kuang');
+		var aShanchu=document.getElementsByClassName('shanchu');
+		var num="";
+		var arr=['<ul class="baoxian-btn"><li class="baoxian-one"><div class="baoxian-xm">姓名</div><input type="text" name="" value="" placeholder="为谁加入姓名，请输入TA姓名"><div class="clearfix"></div></li><li class="baoxian-one"><div class="baoxian-xm">关系</div><input type="text" name="" value="" placeholder="请输入双方关系"><div class="clearfix"></div></li><li class="baoxian-one"><div class="baoxian-xm">身份证</div><input type="text" name="" value="" placeholder="输入身份证号（忘记可不填）"><div class="clearfix"></div></li><li class="baoxian-one"><div class="baoxian-xm">充值</div><input type="text" name="" value="9元" placeholder="" readonly class="baoxian-jine"><div class="clearfix"></div></li><li class="shanchu">删除</li></ul>'];
+		var num1=0;
+
+
+
+		function shujzi(){
+			for(var i=0;i<aInp.length;i++){
+				num=aInp.length*9;
+				shuzhi.innerHTML='微信支付'+num+'元';
+			}
+		}
+		shujzi();
+		oBtn.onclick=function(){
+			$(".baoxian-li").append(arr[0]);
+			shujzi();
+			// oUl.innerHTML=oUl.innerHTML+arr[0];
+			// shujzi();
+			// for(var i=0;i<aShanchu.length;i++){
+			// 	aShanchu[i].index=i;
+			// 	aShanchu[i].onclick=function(){
+			// 		// console.log(this.index);
+			// 		console.log(aLi[this.index]);
+			// 		aLi[this.index].remove(this.index);
+			// 		shujzi();
+			// 	}
+			// }
+			$(".shanchu").click(function(){
+				$(this).parent().remove();
+				shujzi();
+			});
+			
+		};
+
+	}
+</script>
+</html>

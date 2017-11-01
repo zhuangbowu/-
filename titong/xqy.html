@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi "> 
+<title>商城首页</title>
+<link rel="stylesheet" href="css/shangcheng.css">
+<script src="js/jquery.js"></script>
+</head>
+
+<body>
+<div class="page">
+	<div class="gaodu"></div>
+	<ul class="header">
+		<li class="header_left">
+			<a href="">
+				<img src="images/guanbi.png" alt="">
+			</a>
+		</li>
+		<li class="header_center">
+			河南中移铁通固话充值
+		</li>
+		<li class="header_right">
+			<a href="">
+				<img src="images/gengduo.png" alt="">
+			</a>
+		</li>
+		<div class="clearfix"></div>
+	</ul>
+	<div class="xiangqingye">
+		<img class="xiangqingye2" src="images/shouye6.png" alt="">
+		<div class="xiangqingye3" style="">
+			<a href="javascript:history.go(-1);">
+				<img src="images/fanhui1.png" alt="">
+			</a>
+		</div>
+	</div>
+	<div class="sjxx">OPPO R1 全网通4G+64G 双卡双待手机 玫瑰金色</div>
+	<div class="jiage">
+		<div class="jiage1">
+			￥2999.00
+		</div>
+		<div class="jiage2">
+			<div class="jiage3">
+				<img src="images/jian.png" alt="">
+			</div>
+			<input type="text" value="1" class="jiage4">
+			<div class="jiage5">
+				<img src="images/jia.png" alt="">
+			</div>
+		</div>
+			<div class="clearfix"></div>
+	</div>
+	<div class="fuwuzhichi">服务：由中国移动铁通指定合作商</div>
+	<div class="fuwuzhichi">承诺：正规行货　正规发票　全国联保</div>
+	<div class="fuwuzhichi">赠品：100元话费均分10个月返还+6G省内4G单模流量</div>
+	<div class="jiange"></div>
+	<div class="tuwenxiangqing">图文详情</div>
+	<div class="tu"><img src="images/xiangqingtupian.png" alt=""></div>
+	<div class="tu"><img src="images/6.jpg" alt=""></div>
+	<div class="tu"><img src="images/7.jpg" alt=""></div>
+	<div class="jiarugouwuche">
+		<a href="gwc.html">
+			<div class="jiarugouwuche1">
+				<div class="jiarugouwuche2">
+					<img src="images/gouwuche.png" alt="">
+				</div>
+				加入购物车
+			</div>
+		</a>
+		<a href="daifukuan.html">
+			<div class="jiarugouwuche3">
+				立即购买
+			</div>
+		</a>
+		<div class="clearfix"></div>
+		
+	</div>
+</div>
+<script>
+		$(document).ready(function(){
+//获得文本框对象
+   var t = $(".jiage4");
+//初始化数量为1,并失效减
+$('.jjiage3').attr('disabled',true);
+    //数量增加操作
+    $(".jiage5").click(function(){ 
+//			alert(1);
+        t.val(parseInt(t.val())+1)
+        if (parseInt(t.val())!=1){
+            $('.jiage3').attr('disabled',false);
+        }
+
+    }) 
+    //数量减少操作
+    $(".jiage3").click(function(){
+        if (parseInt(t.val())==1){
+//				alert(1);
+           $('.jiage3').attr('disabled',true);
+				return;
+        }
+			t.val(parseInt(t.val())-1);
+
+    })
+
+});
+
+</script>  
+</body>
+</html>

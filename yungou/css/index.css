@@ -1,0 +1,25 @@
+/* ::::: http://www.jq22.com/demo/69fd653e-540b-11e4-a838-00163e001348/css/base.css ::::: */
+
+body { font-family: "Segoe UI",Frutiger,Tahoma,Helvetica,"Helvetica Neue",Arial,sans-serif; font-size: 62.5%; }
+fieldset { margin-top: 1em; margin-bottom: 1em; border: 1px solid rgb(221, 221, 221); padding: 1em 15px; }
+legend { font-size: 1.4em; font-weight: bold; padding: 0.2em 5px; }
+label { margin-right: 1.2em; }
+.demo { margin: 0px auto; width: 600px; }
+.demo h3 { margin: 50px 0px 20px; font-size: 22px; color: rgb(51, 102, 204); }
+.custom-checkbox, .custom-radio { position: relative; text-align: center;}
+.custom-checkbox input { position: absolute; left: 2px; top: 2px; margin: 0px; }
+.custom-checkbox label { display: block; position: relative; font-size: 1.3em; line-height: 1; padding: 0.5em 0px 0.5em 30px; margin: 0px 0px 0.3em; cursor: pointer; }
+.custom-checkbox label { background: rgba(0, 0, 0, 0) url('checkbox.gif') no-repeat scroll 0% 0%; }
+.custom-radio label { background: rgba(0, 0, 0, 0) url('../images/radiobutton.gif') no-repeat scroll 0% 0%; }
+.custom-checkbox label, .custom-radio label { background-position: 70px -8px; }
+.custom-checkbox label.checked, .custom-radio label.checked { background-position: 70px -208px; }
+.custom-radio input { position: absolute; left: 86px; top: 2px; margin: 0px; }
+.custom-radio label { display: block; position: relative; font-size: 1.3em; line-height: 1; padding: 0.5em 0px 0.5em 30px; margin: 0px 0px 0.3em; cursor: pointer; }
+#view { width: 140px; display: block; }
+#view .custom-checkbox, #view .custom-radio { width: 50%; float: left; }
+#show { width: 250px; display: block; clear: left; }
+#show .custom-checkbox, #show .custom-radio { width: 33%; float: left; }
+.toggle label { border-collapse: collapse; }
+.toggle .custom-checkbox label, .toggle .custom-radio label { padding: 0.4em 1em; border: 1px solid rgb(45, 116, 6); text-align: center; cursor: pointer; font-size: 1.2em; width: auto; overflow: visible; background: rgb(69, 158, 0) url('button-green.gif') no-repeat scroll left center; color: rgb(255, 255, 255); text-shadow: -1px -1px 0px rgb(55, 115, 14); }
+.toggle .first label { border-bottom-left-radius: 7px; border-top-left-radius: 7px; }
+.toggle .last label { border-bottom-right-radius: 7px; border-top-right-radius: 7px; }

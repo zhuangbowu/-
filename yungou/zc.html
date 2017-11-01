@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi "> 
+<title>众创云购</title>
+<link rel="stylesheet" href="css/zhongchuangyungou.css">
+<script src="jq/jquery.js"></script>
+<script>
+		$(function(){
+			$('.xieyi1').click(function(){
+				var arr = $(this).children('img').attr('src');
+				if(arr.charAt(9)==='1'){
+					var s = arr.split('');
+					s.splice(9,1,'2');
+					var c = s.join('');
+					$(this).children('img').attr('src',c);
+				}else if(arr.charAt(9)==='2'){
+					var s = arr.split('');
+					s.splice(9,1,'1');
+					var c = s.join('');
+					$(this).children('img').attr('src',c);
+				}
+				
+			})
+		})
+	</script>
+
+</head>
+
+<body>
+<div class="tongping_1">
+	<div class="dingbu">
+		<div class="fukuan">
+		注册
+		</div>
+	</div>
+	<div class="gaodu_1"></div>
+	<div class="xinyonghu">新用户注册赠送价值500元礼包</div>
+	<div class="xinyonghu1">
+		<div class="xinyonghu2">
+			<div class="xinyonghu3">
+				<img src="images/dianhua.png" alt="">
+			</div>
+			<input class="xinyonghu4" type="text" placeholder="请输入手机号码">
+			<div class="xinyonghu5">发送验证码</div>
+		</div>
+	</div>
+	<div class="xinyonghu1">
+		<div class="xinyonghu2">
+			<div class="xinyonghu3">
+				<img src="images/yanzheng.png" alt="">
+			</div>
+			<input class="xinyonghu4" type="text" placeholder="输入验证码">
+		</div>
+	</div>
+	<div class="xinyonghu1">
+		<div class="xinyonghu2">
+			<div class="xinyonghu3">
+				<img src="images/mm.png" alt="">
+			</div>
+			<input class="xinyonghu4" type="text" placeholder="请输入密码">
+		</div>
+	</div>
+	<div class="xinyonghu1">
+		<div class="xinyonghu2">
+			<div class="xinyonghu3">
+				<img src="images/yaoqingren.png" alt="">
+			</div>
+			<input class="xinyonghu6" type="text" placeholder="请填写邀请人激活码（必填）">
+		</div>
+	</div>
+	<div class="xinyonghu1">
+		<div class="xinyonghu2">
+			<div class="xinyonghu3">
+				<img src="images/tuijianren.png" alt="">
+			</div>
+			<input class="xinyonghu6" type="text" placeholder="请填写推荐人手机号（必填）">
+		</div>
+	</div>
+	<a href="dl.html">
+		<div class="lijizhuce">
+			立即注册
+		</div>
+	</a>
+	<div class="xieyi">
+		<div class="xieyi1">
+			<img src="images/ty1.png" alt="">
+		</div>
+		<div class="xieyi2">
+			同意
+			<span class="xieyi3">
+				《众创云购用户协议》
+			</span>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+
+</body>
+</html>

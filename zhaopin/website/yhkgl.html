@@ -1,0 +1,271 @@
+<head>
+<meta charset="UTF-8">
+<!-- 优先使用 IE 最新版本和 Chrome -->
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<!-- 页面描述 -->
+<meta name="description" content="不超过150个字符"/>
+<!-- 页面关键词 -->
+<meta name="keywords" content=""/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+<meta name="format-detection" content="telphone=no, email=no"/>
+<title>银行卡修改</title>
+<link rel="stylesheet" type="text/css" href="css/cssreset.css"/>
+<link rel="stylesheet" type="text/css" href="css/index.css"/>
+</head>
+<body>
+	<div id="findpassword">
+	<div class="erjitoubu">
+		银行卡修改
+		<a href="javascript:history.go(-1);">
+			<img src="images/fanhui.png" alt="">
+		</a>
+		<div class="toubu">
+			小明 <a href="sign.html">退出</a> | <a href="index.html">首页</a>
+		</div>
+	</div>
+	<div class="list">
+		<p>
+			<a href="#">火星人才网</a><span>》</span>
+			<a href="#">会员中心  </a><span>》</span>
+			<a href="#" class="gray">银行卡修改  </a>      
+		</p>
+	</div>
+	<div class="wrap">
+		<div class="toux fl">
+			<img src="images/touxiang.png" style="width: 1.6rem; height: 1.6rem; "/>
+		</div>	
+		<div class="contant fr clearfix">
+			<div class="contant_top">
+				<span>尚泽</span>
+				<b>公司负责人：谭某某</b>
+				<a href="#">发布职位</a>
+			</div>
+			<div class="contant_middle fl">
+				<img src="images/shouji.png" style="width:0.4rem; height:0.4rem; background:#4dd4fe;" class="fl"/>
+				<span class="fl">15589645123</span>
+			</div>
+			<div class="contant_middle fl">
+				<img src="images/shouji.png" style="width:0.4rem; height:0.4rem; " class="fl"/>
+				<span class="fl">15589645123</span>
+			</div>
+			<div class="contant_bottom">
+				<img src="images/dingwei.png" style="width:0.21rem; height:0.3rem; margin-top: 0.1rem; margin-left:0.2rem;"/>
+				<span>山东省临沂市兰山区XXX</span>
+			</div>
+		</div>	
+	</div>
+	<div class="line01"></div>
+	<p class="wenzi">银行卡修改</p>
+	<div class="management2">
+		<div class="back_two">
+			<div class="back_two_mm">
+				<div class="back_two_mm1">
+					账户名：
+				</div>
+				<input type="text" class="back_two_mm2" placeholder="请输入账户名">
+				<div class="clearfix"></div>
+			</div>
+			<div class="back_two_mm">
+				<div class="back_two_mm1">
+					账号：
+				</div>
+				<input type="text" class="back_two_mm2" placeholder="请输入账号">
+				<div class="clearfix"></div>
+			</div>
+			<div class="back_two_mm">
+				<div class="back_two_mm1">
+					开户行全称：
+				</div>
+				<input type="text" class="back_two_mm2" placeholder="请输入开户行全称">
+				<div class="clearfix"></div>
+			</div>
+			<div class="management_complete">完 成</div>
+			<div class="management_complete2">银行卡绑定修改后三天内不得进行退款操作</div>
+		</div>
+	</div>	
+	<!--提交成功-->
+	<div class="xiugai" style="display: none;">
+		<div class="back_two">
+			<div class="back_two_mm">
+				<div class="back_two_mm1">
+					账户名：
+				</div>
+				<div class="back_two_mm3">
+					临沂尚泽网络有限公司
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="back_two_mm">
+				<div class="back_two_mm1">
+					账号：
+				</div>
+				<div class="back_two_mm3">
+					371325199428569
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="back_two_mm">
+				<div class="back_two_mm1">
+					开户行全称：
+				</div>
+				<div class="back_two_mm3">
+					山东省临沂市兰山区人民银行支行
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="xiugai-text">
+			修改
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="retrieval" style="display: none;">
+		<div class="retrieval_yanzhen">
+			<div class="retrieval_yanzhen_text">
+				<img src="images/yuan_03.png">
+				<p>验证账户</p>
+			</div>
+			<div class="linek"></div>
+			<div class="retrieval_yanzhen_text">
+				<img src="images/yuan_05.png">
+				<p>重置密码</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="tw">
+			<div>
+				<input type="text" placeholder="请输入手机号码" class="tw_top">
+			</div>
+			<div class="tw_bd">
+				<div class="tw_bd_br">
+					<input type="text" placeholder="图形验证码" size="13" class="tw_bd_input" />
+					<img src="images/yanzhenma.png" alt="" class="tw_bd_img">
+				</div>
+				<div class="tw_bd_kan">看不清，换一张</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="tw_bd2">
+				<input type="text" placeholder="短信验证码" class="tw_bd_input2"/>
+				<input type="button" class="tw_bd_input3" value="获取短信验证码" id="btn">
+				<div class="clearfix"></div>
+			</div>
+			<button type="submit" class="tw_bd_input4">提交</button>
+		</div>
+	</div>
+	<div class="retrieval1" style="display: none;">
+		<div class="retrieval_yanzhen">
+			<div class="retrieval_yanzhen_text">
+				<img src="images/yuan_04.png">
+				<p>验证账户</p>
+			</div>
+			<div class="linek"></div>
+			<div class="retrieval_yanzhen_text">
+				<img src="images/yuan_02.png">
+				<p>重置密码</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div style="height: 20px;"></div>
+		<div class="back_two">
+			<div class="back_two_mm">
+				<div class="back_two_mm1">
+					账户名：
+				</div>
+				<input type="text" class="back_two_mm2" placeholder="请输入账户名">
+				<div class="clearfix"></div>
+			</div>
+			<div class="back_two_mm">
+				<div class="back_two_mm1">
+					账号：
+				</div>
+				<input type="text" class="back_two_mm2" placeholder="请输入账号">
+				<div class="clearfix"></div>
+			</div>
+			<div class="back_two_mm">
+				<div class="back_two_mm1">
+					开户行全称：
+				</div>
+				<input type="text" class="back_two_mm2" placeholder="请输入开户行全称">
+				<div class="clearfix"></div>
+			</div>
+			<div class="management_complete">完 成</div>
+			<div class="management_complete2">银行卡绑定修改后三天内不得进行退款操作</div>
+		</div>
+	</div>
+	<div class="footer">
+		<p>
+			<a href="#">网站资质</a><span>|</span>
+			<a href="#">备案</a><span>|</span>
+			<a href="#">法律声明</a><span>|</span>
+			<a href="yinsiquan.html">隐私权政策</a>
+		</p>
+		<p>未经同意，不得转载本网站之所有招聘信息及作品</p>
+		<p>火星人才网版权所有©2017-3017  |  地址：沈阳市沈河区</p>
+		<p> 服务热线：400-024-5880  邮箱：175969151@163.com</p>
+	</div>	
+	<script src="js/jquery-1.10.2.min.js"></script>
+	
+	<script type="text/javascript">
+    	
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   			
+   		});
+   		 var doc = document;
+        var win = window;
+        function initFontSize(){
+            var docEl = doc.documentElement;
+           //判断窗口有没有orientationchange这个方法，有就赋值给一个变量，没有就返回resize方法。
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                //获取设计图的尺寸--750px
+                fontSizeRate = (clientWidth / 750);
+                //设置大小--目前的设备大小是
+                var baseFontSize = 100*fontSizeRate;
+                docEl.style.fontSize = baseFontSize + 'px';
+              //  console.log(baseFontSize);
+            };
+            recalc();
+         
+        }
+        initFontSize();
+        
+    </script>
+<script>
+	$('.management_complete').click(function(){
+		$('.retrieval1').hide();
+		$('.management2').hide();
+		$('.xiugai').show();
+	});
+	$('.xiugai-text').click(function(){
+		$('.xiugai').hide();
+		$('.retrieval').show();
+	});
+	$('.tw_bd_input4').click(function(){
+		$('.retrieval').hide();
+		$('.retrieval1').show();
+	});
+</script>
+<script type="text/javascript">  
+var wait=60;  
+function time(o) {  
+        if (wait == 0) {  
+            o.removeAttribute("disabled");            
+            o.value="免费获取验证码";  
+            wait = 60;  
+        } else {  
+            o.setAttribute("disabled", true);  
+            o.value="重新发送(" + wait + ")";  
+            wait--;  
+            setTimeout(function() {  
+                time(o)  
+            },  
+            1000)  
+        }  
+    }  
+document.getElementById("btn").onclick=function(){time(this);}  
+</script>
+</body>
+</html>

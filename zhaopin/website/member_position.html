@@ -1,0 +1,430 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi ">
+<title>会员中心-职位进程条</title>
+<link rel="stylesheet" href="css/swiper.min.css">
+<script src="js/swiper.min.js"></script>
+<script src="js/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div style="min-height:100%">
+	<!--头部-->
+	<div class="erjitoubu">
+		已报名职位
+		<a href="javascript:history.go(-1);">
+			<img src="images/fanhui.png" alt="">
+		</a>
+		<div class="toubu">
+			小明 <a href="sign.html">退出</a> | <a href="index.html">首页</a>
+		</div>
+	</div>
+	<!--会员中心通用页面-->
+	<div class="modification_nav">
+		<div class="modification_nav_text">
+			火星人才网
+		</div>
+		<div class="modification_nav_img">
+			<img src="images/xiayi.png" alt="">
+		</div>
+		<div class="modification_nav_text">
+			会员中心
+		</div>
+		<div class="modification_nav_img">
+			<img src="images/xiayi.png" alt="">
+		</div>
+		<div class="modification_nav_a">
+			已报名职位
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="modification_portrait">
+		<div class="modification_img">
+			<img src="images/touxiang.png" alt="">
+		</div>
+		<div class="modification_data">
+			<div class="modification_data_one">
+				尚泽       
+			</div>
+			<div class="modification_data_two">
+				男 | 28岁 
+			</div>
+			<div class="clearfix"></div>
+			<div class="modification_data_img">
+				<img src="images/dingwei.png" alt="">
+			</div>
+			<div class="modification_data_four">
+				山东省临沂市兰山区XXX
+			</div>
+			<div class="clearfix"></div>
+			<div class="modification_sj">
+				<div class="modification_sj1">
+					<img src="images/sj.png" alt="">
+				</div>
+				<div class="modification_sj2">
+					15589645123
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="modification_wx">
+				<div class="modification_wx1">
+					<img src="images/wx.png" alt="">
+				</div>
+				<input type="text" class="modification_wx2" value="15589645123" readonly id="beigai">
+				<span class="modification_wx3" id="xiugai">[修改]</span>
+				<span class="modification_wx3" style="display: none;" id="baocun">[保存]</span>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<!--密码修改-->
+	<div class="back_one">
+		已报名职位
+		<div class="back_one_right">（左右滑动查看职位进程）</div>
+	</div>
+	<div class="baozhuangong">
+		<div class="baozhuangong1">
+			<div class="baozhuangong2">包装工</div>
+			<div class="baozhuangong3">2000元</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="baozhuangong1">
+			<div class="baozhuangong_two2">男 | 25-50岁 | 大专 | 日本</div>
+			<div class="baozhuangong_two3">临沂市尚泽网络</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="baozhuangong1">
+			<div class="baozhuangong_two2">
+				<img src="images/wuyouzhgiwei.png" alt="" class="baozhuangong_three_img1">
+				<img src="images/sfz.png" alt="" class="baozhuangong_three_img">
+				<img src="images/tx.png" alt="" class="baozhuangong_three_img">
+				<img src="images/sz.png" alt="" class="baozhuangong_three_img">
+			</div>
+			<div class="baozhuangong_two3">2017-07-07</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="baozhuangong_zprs">招聘人数：200人 | 已报名人数：80人</div>
+		<div class="baozhuangong1">
+			<div class="baozhuangong_four3">取消报名</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<div class="jinchengtiao">
+		<div class="jinchengtiao_huadong" style="left: 0;" id="id">
+			<div class="jinchengtiao_dingwei">
+				<div class="jinchengtiao_one1">
+					<div class="jinchengtiao_text1">
+						报名
+					</div>
+				</div>
+				<div class="jinchengtiao_one2">
+				</div>
+				<div class="jinchengtiao_two1">
+					<div class="jinchengtiao_text2">
+						电话<br>
+						回访
+					</div>
+				</div>
+				<div class="jinchengtiao_two2">
+				</div>
+				<div class="jinchengtiao_three1">
+					<div class="jinchengtiao_text2">
+						提交<br>
+						资料
+					</div>
+				</div>
+				<div class="jinchengtiao_three2">
+				</div>
+				<div class="jinchengtiao_four1">
+					<div class="jinchengtiao_text1">
+						报名费
+					</div>
+				</div>
+				<div class="jinchengtiao_four2">
+				</div>
+				<div class="jinchengtiao_five1">
+					<div class="jinchengtiao_text2">
+						面试<br>
+						考核
+					</div>
+				</div>
+				<div class="jinchengtiao_five2">
+				</div>
+				<div class="jinchengtiao_six1">
+					<div class="jinchengtiao_text1">
+						中介费
+					</div>
+				</div>
+				<div class="jinchengtiao_six2">
+				</div>
+				<div class="jinchengtiao_seven1">
+					<div class="jinchengtiao_text2">
+						办理<br>
+						签证
+					</div>
+				</div>
+				<div class="jinchengtiao_seven2">
+				</div>
+				<div class="jinchengtiao_eight1">
+					<div class="jinchengtiao_text2">
+						购买<br>
+						机票
+					</div>
+				</div>
+				<div class="jinchengtiao_eight2">
+				</div>
+				<div class="jinchengtiao_nine1">
+					<div class="jinchengtiao_text2">
+						出国<br>
+						就业
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="gaodu"></div>
+	<div class="baozhuangong">
+		<div class="baozhuangong1">
+			<div class="baozhuangong2">包装工</div>
+			<div class="baozhuangong3">2000元</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="baozhuangong1">
+			<div class="baozhuangong_two2">男 | 25-50岁 | 大专 | 日本</div>
+			<div class="baozhuangong_two3">临沂市尚泽网络</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="baozhuangong1">
+			<div class="baozhuangong_two2">
+				<img src="images/wuyouzhgiwei.png" alt="" class="baozhuangong_three_img1">
+				<img src="images/sfz.png" alt="" class="baozhuangong_three_img">
+				<img src="images/tx.png" alt="" class="baozhuangong_three_img">
+				<img src="images/sz.png" alt="" class="baozhuangong_three_img">
+			</div>
+			<div class="baozhuangong_two3">2017-07-07</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="baozhuangong_zprs">招聘人数：200人 | 已报名人数：80人</div>
+		<div class="baozhuangong1">
+			<div class="baozhuangong_four3">取消报名</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<div class="jinchengtiao">
+		<div class="jinchengtiao_huadong" style="left: 0;" id="id1">
+			<div class="jinchengtiao_dingwei">
+				<div class="jinchengtiao_one1">
+					<div class="jinchengtiao_text1">
+						报名
+					</div>
+				</div>
+				<div class="jinchengtiao_one2">
+				</div>
+				<div class="jinchengtiao_two1">
+					<div class="jinchengtiao_text2">
+						电话<br>
+						回访
+					</div>
+				</div>
+				<div class="jinchengtiao_two2">
+				</div>
+				<div class="jinchengtiao_three1">
+					<div class="jinchengtiao_text2">
+						提交<br>
+						资料
+					</div>
+				</div>
+				<div class="jinchengtiao_three2">
+				</div>
+				<div class="jinchengtiao_four1">
+					<div class="jinchengtiao_text1">
+						报名费
+					</div>
+				</div>
+				<div class="jinchengtiao_four2">
+				</div>
+				<div class="jinchengtiao_five1">
+					<div class="jinchengtiao_text2">
+						面试<br>
+						考核
+					</div>
+				</div>
+				<div class="jinchengtiao_five2">
+				</div>
+				<div class="jinchengtiao_six1">
+					<div class="jinchengtiao_text1">
+						中介费
+					</div>
+				</div>
+				<div class="jinchengtiao_six2">
+				</div>
+				<div class="jinchengtiao_seven1">
+					<div class="jinchengtiao_text2">
+						办理<br>
+						签证
+					</div>
+				</div>
+				<div class="jinchengtiao_seven2">
+				</div>
+				<div class="jinchengtiao_eight1">
+					<div class="jinchengtiao_text2">
+						购买<br>
+						机票
+					</div>
+				</div>
+				<div class="jinchengtiao_eight2">
+				</div>
+				<div class="jinchengtiao_nine1">
+					<div class="jinchengtiao_text2">
+						出国<br>
+						就业
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<ul class="fanye">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>下一页</li>
+		<div class="clearfix"></div>
+	</ul>
+</div>
+<!--底部通用-->
+<div class="home-bottom">
+	<div class="home-bottom3">
+		网站资质  |  备案   |   法律声明 ｜ <a href="yinsiquan.html">隐私权政策</a><br>
+		未经同意，不得转载本网站之所有招聘信息及作品<br>
+		火星人才网版权所有©2017-3017  |  地址：沈阳市沈河区<br>
+		服务热线：400-024-5880  邮箱：175969151@163.com
+	</div>
+</div>
+<!--弹出窗口-->
+<div class="tanchuang">
+	<div class="tanchuang_fff">
+		<div class="tanchuang_top">
+			<div class="tanchuang_top_left">取消报名</div>
+			<div class="tanchuang_top_right"><img src="images/gb.png" alt="" style="width: 12px;"></div>
+			<div class="clearfix"></div>	
+		</div>
+		<div class="tanchuang_nr">
+			已扣款：<span style="color: #f00;">2000</span>元
+		</div>
+		<div class="tanchuang_nr1">
+			请详细确认扣款，有疑问致电客服400-024-5880
+		</div>
+		<div class="tanchuang_qd">确认</div>
+		<div class="tanchuang_qx">取消</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+<!--修改号码-->
+<script>
+	$('.baozhuangong_four3').click(function(){
+		$('.tanchuang').show();
+	});
+	$('.tanchuang_top_right,.tanchuang_qd,.tanchuang_qx').click(function(){
+		$('.tanchuang').hide();
+	})
+</script>
+<script>
+		var xiugai=document.getElementById('xiugai');
+		var beigai=document.getElementById('beigai');
+		var baocun=document.getElementById('baocun');
+		var dian=function(){
+		beigai.readOnly=false;
+		beigai.style.borderBottom="solid 1px #aaa";
+		xiugai.style.display="none";
+		baocun.style.display="block"; 
+	}
+	var ji=function(){
+		beigai.style="readOnly";
+		beigai.style.borderBottom="none";
+		xiugai.style.display="block";
+		baocun.style.display="none";
+	}
+	xiugai.onclick=function(){
+		dian()
+	}
+	beigai.onblur=function(){
+		if(beigai.value.length<11){
+			alert('请输入号码');
+		}else if(beigai.value.length>11){
+			alert('请输入正确的号码');
+		}else{
+		ji();
+		}
+	}
+</script>
+<script>  
+function load (){  
+  
+        /*单指拖动*/  
+    var obj = document.getElementById('id');  
+    obj.addEventListener("touchstart", function(event) {  
+        var touch = event.targetTouches[0];  
+        var left = parseInt(obj.style.left);  
+        // alert(left);  
+        var x = touch.pageX - left;  
+        var y = touch.pageY - left;  
+        obj.addEventListener('touchmove', function(event) {  
+            // 如果这个元素的位置内只有一个手指的话  
+  
+            if (event.targetTouches.length == 1) {　　　　  
+                event.preventDefault(); // 阻止浏览器默认事件，重要   
+                var touch = event.targetTouches[0];  
+                // 把元素放在手指所在的位置  
+  
+                obj.style.left = touch.pageX - x + 'px';  
+                // obj.style.top = touch.pageY + 'px';  
+            }  
+        }, false);  
+  
+    });  
+    obj.addEventListener("touchend",function(){  
+        obj.removeEventListener("touchstart");  
+        obj.removeEventListener("touchmove");  
+    });     
+}  
+window.addEventListener('load',load, false);  
+function load1 (){
+  
+        /*单指拖动*/  
+    var obj = document.getElementById('id1');  
+    obj.addEventListener("touchstart", function(event) {  
+        var touch = event.targetTouches[0];  
+        var left = parseInt(obj.style.left);  
+        // alert(left);  
+        var x = touch.pageX - left;  
+        var y = touch.pageY - left;  
+        obj.addEventListener('touchmove', function(event) {  
+            // 如果这个元素的位置内只有一个手指的话  
+  
+            if (event.targetTouches.length == 1) {　　　　  
+                event.preventDefault(); // 阻止浏览器默认事件，重要   
+                var touch = event.targetTouches[0];  
+                // 把元素放在手指所在的位置  
+  
+                obj.style.left = touch.pageX - x + 'px';  
+                // obj.style.top = touch.pageY + 'px';  
+            }  
+        }, false);  
+  
+    });  
+    obj.addEventListener("touchend",function(){  
+        obj.removeEventListener("touchstart");  
+        obj.removeEventListener("touchmove");  
+    });     
+}  
+window.addEventListener('load',load1, false);  
+ </script>
+</body>
+</html>

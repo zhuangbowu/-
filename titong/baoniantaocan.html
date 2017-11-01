@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi "> 
+<title>铁通包年套餐</title>
+<script src="js/jquery.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div class="page_2">
+<ul class="header">
+	<li class="header_left"><a href=""><img src="images/guanbi.png" alt=""></a></li>
+	<li class="header_center">铁通包年套餐</li>
+	<li class="header_right"><a href=""><img src="images/gengduo.png" alt=""></a></li>
+	<div class="clearfix"></div>
+</ul>
+<ul class="kuandai_1">
+	<a href="baoniantaocan.html"><li class="kuandai_left_1">新套餐</li></a>
+	<a href="chaxuntaocan.html"><li class="kuandai_right_1">查询套餐</li></a>
+	<a href="genggaitaocan.html"><li class="kuandai_right_1">更改套餐</li></a>
+</ul>
+<div class="fanwei">
+<div class="tetong">铁通号码 (新套餐)</div>
+<div class="tetong_shuru">
+	<input type="text" placeholder="请输入铁通号码">
+</div>
+</div>
+<div class="xuanzetaocan">选择套餐</div>
+<div class="fanwei">
+<div class="baoniantaocan">
+	<div class="baoniantaocan_left"><img src="images/xuanze-1.png" alt=""></div>
+	<div class="baoniantaocan_right">
+		<h1>商务卡260元包年套餐</h1>
+		<h2>当月20元，次月开始返还40元话费×12个月</h2>
+	</div>
+	<div class="clearfix"></div>
+</div>
+<div class="baoniantaocan">
+	<div class="baoniantaocan_left"><img src="images/xuanze-2.png" alt=""></div>
+	<div class="baoniantaocan_right">
+		<h1>商务卡390元包年套餐</h1>
+		<h2>当月30元，次月开始返还40元话费×12个月</h2>
+	</div>
+	<div class="clearfix"></div>
+</div>
+<div class="baoniantaocan">
+	<div class="baoniantaocan_left"><img src="images/xuanze-2.png" alt=""></div>
+	<div class="baoniantaocan_right">
+		<h1>商务卡650元包年套餐</h1>
+		<h2>当月50元，次月开始返还40元话费×12个月</h2>
+	</div>
+	<div class="clearfix"></div>
+</div>
+<div class="baoniantaocan">
+	<div class="baoniantaocan_left"><img src="images/xuanze-2.png" alt=""></div>
+	<div class="baoniantaocan_right">
+		<h1>商务卡990元包年套餐</h1>
+		<h2>当月30元，次月开始返还40元话费×24个月</h2>
+	</div>
+	<div class="clearfix"></div>
+</div>
+<div class="baoniantaocan">
+	<div class="baoniantaocan_left"><img src="images/xuanze-2.png" alt=""></div>
+	<div class="baoniantaocan_right_1">
+		<h1>商务卡490元包年套餐</h1>
+		<h2>当月10元，次月开始返还40元话费×24个月</h2>
+	</div>
+	<div class="clearfix"></div>
+</div>
+
+<script>
+	$(function(){
+		$(".baoniantaocan_left").click(function(){
+			var src1= $(this).children('img').attr('src');
+//			console.log(src1.charAt(14));
+			if(src1.charAt(14)=='1'){
+				var c1=src1.split("");
+//				console.log(c1);
+				c1.splice(14,1,'2');
+//				console.log(c1);
+				var c2=c1.join("");
+//				console.log(c2);
+				$(this).children('img').attr('src',c2);
+				
+			}else if(src1.charAt(14)=='2'){
+				var c1=src1.split("");
+//				console.log(c1);
+				c1.splice(14,1,'1');
+//				console.log(c1);
+				var c2=c1.join("");
+//				console.log(c2);
+				$(this).children('img').attr('src',c2);
+				$(this).parent('.baoniantaocan').siblings('.baoniantaocan').children('.baoniantaocan_left').children('img').attr('src',"images/xuanze-2.png");
+			}
+		})
+	})
+</script>
+
+
+</div>
+<div class="fengge"></div>
+<div class="fanwei">
+<div class="tetong_shuru">
+	<input type="text" placeholder="请输入备注信息">
+</div>
+<div class="tishi">以上套餐，均为当月订购下月生效，28号前订购最佳，早订购，话费早返还。</div>
+<div class="kefu">客服：56610050</div>
+<div class="anniu"><a href=""><input type="button" value="确认支付"></a></div>
+</div>
+</div>
+</body>
+</html>

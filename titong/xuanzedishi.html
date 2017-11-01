@@ -1,0 +1,194 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi "> 
+<title>选择城市</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.js"></script>
+<script type="text/javascript">
+//		function toXianshi(){
+//			document.getElementById('touming').style.display='block';
+//			console.log(this.id);
+//		}
+		$(function(){
+			$('.xialaxuanze').click(function(){
+//				alert($(this).id);
+//				alert('1');
+				$('.touming').show();
+				$('.touming').children('.xuanzechenshi').children('.xuanzechenshi_1').children('.xuanzechenshi_2').click(function(){
+//					alert('1');
+//					console.log($(this).attr('class'));
+//					alert($(this).next('.xuanzeguzhang_3').html());
+					var c = $(this).next('.xuanzechenshi_3').html();
+					$('.xialaxuanze1').children('input').attr('value',c);
+					$('.touming').hide();
+				})
+				
+			})
+		})
+//		function toYincang(){
+//			document.getElementById('touming').style.display='none';
+//		}
+	
+	</script>
+</head>
+
+<body>
+<div class="page_2">
+<ul class="header">
+	<li class="header_left"><a href=""><img src="images/guanbi.png" alt=""></a></li>
+	<li class="header_center">河南中移铁通固化充值</li>
+	<li class="header_right"><a href=""><img src="images/gengduo.png" alt=""></a></li>
+	<div class="clearfix"></div>
+</ul>
+<div class="touming">
+		<div class="xuanzechenshi">
+		<div class="xuanzechenshi_1">
+		<div class="xuanzechenshi_2"><img src="images/xuanze-1.png" alt=""></div>
+		<div class="xuanzechenshi_3">请选择城市</div>
+		<div class="clearfix"></div>
+		</div>
+		<div class="xuanzechenshi_1">
+		<div class="xuanzechenshi_2"><img src="images/xuanze-2.png" alt=""></div>
+		<div class="xuanzechenshi_3">郑州市</div>
+		<div class="clearfix"></div>
+		</div>
+		<div class="xuanzechenshi_1">
+		<div class="xuanzechenshi_2"><img src="images/xuanze-2.png" alt=""></div>
+		<div class="xuanzechenshi_3">洛阳市</div>
+		<div class="clearfix"></div>
+		</div>
+		<div class="xuanzechenshi_1">
+		<div class="xuanzechenshi_2"><img src="images/xuanze-2.png" alt=""></div>
+		<div class="xuanzechenshi_3">许昌市</div>
+		<div class="clearfix"></div>
+		</div>
+		<div class="xuanzechenshi_1">
+		<div class="xuanzechenshi_2"><img src="images/xuanze-2.png" alt=""></div>
+		<div class="xuanzechenshi_3">商丘市</div>
+		<div class="clearfix"></div>
+		</div>
+		<div class="xuanzechenshi_1">
+		<div class="xuanzechenshi_2"><img src="images/xuanze-2.png" alt=""></div>
+		<div class="xuanzechenshi_3">安阳市</div>
+		<div class="clearfix"></div>
+		</div>
+		<div class="xuanzechenshi_1">
+		<div class="xuanzechenshi_2"><img src="images/xuanze-2.png" alt=""></div>
+		<div class="xuanzechenshi_3">新乡市</div>
+		<div class="clearfix"></div>
+		</div>
+		<div class="xuanzechenshi_1">
+		<div class="xuanzechenshi_2"><img src="images/xuanze-2.png" alt=""></div>
+		<div class="xuanzechenshi_3">平顶山市</div>
+		<div class="clearfix"></div>
+		</div>
+		<div class="xuanzechenshi_1">
+		<div class="xuanzechenshi_2"><img src="images/xuanze-2.png" alt=""></div>
+		<div class="xuanzechenshi_3">南阳市</div>
+		<div class="clearfix"></div>
+		</div>
+		<div class="xuanzechenshi_1">
+		<div class="xuanzechenshi_2"><img src="images/xuanze-2.png" alt=""></div>
+		<div class="xuanzechenshi_3">开封市</div>
+		<div class="clearfix"></div>
+		</div>
+</div>
+<!--<script>
+	$(function(){
+		$(".xuanzechenshi_2").click(function(){
+			var src1= $(this).children('img').attr('src');
+//			console.log(src1.charAt(14));
+			if(src1.charAt(14)=='1'){
+				var c1=src1.split("");
+//				console.log(c1);
+				c1.splice(14,1,'2');
+//				console.log(c1);
+				var c2=c1.join("");
+//				console.log(c2);
+				$(this).children('img').attr('src',c2);
+				
+			}else if(src1.charAt(14)=='2'){
+				var c1=src1.split("");
+//				console.log(c1);
+				c1.splice(14,1,'1');
+//				console.log(c1);
+				var c2=c1.join("");
+//				console.log(c2);
+				$(this).children('img').attr('src',c2);
+				$(this).parent('.xuanzechenshi_1').siblings('.xuanzechenshi_1').children('.xuanzechenshi_2').children('img').attr('src',"images/xuanze-2.png");
+			}
+		})
+	})
+</script>-->
+
+
+</div>
+<ul class="diqu">
+	<li>选择地区</li>
+</ul>
+<form action="" class="xuanze">
+	<div class="xialaxuanze1"><input type="text" value="" placeholder="请选择地市"></div>
+	<div class="xialaxuanze"><img src="images/xiala.png" alt=""></div>
+	<div class="clearfix"></div>
+</form>
+<ul class="diqu">
+	<li>电话号码</li>
+</ul>
+<form action="" class="xuanze">
+	<input type="text" placeholder="请输入铁通号码">
+	<div class="clearfix"></div>
+</form>
+<ul class="diqu">
+	<li>充话费</li>
+</ul>
+<div class="chonghuafei">
+	<ul>
+		<a href=""><li>
+			<h1>10元</h1>
+			<h2>售价9.9元</h2>
+		</li></a>
+		<a href=""><li>
+			<h1>20元</h1>
+			<h2>售价19.8元</h2>
+		</li></a>
+		<a href=""><li>
+			<h1>30元</h1>
+			<h2>售价29.9元</h2>
+		</li></a>
+	</ul>
+	<ul>
+		<a href=""><li>
+			<h1>50元</h1>
+			<h2>售价48.9元</h2>
+		</li></a>
+		<a href=""><li>
+			<h1>100元</h1>
+			<h2>售价98.8元</h2>
+		</li></a>
+		<a href=""><li>
+			<h1>150元</h1>
+			<h2>售价148.6元</h2>
+		</li></a>
+	</ul>
+	<ul>
+		<a href=""><li>
+			<h1>200元</h1>
+			<h2>售价198.6元</h2>
+		</li></a>
+		<a href=""><li>
+			<h1>300元</h1>
+			<h2>售价298.2元</h2>
+		</li></a>
+		<a href=""><li>
+			<h1>500元</h1>
+			<h2>售价496.0元</h2>
+		</li></a>
+	</ul>
+	<div class="clearfix"></div>
+</div>
+<div class="tianchong"></div>
+</div>
+</body>
+</html>

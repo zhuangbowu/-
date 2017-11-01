@@ -1,0 +1,313 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi ">
+<title>代理会员中心-账户管理</title>
+<link rel="stylesheet" href="css/swiper.min.css">
+<script src="js/swiper.min.js"></script>
+<script src="js/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div style="min-height:100%;">
+	<!--头部-->
+	<div class="erjitoubu">
+		账户管理
+		<a href="javascript:history.go(-1);">
+			<img src="images/fanhui.png" alt="">
+		</a>
+		<div class="toubu">
+			小明 <a href="sign.html">退出</a> | <a href="index.html">首页</a>
+		</div>
+	</div>
+	<!--会员中心通用页面-->
+	<div class="modification_nav">
+		<div class="modification_nav_text">
+			火星人才网
+		</div>
+		<div class="modification_nav_img">
+			<img src="images/xiayi.png" alt="">
+		</div>
+		<div class="modification_nav_text">
+			会员中心
+		</div>
+		<div class="modification_nav_img">
+			<img src="images/xiayi.png" alt="">
+		</div>
+		<div class="modification_nav_a">
+			账户管理
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="modification_portrait">
+		<div class="modification_img">
+			<img src="images/touxiang.png" alt="">
+		</div>
+		<div class="modification_data">
+			<div class="modification_data_one">
+				尚泽       
+			</div>
+			<div class="modification_data_two">
+				男 | 28岁 
+			</div>
+			<div class="clearfix"></div>
+			<div class="modification_data_img">
+				<img src="images/dingwei.png" alt="">
+			</div>
+			<div class="modification_data_four">
+				山东省临沂市兰山区XXX
+			</div>
+			<div class="clearfix"></div>
+			<div class="modification_sj">
+				<div class="modification_sj1">
+					<img src="images/sj.png" alt="">
+				</div>
+				<div class="modification_sj2">
+					15589645123
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="modification_wx">
+				<div class="modification_wx1">
+					<img src="images/wx.png" alt="">
+				</div>
+				<input type="text" class="modification_wx2" value="15589645123" readonly id="beigai">
+				<span class="modification_wx3" id="xiugai">[修改]</span>
+				<span class="modification_wx3" style="display: none;" id="baocun">[保存]</span>
+				<div class="clearfix"></div>
+			</div>
+			<div class="modification_tjh">
+				推荐码：123456
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<!--身份证绑定-->
+	<a href="agent_management.html">
+		<div class="back_one2">
+			身份证绑定
+		</div>
+	</a>
+	<a href="agent_management2.html">
+		<div class="back_one1">
+			银行卡绑定
+		</div>
+	</a>
+	<div class="clearfix"></div>
+	<!--上传身份证-->
+	<div class="management2">
+		<div class="back_two">
+			<div class="back_two_mm">
+				<div class="back_two_mm1">
+					账户名：
+				</div>
+				<input type="text" class="back_two_mm2" placeholder="请输入账户名">
+				<div class="clearfix"></div>
+			</div>
+			<div class="back_two_mm">
+				<div class="back_two_mm1">
+					账号：
+				</div>
+				<input type="text" class="back_two_mm2" placeholder="请输入账号">
+				<div class="clearfix"></div>
+			</div>
+			<div class="back_two_mm">
+				<div class="back_two_mm1">
+					开户行全称：
+				</div>
+				<input type="text" class="back_two_mm2" placeholder="请输入开户行全称">
+				<div class="clearfix"></div>
+			</div>
+			<div class="management_complete">完 成</div>
+			<div class="management_complete2">银行卡绑定修改后三天内不得进行退款操作</div>
+		</div>
+
+	</div>	
+	<!--提交成功-->
+	<div class="xiugai" style="display: none;">
+		<div class="back_two">
+			<div class="back_two_mm">
+				<div class="back_two_mm1">
+					账户名：
+				</div>
+				<div class="back_two_mm3">
+					临沂尚泽网络有限公司
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="back_two_mm">
+				<div class="back_two_mm1">
+					账号：
+				</div>
+				<div class="back_two_mm3">
+					371325199428569
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="back_two_mm">
+				<div class="back_two_mm1">
+					开户行全称：
+				</div>
+				<div class="back_two_mm3">
+					山东省临沂市兰山区人民银行支行
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		<div class="xiugai-text">
+			修改
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="retrieval" style="display: none;">
+		<div class="retrieval_yanzhen">
+			<div class="retrieval_yanzhen_text">
+				<img src="images/yuan_03.png">
+				<p>验证账户</p>
+			</div>
+			<div class="line"></div>
+			<div class="retrieval_yanzhen_text">
+				<img src="images/yuan_05.png">
+				<p>重置密码</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="tw">
+			<div>
+				<input type="text" placeholder="请输入手机号码" class="tw_top">
+			</div>
+			<div class="tw_bd">
+				<div class="tw_bd_br">
+					<input type="text" placeholder="图形验证码" size="13" class="tw_bd_input" />
+					<img src="images/yanzhenma.png" alt="" class="tw_bd_img">
+				</div>
+				<div class="tw_bd_kan">看不清，换一张</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="tw_bd2">
+				<input type="text" placeholder="短信验证码" class="tw_bd_input2"/>
+				<input type="button" class="tw_bd_input3" value="获取短信验证码" id="btn">
+				<div class="clearfix"></div>
+			</div>
+			<button type="submit" class="tw_bd_input4">提交</button>
+		</div>
+	</div>
+	<div class="retrieval1" style="display: none;">
+		<div class="retrieval_yanzhen">
+			<div class="retrieval_yanzhen_text">
+				<img src="images/yuan_04.png">
+				<p>验证账户</p>
+			</div>
+			<div class="line"></div>
+			<div class="retrieval_yanzhen_text">
+				<img src="images/yuan_02.png">
+				<p>重置密码</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div style="height: 20px;"></div>
+		<div class="back_two">
+			<div class="back_two_mm">
+				<div class="back_two_mm1">
+					账户名：
+				</div>
+				<input type="text" class="back_two_mm2" placeholder="请输入账户名">
+				<div class="clearfix"></div>
+			</div>
+			<div class="back_two_mm">
+				<div class="back_two_mm1">
+					账号：
+				</div>
+				<input type="text" class="back_two_mm2" placeholder="请输入账号">
+				<div class="clearfix"></div>
+			</div>
+			<div class="back_two_mm">
+				<div class="back_two_mm1">
+					开户行全称：
+				</div>
+				<input type="text" class="back_two_mm2" placeholder="请输入开户行全称">
+				<div class="clearfix"></div>
+			</div>
+			<div class="management_complete">完 成</div>
+			<div class="management_complete2">银行卡绑定修改后三天内不得进行退款操作</div>
+		</div>
+	</div>
+</div>
+<!--底部通用-->
+<div class="home-bottom">
+	<div class="home-bottom3">
+		网站资质  |  备案   |   法律声明 ｜ <a href="yinsiquan.html">隐私权政策</a><br>
+		未经同意，不得转载本网站之所有招聘信息及作品<br>
+		火星人才网版权所有©2017-3017  |  地址：沈阳市沈河区<br>
+		服务热线：400-024-5880  邮箱：175969151@163.com
+	</div>
+</div>
+<!--修改号码-->
+<script>
+		var xiugai=document.getElementById('xiugai');
+		var beigai=document.getElementById('beigai');
+		var baocun=document.getElementById('baocun');
+		var dian=function(){
+		beigai.readOnly=false;
+		beigai.style.borderBottom="solid 1px #aaa";
+		xiugai.style.display="none";
+		baocun.style.display="block"; 
+	}
+	var ji=function(){
+		beigai.style="readOnly";
+		beigai.style.borderBottom="none";
+		xiugai.style.display="block";
+		baocun.style.display="none";
+	}
+	xiugai.onclick=function(){
+		dian()
+	}
+	beigai.onblur=function(){
+		if(beigai.value.length<11){
+			alert('请输入号码');
+		}else if(beigai.value.length>11){
+			alert('请输入正确的号码');
+		}else{
+		ji();
+		}
+	}
+</script>
+<script>
+	$('.management_complete').click(function(){
+		$('.retrieval1').hide();
+		$('.management2').hide();
+		$('.xiugai').show();
+	});
+	$('.xiugai-text').click(function(){
+		$('.xiugai').hide();
+		$('.retrieval').show();
+	});
+	$('.tw_bd_input4').click(function(){
+		$('.retrieval').hide();
+		$('.retrieval1').show();
+	});
+</script>
+<script type="text/javascript">  
+var wait=60;  
+function time(o) {  
+        if (wait == 0) {  
+            o.removeAttribute("disabled");            
+            o.value="免费获取验证码";  
+            wait = 60;  
+        } else {  
+            o.setAttribute("disabled", true);  
+            o.value="重新发送(" + wait + ")";  
+            wait--;  
+            setTimeout(function() {  
+                time(o)  
+            },  
+            1000)  
+        }  
+    }  
+document.getElementById("btn").onclick=function(){time(this);}  
+</script>
+</body>
+</html>

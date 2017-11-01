@@ -1,0 +1,403 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>企业中心-发布职位</title>
+<link rel="stylesheet" href="css/index.css"/>
+<script src="js/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script src="js/jquery-1.5.2.min.js"></script>
+</head>
+
+<body>
+<div class="wuyoujianli_header">
+	<div class="wuyoujianli_nav">
+		<span class="wuyoujianli_nav1">小明</span>　<a href="dlym.html">退出</a>　|　<a href="index.html">首页</a>　|　<a href="qy-cwgl.html">个人中心</a>
+	</div>
+</div>
+<div class="header-b">
+   <div class="inner">
+		<a href="index.html">
+			<div class="logo">
+			   <img src="images/header_03.jpg">
+		   </div>
+		</a>
+	   <div class="tel" style="float: right;">
+		   <img src="images/header_14.jpg">
+	   </div>
+   </div>
+</div>
+<div class="inner">	
+	<div class="remind1">
+		<img src="images/xiaxian.jpg" alt="">
+		职位发布
+	</div>
+	<form action="">
+		<table class="remind" style="padding-top: 60px;" border="1">
+			<tr>
+				<td class="zhiwei">
+					职位标题：
+				</td>
+				<td class="zhiwei1">
+					<input type="text" placeholder="请输入职位标题，不超过10个字" class="zhiwei2 required" id="btd">
+				</td>
+			</tr>
+			<tr>
+				<td class="zhiwei">职位类别、名称：</td>
+				<td class="zhiwei1" id="one">
+					<select id="province" class="zhiwei3">
+						<option>请选择职位类</option>
+						<option>文职销售</option>
+						<option>服务行业</option>
+						<option>技术工种</option> 
+						<option>普工</option> 
+						<option>建筑行业</option>
+						<option>其他</option>
+				   </select>
+				   <select class="city zhiwei4">
+						<option>请选择职位</option>
+				   </select>
+				   <select class="city zhiwei4">
+					   <option>销售</option>
+					   <option>幼师</option>
+					   <option>教师</option>
+					   <option>文员</option>
+					   <option>助理</option>
+					   <option>会计</option>
+					   <option>采购</option>
+						<option>其他</option>
+				   </select>
+				   <select class="city zhiwei4">
+					   <option>客服</option>
+					   <option>前台</option>
+					   <option>厨师</option>
+					   <option>帮厨</option>
+					   <option>收银台</option>
+					   <option>服务员</option>
+					   <option>面点师</option>
+					   <option>足疗按摩</option>
+					   <option>中医推拿</option>
+					   <option>美容美发美甲</option>
+						<option>其他</option>
+				   </select>
+				   <select class="city zhiwei4">
+					   <option>电工</option>
+					   <option>钳工</option>
+					   <option>焊工</option>
+					   <option>司机</option>
+					   <option>装修</option>
+					   <option>汽修</option>
+					   <option>编程</option>
+					   <option>工程师</option>
+					   <option>设计师</option>
+					   <option>缝纫工</option>
+					   <option>CAD制图</option>
+					   <option>数控机床</option>
+					   <option>设备维护</option>
+					   <option>空调安装</option>
+					   <option>机械加工</option>
+					   <option>钣金喷漆</option>
+					   <option>工IT互联网</option>
+						<option>其他</option>
+				   </select>
+				   <select class="city zhiwei4">
+					   <option>杂工</option>
+					   <option>库管</option>
+					   <option>保洁</option>
+					   <option>电子厂</option>
+						<option>其他</option>
+				   </select>
+				   <select class="city zhiwei4">
+					   <option>木工</option>
+					   <option>瓦工</option>
+					   <option>钢筋工</option>
+					   <option>施工员</option>
+					   <option>测量员</option>
+						<option>其他</option>
+				   </select>
+				</td>
+			</tr>
+			<tr>
+				<td class="zhiwei">性别:</td>
+				<td class="zhiwei1">
+					<form action="">
+						<input type="radio" name="see" class="zhiwei5"> 男
+						<input type="radio" name="see" class="zhiwei5"> 女
+						<input type="radio" name="see" class="zhiwei5 required"> 男女不限
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td class="zhiwei">学历:</td>
+				<td class="zhiwei1">
+					<select name="cars" class="zhiwei6 required">
+						<option value="初中及以下">初中及以下</option>
+						<option value="高中/中技/中专">高中/中技/中专</option>
+						<option value="大专">大专</option>
+						<option value="本科">本科</option>
+						<option value="硕士">硕士</option>
+						<option value="博士">博士</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td class="zhiwei">年龄:</td>
+				<td class="zhiwei1">
+					<input type="text" class="zhiwei7 required" id="xiaxian"> - <input type="text" class="zhiwei7 required" id="shangxian">
+				</td>
+			</tr>
+			<tr>
+				<td class="zhiwei">国家:</td>
+				<td class="zhiwei1" id="two">
+					<select name="cars" class="zhiwei3" id="province1">
+						<option value="">请选择洲</option>
+						<option value="">亚洲</option>
+						<option value="">欧洲</option>
+						<option value="">非洲</option>
+						<option value="">大洋洲</option>
+						<option value="">北美洲</option>
+						<option value="">南美洲</option>
+					</select>
+					<select name="cars" class="city zhiwei4 required">
+						<option>请选择国家</option>
+				   </select>
+				   <select class="city zhiwei4">
+					   <option>韩国</option>
+					   <option>日本</option>
+					   <option>泰国</option>
+					   <option>文莱</option>
+					   <option>柬埔寨</option>
+					   <option>新加坡</option>
+					   <option>以色列</option>
+					   <option>阿联酋</option>
+					   <option>土耳其</option>
+					   <option>马来西亚</option>
+					   <option>巴基斯坦</option>
+					   <option>塞浦路斯</option>
+					   <option>印度尼西亚</option>
+					   <option>哈萨克斯坦</option>
+					   <option>沙特阿拉伯</option>
+					   <option>斯里兰卡以色列</option>
+						<option>其他</option>
+				   </select>
+				   <select class="city zhiwei4">
+					   <option>芬兰</option>
+					   <option>瑞典</option>
+					   <option>挪威</option>
+					   <option>德国</option>
+					   <option>瑞士</option>
+					   <option>英国</option>
+					   <option>荷兰</option>
+					   <option>法国</option>
+					   <option>爱尔兰</option>
+					   <option>奥地利</option>
+					   <option>比利时</option>
+					   <option>卢森堡</option>
+					   <option>摩纳哥</option>
+					   <option>意大利</option>
+					   <option>西班牙</option>
+					   <option>俄罗斯</option>
+					   <option>乌克兰</option>
+						<option>其他</option>
+				   </select>
+				   <select class="city zhiwei4">
+					   <option>加纳</option>
+					   <option>摩纳哥</option>
+					   <option>赞比亚</option>
+					   <option>安哥拉</option>
+					   <option>喀麦隆</option>
+					   <option>毛里塔尼</option>
+					   <option>利比里亚</option>
+					   <option>科特迪瓦</option>
+					   <option>坦桑尼亚</option>
+					   <option>津巴布韦</option>
+					   <option>毛里求斯</option>
+					   <option>埃塞俄比亚</option>
+					   <option>阿尔及利亚</option>
+					   <option>赤道几内亚</option>
+						<option>其他</option>
+				   </select>
+				   <select class="city zhiwei4">
+					   <option>帕劳</option>
+					   <option>关岛</option>
+					   <option>新西兰</option>
+					   <option>斐济群岛</option>
+					   <option>澳大利亚</option>
+					   <option>所罗门群岛</option>
+					   <option>巴布亚新几内亚</option>
+						<option>其他</option>
+				   </select>
+				   <select class="city zhiwei4">
+					   <option>美国</option>
+					   <option>墨西哥</option>
+					   <option>加拿大</option>
+					   <option>巴拿马</option>
+					   <option>牙买加</option>
+					   <option>格陵兰</option>
+					   <option>尼加拉瓜</option>
+					   <option>哥斯达黎加</option>
+						<option>其他</option>
+				   </select>
+				   <select class="city zhiwei4">
+					   <option>巴西</option>
+					   <option>智利</option>
+					   <option>秘鲁</option>
+					   <option>圭亚那</option>
+					   <option>苏里南</option>
+					   <option>哥伦比亚</option>
+					   <option>委内瑞拉</option>
+					   <option>厄瓜多尔</option>
+					   <option>玻利维亚</option>
+						<option>其他</option>
+				   </select>
+				</td>
+			</tr>
+			<tr>
+				<td class="zhiwei">工资:</td>
+				<td class="zhiwei1">
+					<input type="text" class="zhiwei7 required" id="zuidi"> - <input type="text" class="zhiwei7 required" id="zuigao">
+				</td>
+			</tr>
+			<tr>
+				<td class="zhiwei">中介费:</td>
+				<td class="zhiwei1">
+					<input type="text" class="zhiwei6 required" id="zhjf">
+				</td>
+			</tr>
+			<tr>
+				<td class="zhiwei">有无培训费:</td>
+				<td class="zhiwei1">
+					<form action="">
+						<input type="radio" name="see" class="zhiwei5"> 有
+						<input type="radio" name="see" class="zhiwei5 required"> 无
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td class="zhiwei">面试时间:</td>
+				<td class="zhiwei1">
+					<input type="text" class="zhiwei6 required" id="mssj">
+				</td>
+			</tr>
+			<tr>
+				<td class="zhiwei">面试地点:</td>
+				<td class="zhiwei1">
+					<input type="text" class="zhiwei6 required" id="msdd">
+				</td>
+			</tr>
+			<tr>
+				<td class="zhiwei">签出周期:</td>
+				<td class="zhiwei1">
+					<input type="text" class="zhiwei6 required" id="qianchu">
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td class="zhiwei71">
+					企业接收护照当日起至成功出境就业当日止，最长不得超过180个自然日。
+				</td>
+			</tr>
+			<tr>
+				<td class="zhiwei" valign="top">详细介绍:</td>
+				<td class="zhiwei1">
+					<div class="zhiwei17_1">
+						<div class="qing">&nbsp;请详细介绍您的公司信息：</div>
+						<div class="qing1">500字以内</div>
+						<div class="clearfix"></div>
+						<textarea name="" id="xxjs" class="zhiwei15 required" style="resize: none;"></textarea>
+						<div id="preview" class="zhiwei17">
+							<img src="images/shangchuan.jpg" alt="" id="imghead" onClick="$('#previewImg').click();">
+							<input type="file" onChange="previewImage(this)" style="opacity: 0;" id="previewImg" class="zhiwei16">
+						</div>
+						<div id="preview1" class="zhiwei17">
+							<img src="images/shangchuan.jpg" alt="" id="imghead1" onClick="$('#previewImg1').click();">
+							<input type="file" onChange="previewImage1(this)" style="opacity: 0;" id="previewImg1" class="zhiwei16">
+						</div>
+						<div id="preview2" class="zhiwei17">
+							<img src="images/shangchuan.jpg" alt="" id="imghead2" onClick="$('#previewImg2').click();">
+							<input type="file" onChange="previewImage2(this)" style="opacity: 0;" id="previewImg2" class="zhiwei16">
+						</div>
+						<div class="clearfix"></div>
+						<div class="shangchuan1">上传图片每张图片&#60;3M</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="zhiwei">招聘人数:</td>
+				<td class="zhiwei1">
+					<input type="text" class="zhiwei6 required" id="zprs">
+				</td>
+			</tr>
+			<tr>
+				<td class="zhiwei">代理价格:</td>
+				<td class="zhiwei1">
+					<input type="text" class="zhiwei6" style="padding-left: 10px;"> 元
+					<div class="zhiwei18">发布普通职位可不填写</div>
+				</td>
+			</tr>
+		</table>
+		<div class="tongyi2">
+			<div class="tongyi">
+				<input type="checkbox" checked>
+			</div>
+			<div class="tongyi1">我已阅读并同意<a href="zhucexieyi.html"><span>《用户注册协议》</span></a></div>
+			<div class="clearfix"></div>	
+			<div class="clearfix"></div>
+			<div class="tongyi1">注：职位发布后除变更为无忧职位不得做其他修改</div>
+		</div>
+		<div>
+			<div class="zhiwei12">
+				<div class="zhiwei20" id="fabu">发布普通职位</div>
+				<div class="zhiwei21" id="fabu1">发布无忧职位</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</form>
+</div>
+<div class="dibu">
+		<div class="dibu1">
+			<div class="dibu2">
+				<img src="images/footer_29.jpg" alt="">
+			</div>
+			<div class="dibu3">
+				<div>网站资质　|　备案　|　法律声明　｜　<a href="yinsiquan.html">隐私权政策</a></div>
+				<div>未经同意，不得转载本网站之所有招聘信息及作品　|　火星人才网版权所有©2017-3017</div>
+				<div>地址：沈阳市沈河区　服务热线：400-024-5880　邮箱：175969151@163.com</div>
+			</div>
+		<div class="clearfix"></div>
+		</div>
+	</div>
+<script> 
+var currentShowCity=0;
+$(document).ready(function(){
+   $("#one #province").change(function(){
+	   $("#one #province option").each(function(i,o){
+		   if($(this).attr("selected"))
+		   {
+			   $("#one .city").hide();
+			   $("#one .city").eq(i).show();
+			   currentShowCity=i;
+		   }
+	   });
+   });
+   $("#one #province").change();
+});
+</script>
+<script>
+var currentShowCity=0;
+$(document).ready(function(){
+   $("#two #province1").change(function(){
+	   $("#two #province1 option").each(function(i,o){
+		   if($(this).attr("selected"))
+		   {
+			   $("#two .city").hide();
+			   $("#two .city").eq(i).show();
+			   currentShowCity=i;
+		   }
+	   });
+   });
+   $("#two #province1").change();
+});
+</script>
+</body>
+</html>

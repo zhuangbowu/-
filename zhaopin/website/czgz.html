@@ -1,0 +1,773 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi ">
+<meta charset="utf-8">
+<title>查找工作</title>
+<link rel="stylesheet" href="css/swiper.min.css">
+<script src="js/swiper.min.js"></script>
+<script src="js/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/demo.css">
+<script src="js/czgz.js"></script>
+<script src="js/czgz2.js"></script>
+</head>
+
+<body>
+<div style="min-height: 100%">
+	<!--头部-->
+	<div class="erjitoubu">
+		找工作
+		<a href="index.html">
+			<img src="images/fanhui.png" alt="">
+		</a>
+	</div>
+	<!--导航-->
+	<ul class="nav">
+		<a href="czgz.html"><li><img src="images/zhaogongzuo2.png" alt=""></li></a>
+		<a href="background.html"><li><img src="images/xiangmuhezuo.png" alt=""></li></a>
+		<a href="member.html"><li><img src="images/huiyuanzhongxin.png" alt=""></li></a>
+		<a href="aid.html"><li><img src="images/falvyuanzhu.png" alt=""></li></a>
+		<a href="loan.html"><li><img src="images/shengqingdaikuan.png" alt=""></li></a>
+		<a href="service.html"><li><img src="images/zengzhifuwu.png" alt=""></li></a>
+		<div class="clearfix"></div>
+	</ul>
+	<div class="chazhao">
+		<form action="">
+			<div class="task_xuanze_one_left">
+				<input type="text" placeholder="请输入关键字" class="task_xuanze_one_left1">
+				<div class="task_xuanze_one_left2" id="input-sele">
+					亚洲
+				</div>
+				<div class="task_xuanze_one_left3">
+					+
+				</div>
+			</div>
+			<div class="task_xuanze_one_right">
+				<input class="task_xuanze_one_right1" type="text" placeholder="行业类别">
+				<div class="task_xuanze_one_right2" id="input-sele2">
+					行业类别
+				</div>
+				<div class="task_xuanze_one_right3">
+					+
+				</div>
+			</div>
+		   <input class="ssuo2" type="button" value="搜索" style="">
+		</form>
+		<div class="clearfix"></div>
+		<ul class="task_xuanze_three" id="one">
+			<li>薪资：</li>
+			<li class="task_xuanze_three_color task_xz" id="box">所有</li>
+			<li class="task_xz" id="boxcolor1">2000-6000元</li>
+			<li class="task_xz" id="boxcolor2">6000-10000元</li>
+			<li class="task_xz" id="boxcolor3">10000-15000元</li>
+			<li class="task_xz" id="boxcolor4">15000-20000元</li>
+			<li class="task_xz" id="boxcolor5">20000以上</li>
+			<li class="task_xuanze_three_duoxuan">+多选</li>
+			<div class="clearfix"></div>
+		</ul>
+		<ul class="task_xuanze_three" id="two">
+			<li>资质认证：</li>
+			<li class="task_xuanze_three_color task_xz" id="cox">所有</li>
+			<li class="task_xz" id="coxcolor1">营业执照</li>
+			<li class="task_xz" id="coxcolor2">商务部派遣资质</li>
+			<li class="task_xz" id="coxcolor3">海员派遣资质</li>
+			<li class="task_xuanze_three_duoxuan">+多选</li>
+			<div class="clearfix"></div>
+		</ul>
+		<ul class="task_xuanze_three" id="four">
+			<li>职位种类：</li>
+			<li class="task_xuanze_three_color task_xz">普通职位</li>
+			<li class="task_xz">无忧职位</li>
+			<div class="clearfix"></div>
+		</ul>
+		<ul class="task_xuanze_three" id="five">
+			<li>学历要求：</li>
+			<li class="task_xuanze_three_color task_xz" id="dox">所有</li>
+			<li class="task_xz" id="doxcolor1">初中及以下</li>
+			<li class="task_xz" id="doxcolor2">高中/中技/中专</li>
+			<li class="task_xz" id="doxcolor3">大专</li>
+			<li class="task_xz" id="doxcolor4">本科</li>
+			<li class="task_xz" id="doxcolor5">硕士</li>
+			<li class="task_xz" id="doxcolor6">博士</li>
+			<li class="task_xuanze_three_duoxuan">+多选</li>
+			<div class="clearfix"></div>
+		</ul>
+		<ul class="task_xuanze_three" id="six">
+			<li>中介费：</li>
+			<li class="task_xuanze_three_color task_xz">10000以下</li>
+			<li class="task_xz">10000-20000</li>
+			<li class="task_xz">20000以上</li>
+			<div class="clearfix"></div>
+		</ul>
+		<ul class="task_xuanze_three">
+			<li>性别：</li>
+			<li><input type="radio" style="float: left;margin-top: 6px;margin-right: 4px;"><div style="float: left;margin-right: 5px;"> 男</div></li>
+			<li><input type="radio" style="float: left;margin-top: 6px;margin-right: 4px;"><div style="float: left;"> 女</div></li>
+			<div class="clearfix"></div>
+		</ul>
+		<ul class="task_xuanze_three" id="seven">
+			<li>发布时间：</li>
+			<li class="task_xz task_xuanze_three_color" id="eox">所有</li>
+			<li class="task_xz" id="eoxcolor1">24小时内</li>
+			<li class="task_xz" id="eoxcolor2">近三天</li>
+			<li class="task_xz" id="eoxcolor3">近一周</li>
+			<li class="task_xz" id="eoxcolor4">近一月</li>
+			<li class="task_xuanze_three_duoxuan">+多选</li>
+			<div class="clearfix"></div>
+		</ul>
+	</div>
+	<div class="nei">
+		<a href="zwxq.html">
+			<div class="baozhuangong">
+				<div class="baozhuangong1">
+					<div class="baozhuangong2">包装工</div>
+					<div class="baozhuangong3">2000元</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="baozhuangong1">
+					<div class="baozhuangong_two2">男 | 25-50岁 | 大专 | 日本</div>
+					<div class="baozhuangong_two3">临沂市尚泽网络</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="baozhuangong1">
+					<div class="baozhuangong_two2">
+						<img src="images/wuyouzhgiwei.png" alt="" class="baozhuangong_three_img1">
+						<img src="images/sfz.png" alt="" class="baozhuangong_three_img">
+						<img src="images/tx.png" alt="" class="baozhuangong_three_img">
+						<img src="images/sz.png" alt="" class="baozhuangong_three_img">
+					</div>
+					<div class="baozhuangong_two3">2017-07-07</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="baozhuangong_zprs">招聘人数：200人 | 已报名人数：80人</div>
+			</div>
+		</a>
+		<a href="zwxq.html">
+			<div class="baozhuangong">
+				<div class="baozhuangong1">
+					<div class="baozhuangong2">包装工</div>
+					<div class="baozhuangong3">2000元</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="baozhuangong1">
+					<div class="baozhuangong_two2">男 | 25-50岁 | 大专 | 日本</div>
+					<div class="baozhuangong_two3">临沂市尚泽网络</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="baozhuangong1">
+					<div class="baozhuangong_two2">
+						<img src="images/wuyouzhgiwei.png" alt="" class="baozhuangong_three_img1">
+						<img src="images/sfz.png" alt="" class="baozhuangong_three_img">
+						<img src="images/tx.png" alt="" class="baozhuangong_three_img">
+						<img src="images/sz.png" alt="" class="baozhuangong_three_img">
+					</div>
+					<div class="baozhuangong_two3">2017-07-07</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="baozhuangong_zprs">招聘人数：200人 | 已报名人数：80人</div>
+			</div>
+		</a>
+		<a href="zwxq.html">
+			<div class="baozhuangong">
+				<div class="baozhuangong1">
+					<div class="baozhuangong2">包装工</div>
+					<div class="baozhuangong3">2000元</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="baozhuangong1">
+					<div class="baozhuangong_two2">男 | 25-50岁 | 大专 | 日本</div>
+					<div class="baozhuangong_two3">临沂市尚泽网络</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="baozhuangong1">
+					<div class="baozhuangong_two2">
+						<img src="images/wuyouzhgiwei.png" alt="" class="baozhuangong_three_img1">
+						<img src="images/sfz.png" alt="" class="baozhuangong_three_img">
+						<img src="images/tx.png" alt="" class="baozhuangong_three_img">
+						<img src="images/sz.png" alt="" class="baozhuangong_three_img">
+					</div>
+					<div class="baozhuangong_two3">2017-07-07</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="baozhuangong_zprs">招聘人数：200人 | 已报名人数：80人</div>
+			</div>
+		</a>
+		<a href="zwxq.html">
+			<div class="baozhuangong">
+				<div class="baozhuangong1">
+					<div class="baozhuangong2">包装工</div>
+					<div class="baozhuangong3">2000元</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="baozhuangong1">
+					<div class="baozhuangong_two2">男 | 25-50岁 | 大专 | 日本</div>
+					<div class="baozhuangong_two3">临沂市尚泽网络</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="baozhuangong1">
+					<div class="baozhuangong_two2">
+						<img src="images/wuyouzhgiwei.png" alt="" class="baozhuangong_three_img1">
+						<img src="images/sfz.png" alt="" class="baozhuangong_three_img">
+						<img src="images/tx.png" alt="" class="baozhuangong_three_img">
+						<img src="images/sz.png" alt="" class="baozhuangong_three_img">
+					</div>
+					<div class="baozhuangong_two3">2017-07-07</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="baozhuangong_zprs">招聘人数：200人 | 已报名人数：80人</div>
+			</div>
+		</a>
+		<a href="zwxq.html">
+			<div class="baozhuangong">
+				<div class="baozhuangong1">
+					<div class="baozhuangong2">包装工</div>
+					<div class="baozhuangong3">2000元</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="baozhuangong1">
+					<div class="baozhuangong_two2">男 | 25-50岁 | 大专 | 日本</div>
+					<div class="baozhuangong_two3">临沂市尚泽网络</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="baozhuangong1">
+					<div class="baozhuangong_two2">
+						<img src="images/wuyouzhgiwei.png" alt="" class="baozhuangong_three_img1">
+						<img src="images/sfz.png" alt="" class="baozhuangong_three_img">
+						<img src="images/tx.png" alt="" class="baozhuangong_three_img">
+						<img src="images/sz.png" alt="" class="baozhuangong_three_img">
+					</div>
+					<div class="baozhuangong_two3">2017-07-07</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="baozhuangong_zprs">招聘人数：200人 | 已报名人数：80人</div>
+			</div>
+		</a>
+		<a href="zwxq.html">
+			<div class="baozhuangong">
+				<div class="baozhuangong1">
+					<div class="baozhuangong2">包装工</div>
+					<div class="baozhuangong3">2000元</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="baozhuangong1">
+					<div class="baozhuangong_two2">男 | 25-50岁 | 大专 | 日本</div>
+					<div class="baozhuangong_two3">临沂市尚泽网络</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="baozhuangong1">
+					<div class="baozhuangong_two2">
+						<img src="images/wuyouzhgiwei.png" alt="" class="baozhuangong_three_img1">
+						<img src="images/sfz.png" alt="" class="baozhuangong_three_img">
+						<img src="images/tx.png" alt="" class="baozhuangong_three_img">
+						<img src="images/sz.png" alt="" class="baozhuangong_three_img">
+					</div>
+					<div class="baozhuangong_two3">2017-07-07</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="baozhuangong_zprs">招聘人数：200人 | 已报名人数：80人</div>
+			</div>
+		</a>
+		<a href="zwxq.html">
+			<div class="baozhuangong">
+				<div class="baozhuangong1">
+					<div class="baozhuangong2">包装工</div>
+					<div class="baozhuangong3">2000元</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="baozhuangong1">
+					<div class="baozhuangong_two2">男 | 25-50岁 | 大专 | 日本</div>
+					<div class="baozhuangong_two3">临沂市尚泽网络</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="baozhuangong1">
+					<div class="baozhuangong_two2">
+						<img src="images/wuyouzhgiwei.png" alt="" class="baozhuangong_three_img1">
+						<img src="images/sfz.png" alt="" class="baozhuangong_three_img">
+						<img src="images/tx.png" alt="" class="baozhuangong_three_img">
+						<img src="images/sz.png" alt="" class="baozhuangong_three_img">
+					</div>
+					<div class="baozhuangong_two3">2017-07-07</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="baozhuangong_zprs">招聘人数：200人 | 已报名人数：80人</div>
+			</div>
+		</a>
+		<a href="zwxq.html">
+			<div class="baozhuangong">
+				<div class="baozhuangong1">
+					<div class="baozhuangong2">包装工</div>
+					<div class="baozhuangong3">2000元</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="baozhuangong1">
+					<div class="baozhuangong_two2">男 | 25-50岁 | 大专 | 日本</div>
+					<div class="baozhuangong_two3">临沂市尚泽网络</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="baozhuangong1">
+					<div class="baozhuangong_two2">
+						<img src="images/wuyouzhgiwei.png" alt="" class="baozhuangong_three_img1">
+						<img src="images/sfz.png" alt="" class="baozhuangong_three_img">
+						<img src="images/tx.png" alt="" class="baozhuangong_three_img">
+						<img src="images/sz.png" alt="" class="baozhuangong_three_img">
+					</div>
+					<div class="baozhuangong_two3">2017-07-07</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="baozhuangong_zprs">招聘人数：200人 | 已报名人数：80人</div>
+			</div>
+		</a>
+		<ul class="fanye">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+			<li>下一页</li>
+			<div class="clearfix"></div>
+		</ul>
+	</div>
+	<div class="clear"></div>
+</div>
+<!--底部-->
+<div class="home-bottom">
+	<div class="home-bottom3">
+		网站资质  |  备案   |   法律声明 ｜ <a href="yinsiquan.html">隐私权政策</a><br>
+		未经同意，不得转载本网站之所有招聘信息及作品<br>
+		火星人才网版权所有©2017-3017  |  地址：沈阳市沈河区<br>
+		服务热线：400-024-5880  邮箱：175969151@163.com
+	</div>
+</div>
+<!--弹窗-->
+<div class="chazhao-select-bg">
+	<div class="chazhao-select">
+		<div class="chazhao-select-title">
+			<h2>选择国家</h2>(最多选择<span>5</span>项)
+			<i class="select-close"></i>
+		</div>
+		<div class="select-content"> 
+		</div>
+		<div class="select-body">
+			<div class="select-boy-left">
+				<li class="activeli">亚洲</li>
+				<li>欧洲</li>
+				<li>非洲</li>
+				<li>大洋洲</li>
+				<li>北美洲</li>
+				<li>南洋洲</li>
+			</div>
+			<div class="select-boy-right">
+				<div class="select-right-item active-right-item"><span>韩国</span><span>日本</span><span>柬埔寨</span><span>泰国</span><span>马来西亚</span><span>文莱</span><span>新加坡</span><span>印度尼西亚</span><span>巴基斯坦</span><span>斯里兰卡以色列</span><span>哈萨克斯坦</span><span>以色列</span><span>沙特阿拉伯</span><span>阿联酋</span><span>土耳其</span><span>塞浦路斯</span><span>其他</span></div>
+				<div class="select-right-item"><span>芬兰</span><span>瑞典</span><span>挪威</span><span>德国</span><span>奥地利</span><span>瑞士</span><span>英国</span><span>爱尔兰</span><span>荷兰</span><span>比利时</span><span>卢森堡</span><span>法国</span><span>摩纳哥</span><span>意大利</span><span>西班牙</span><span>俄罗斯</span><span>乌克兰</span><span>其他</span></div>
+				<div class="select-right-item"><span>阿尔及利亚</span><span>摩洛哥</span><span>埃塞俄比亚</span><span>坦桑尼亚</span><span>赤道几内亚</span><span>毛里塔尼</span><span>利比里亚</span><span>科特迪瓦</span><span>加纳</span><span>赞比亚</span><span>安哥拉</span><span>津巴布韦</span><span>毛里求斯</span><span>喀麦隆</span><span>其他</span></div>
+				<div class="select-right-item"><span>澳大利亚</span><span>新西兰</span><span>帕劳</span><span>斐济群岛</span><span>关岛</span><span>巴布亚新几内亚</span><span>所罗门群岛</span><span>其他</span></div>
+				<div class="select-right-item"><span>加拿大</span><span>美国</span><span>墨西哥</span><span>格陵兰</span><span>尼加拉瓜</span><span>哥斯达黎加</span><span>巴拿马</span><span>牙买加</span><span>其他</span></div>
+				<div class="select-right-item"><span>哥伦比亚</span><span>委内瑞拉</span><span>圭亚那</span><span>苏里南</span><span>厄瓜多尔</span><span>秘鲁</span><span>玻利维亚</span><span>巴西</span><span>智利</span><span>其他</span></div>
+			</div>
+		</div>
+		<div class="select-btn">
+			<button class="btn-ok">确定</button>
+			<button class="btn-close">取消</button>
+		</div>
+	</div>
+</div>
+<div class="chazhao-select-bg2">
+	<div class="chazhao-select2">
+		<div class="chazhao-select-title2">
+			<h2>选择职位</h2>(最多选择<span>5</span>项)
+			<i class="select-close2"></i>
+		</div>
+		<div class="select-content2">
+		</div>
+		<div class="select-body2">
+			<div class="select-boy-left2">
+				<li class="activeli2">文职销售</li>
+				<li>服务行业</li>
+				<li>技术工种</li>
+				<li>普工</li>
+				<li>建筑行业</li>
+			</div>
+			<div class="select-boy-right2">
+				<div class="select-right-item2 active-right-item2"><span>销售</span><span>幼师</span><span>教师</span><span>文员</span><span>助理</span><span>会计</span><span>采购</span><span>其他</span></div>
+				<div class="select-right-item2"><span>客服</span><span>前台</span><span>收银员</span><span>服务员</span><span>厨师</span><span>面点师</span><span>帮厨</span><span>美容美发美甲</span><span>足疗按摩</span><span>中医推拿</span><span>其他</span></div>
+				<div class="select-right-item2"><span>数控车床</span><span>机械加工</span><span>钣金喷漆</span><span>CAD制图</span><span>编程</span><span>设计师</span><span>工程师</span><span>IT互联网</span><span>汽修</span><span>设备维护</span><span>空调安装</span><span>装修</span><span>缝纫工</span><span>电工</span><span>钳工</span><span>焊工</span><span>司机</span><span>其他</span></div>
+				<div class="select-right-item2"><span>电子厂</span><span>杂工</span><span>库管</span><span>保洁</span><span>其他</span></div>
+				<div class="select-right-item2"><span>木工</span><span>瓦工</span><span>钢筋工</span><span>施工员</span><span>测量员</span><span>其他</span></div>
+			</div>
+		</div>
+		<div class="select-btn2">
+			<button class="btn-ok2">确定</button>
+			<button class="btn-close2">取消</button>
+		</div>
+	</div>
+</div>
+<div class="pf_xz" style="display: none;">
+	<div class="pf_xz_nr">
+		<div class="pf_xz_hd">
+			薪资：
+		<img src="images/gb.png" alt="" class="pf_xz_hd_img">
+		</div>
+		<div class="clearfix"></div>
+		<div class="pf_xz_ti">
+			<div class="pf_xz_ti1">
+				<input class="pf_xz_ti2" type="checkbox" name="" id="box1">
+				<div class="pf_xz_ti3">
+					2000-6000
+				</div>
+			</div>
+			<div class="pf_xz_ti1">
+				<input class="pf_xz_ti2" type="checkbox" name="" id="box2">
+				<div class="pf_xz_ti3">
+					6000-10000
+				</div>
+			</div>
+			<div class="pf_xz_ti1">
+				<input class="pf_xz_ti2" type="checkbox" name="" id="box3">
+				<div class="pf_xz_ti3">
+					10000-15000
+				</div>
+			</div>
+			<div class="pf_xz_ti1">
+				<input class="pf_xz_ti2" type="checkbox" name="" id="box4">
+				<div class="pf_xz_ti3">
+					15000-20000
+				</div>
+			</div>
+			<div class="pf_xz_ti1">
+				<input class="pf_xz_ti2" type="checkbox" name="" id="box5">
+				<div class="pf_xz_ti3">
+					20000以上
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="pf_qd">确定</div>
+		<div class="pf_qx">取消</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+<div class="pf_xz2" style="display: none;">
+	<div class="pf_xz_nr">
+		<div class="pf_xz_hd">
+			资质认证：
+		<img src="images/gb.png" alt="" class="pf_xz_hd_img2">
+		</div>
+		<div class="clearfix"></div>
+		<div class="pf_xz_ti">
+			<div class="pf_xz_ti1">
+				<input class="pf_xz_ti22" type="checkbox" name="" id="cox1">
+				<div class="pf_xz_ti3">
+					营业执照
+				</div>
+			</div>
+			<div class="pf_xz_ti1">
+				<input class="pf_xz_ti22" type="checkbox" name="" id="cox2">
+				<div class="pf_xz_ti3">
+					商务部派遣资质
+				</div>
+			</div>
+			<div class="pf_xz_ti1">
+				<input class="pf_xz_ti22" type="checkbox" name="" id="cox3">
+				<div class="pf_xz_ti3">
+					海员派遣资质
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="pf_qd2">确定</div>
+		<div class="pf_qx2">取消</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+<div class="pf_xz3" style="display: none;">
+	<div class="pf_xz_nr">
+		<div class="pf_xz_hd">
+			学历要求：
+		<img src="images/gb.png" alt="" class="pf_xz_hd_img3">
+		</div>
+		<div class="clearfix"></div>
+		<div class="pf_xz_ti">
+			<div class="pf_xz_ti1">
+				<input class="pf_xz_ti23" type="checkbox" name="" id="dox1">
+				<div class="pf_xz_ti3">
+					初中及以下
+				</div>
+			</div>
+			<div class="pf_xz_ti1">
+				<input class="pf_xz_ti23" type="checkbox" name="" id="dox2">
+				<div class="pf_xz_ti3">
+					高中/中技/中专
+				</div>
+			</div>
+			<div class="pf_xz_ti1">
+				<input class="pf_xz_ti23" type="checkbox" name="" id="dox3">
+				<div class="pf_xz_ti3">
+					大专
+				</div>
+			</div>
+			<div class="pf_xz_ti1">
+				<input class="pf_xz_ti23" type="checkbox" name="" id="dox4">
+				<div class="pf_xz_ti3">
+					本科
+				</div>
+			</div>
+			<div class="pf_xz_ti1">
+				<input class="pf_xz_ti23" type="checkbox" name="" id="dox5">
+				<div class="pf_xz_ti3">
+					硕士
+				</div>
+			</div>
+			<div class="pf_xz_ti1">
+				<input class="pf_xz_ti23" type="checkbox" name="" id="dox6">
+				<div class="pf_xz_ti3">
+					博士
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="pf_qd3">确定</div>
+		<div class="pf_qx3">取消</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+<div class="pf_xz4" style="display: none;">
+	<div class="pf_xz_nr">
+		<div class="pf_xz_hd">
+			发布时间：
+		<img src="images/gb.png" alt="" class="pf_xz_hd_img4">
+		</div>
+		<div class="clearfix"></div>
+		<div class="pf_xz_ti">
+			<div class="pf_xz_ti1">
+				<input class="pf_xz_ti24" type="checkbox" name="" id="eox1">
+				<div class="pf_xz_ti3">
+					24小时内
+				</div>
+			</div>
+			<div class="pf_xz_ti1">
+				<input class="pf_xz_ti24" type="checkbox" name="" id="eox2">
+				<div class="pf_xz_ti3">
+					近三天
+				</div>
+			</div>
+			<div class="pf_xz_ti1">
+				<input class="pf_xz_ti24" type="checkbox" name="" id="eox3">
+				<div class="pf_xz_ti3">
+					近一周
+				</div>
+			</div>
+			<div class="pf_xz_ti1">
+				<input class="pf_xz_ti24" type="checkbox" name="" id="eox4">
+				<div class="pf_xz_ti3">
+					近一月
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="pf_qd4">确定</div>
+		<div class="pf_qx4">取消</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+<!--JavaScript-->
+<script type="text/javascript">
+           /*main轮播*/
+         var swiper = new Swiper('.swiper-container', {
+            zoom: true,
+            pagination: '.swiper-pagination',
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev'
+        });
+</script>
+<script>
+	$('#one .task_xz').click(function(){
+		$(this).css('color','#00a0e9');
+		$(this).siblings('.task_xz').css('color','#333');
+	})
+	$('#two .task_xz').click(function(){
+		$(this).css('color','#00a0e9');
+		$(this).siblings('.task_xz').css('color','#333');
+	})
+	$('#four .task_xz').click(function(){
+		$(this).css('color','#00a0e9');
+		$(this).siblings('.task_xz').css('color','#333');
+	})
+	$('#five .task_xz').click(function(){
+		$(this).css('color','#00a0e9');
+		$(this).siblings('.task_xz').css('color','#333');
+	})
+	$('#six .task_xz').click(function(){
+		$(this).css('color','#00a0e9');
+		$(this).siblings('.task_xz').css('color','#333');
+	})
+	$('#seven .task_xz').click(function(){
+		$(this).css('color','#00a0e9');
+		$(this).siblings('.task_xz').css('color','#333');
+	})
+	
+
+	//	薪酬
+	$('#one .task_xuanze_three_duoxuan').click(function(){
+		$('.pf_xz').show();
+	});
+	$('.pf_xz_hd_img,.pf_qx').click(function(){
+		$('.pf_xz').hide();
+	});
+	$('.pf_qd').click(function(){
+			$('.pf_xz').hide();
+			if($(".pf_xz_ti2:not(':checked')")){
+					$('#box').css('color','#00a0e8');
+				}
+			if($('#box1').is(':checked')) {
+				$('#boxcolor1').css("color","#00a0e8");
+				$('#box').css('color','#333');
+			}else if($("#box1:not(':checked')")){
+				$('#boxcolor1').css('color','#333');
+			}
+			if($('#box2').is(':checked')){
+				$('#boxcolor2').css("color","#00a0e8");
+				$('#box').css('color','#333');
+			}else if($("#box2:not(':checked')")){
+				$('#boxcolor2').css('color','#333');
+			}
+			if($('#box3').is(':checked')){
+				$('#boxcolor3').css("color","#00a0e8");
+				$('#box').css('color','#333');
+			}else if($("#box3:not(':checked')")){
+				$('#boxcolor3').css('color','#333');
+			}
+			if($('#box4').is(':checked')){
+				$('#boxcolor4').css("color","#00a0e8");
+				$('#box').css('color','#333');
+			}else if($("#box4:not(':checked')")){
+				$('#boxcolor4').css('color','#333');
+			}
+			if($('#box5').is(':checked')){
+				$('#boxcolor5').css("color","#00a0e8");
+				$('#box').css('color','#333');
+			}else if($("#box5:not(':checked')")){
+				$('#boxcolor5').css('color','#333');
+			}
+	});
+	//	资质认证
+	$('#two .task_xuanze_three_duoxuan').click(function(){
+		$('.pf_xz2').show();
+	});
+	$('.pf_xz_hd_img2,.pf_qx2').click(function(){
+		$('.pf_xz2').hide();
+	});
+	$('.pf_qd2').click(function(){
+			$('.pf_xz2').hide();
+			if($(".pf_xz_ti22:not(':checked')")){
+					$('#cox').css('color','#00a0e8');
+				}
+			if($('#cox1').is(':checked')) {
+				$('#coxcolor1').css("color","#00a0e8");
+				$('#cox').css('color','#333');
+			}else if($("#cox1:not(':checked')")){
+				$('#coxcolor1').css('color','#333');
+			}
+			if($('#cox2').is(':checked')){
+				$('#coxcolor2').css("color","#00a0e8");
+				$('#cox').css('color','#333');
+			}else if($("#cox2:not(':checked')")){
+				$('#coxcolor2').css('color','#333');
+			}
+			if($('#cox3').is(':checked')){
+				$('#coxcolor3').css("color","#00a0e8");
+				$('#cox').css('color','#333');
+			}else if($("#cox3:not(':checked')")){
+				$('#coxcolor3').css('color','#333');
+			}
+			
+	});
+//	学历要求
+	$('#five .task_xuanze_three_duoxuan').click(function(){
+		$('.pf_xz3').show();
+	});
+	$('.pf_xz_hd_img3,.pf_qx3').click(function(){
+		$('.pf_xz3').hide();
+	});
+	$('.pf_qd3').click(function(){
+			$('.pf_xz3').hide();
+			if($(".pf_xz_ti23:not(':checked')")){
+					$('#dox').css('color','#00a0e8');
+				}
+			if($('#dox1').is(':checked')) {
+				$('#doxcolor1').css("color","#00a0e8");
+				$('#dox').css('color','#333');
+			}else if($("#dox1:not(':checked')")){
+				$('#doxcolor1').css('color','#333');
+			}
+			if($('#dox2').is(':checked')){
+				$('#doxcolor2').css("color","#00a0e8");
+				$('#dox').css('color','#333');
+			}else if($("#dox2:not(':checked')")){
+				$('#doxcolor2').css('color','#333');
+			}
+			if($('#dox3').is(':checked')){
+				$('#doxcolor3').css("color","#00a0e8");
+				$('#dox').css('color','#333');
+			}else if($("#dox3:not(':checked')")){
+				$('#doxcolor3').css('color','#333');
+			}
+			if($('#dox4').is(':checked')){
+				$('#doxcolor4').css("color","#00a0e8");
+				$('#dox').css('color','#333');
+			}else if($("#dox4:not(':checked')")){
+				$('#doxcolor4').css('color','#333');
+			}
+			if($('#dox5').is(':checked')){
+				$('#doxcolor5').css("color","#00a0e8");
+				$('#dox').css('color','#333');
+			}else if($("#dox5:not(':checked')")){
+				$('#doxcolor5').css('color','#333');
+			}
+			if($('#dox6').is(':checked')){
+				$('#doxcolor6').css("color","#00a0e8");
+				$('#dox').css('color','#333');
+			}else if($("#dox6:not(':checked')")){
+				$('#doxcolor6').css('color','#333');
+			}
+	});
+//	时间
+	$('#seven .task_xuanze_three_duoxuan').click(function(){
+		$('.pf_xz4').show();
+	});
+	$('.pf_xz_hd_img4,.pf_qx4').click(function(){
+		$('.pf_xz4').hide();
+	});
+	$('.pf_qd4').click(function(){
+			$('.pf_xz4').hide();
+			if($(".pf_xz_ti24:not(':checked')")){
+					$('#eox').css('color','#00a0e8');
+				}
+			if($('#eox1').is(':checked')) {
+				$('#eoxcolor1').css("color","#00a0e8");
+				$('#eox').css('color','#333');
+			}else if($("#eox1:not(':checked')")){
+				$('#eoxcolor1').css('color','#333');
+			}
+			if($('#eox2').is(':checked')){
+				$('#eoxcolor2').css("color","#00a0e8");
+				$('#eox').css('color','#333');
+			}else if($("#eox2:not(':checked')")){
+				$('#eoxcolor2').css('color','#333');
+			}
+			if($('#eox3').is(':checked')){
+				$('#eoxcolor3').css("color","#00a0e8");
+				$('#eox').css('color','#333');
+			}else if($("#eox3:not(':checked')")){
+				$('#eoxcolor3').css('color','#333');
+			}
+			if($('#eox4').is(':checked')){
+				$('#eoxcolor4').css("color","#00a0e8");
+				$('#eox').css('color','#333');
+			}else if($("#eox4:not(':checked')")){
+				$('#eoxcolor4').css('color','#333');
+			}
+	});
+</script>
+</body>
+</html>
+

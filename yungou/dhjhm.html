@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi "> 
+<title>众创云购</title>
+<link rel="stylesheet" href="css/zhongchuangyungou.css">
+<script src="jq/jquery.js"></script>
+</head>
+
+<body>
+<div class="tongping_1">
+	<div class="dingbu">
+		<div class="fukuan">
+		兑换激活码
+		</div>
+		<div class="fanhui_1">
+			<a href="javascript:history.go(-1);">
+				<img src="images/fh3.png" alt="">
+			</a>
+		</div>
+		<div class="baocun1">
+			我要兑换
+		</div>
+	</div>
+	<div class="gaodu_1"></div>
+	<div class="jilu">
+		<div class="jilu1">
+			<h2 class="jilu2">12345678910</h2>
+			<h2 class="jilu3">待使用</h2>
+			<h2 class="jilu4">2017-06-29</h2>
+		<div class="clearfix"></div>
+		</div>
+	</div>
+	<div class="jilu">
+		<div class="jilu1">
+			<h2 class="jilu2">12345678910</h2>
+			<h2 class="jilu3">已使用</h2>
+			<h2 class="jilu4">2017-06-28</h2>
+		<div class="clearfix"></div>
+		</div>
+	</div>
+	<div class="jilu">
+		<div class="jilu1">
+			<h2 class="jilu2">12345678910</h2>
+			<h2 class="jilu3">已使用</h2>
+			<h2 class="jilu4">2017-06-28</h2>
+		<div class="clearfix"></div>
+		</div>
+	</div>
+	<div class="jilu">
+		<div class="jilu1">
+			<h2 class="jilu2">12345678910</h2>
+			<h2 class="jilu3">已使用</h2>
+			<h2 class="jilu4">2017-06-28</h2>
+		<div class="clearfix"></div>
+		</div>
+	</div>
+	<div class="jilu">
+		<div class="jilu1">
+			<h2 class="jilu2">12345678910</h2>
+			<h2 class="jilu3">已使用</h2>
+			<h2 class="jilu4">2017-06-28</h2>
+		<div class="clearfix"></div>
+		</div>
+	</div>
+	<div class="jilu">
+		<div class="jilu1">
+			<h2 class="jilu2">12345678910</h2>
+			<h2 class="jilu3">已使用</h2>
+			<h2 class="jilu4">2017-06-28</h2>
+		<div class="clearfix"></div>
+		</div>
+	</div>
+	<div class="gaodu"></div>
+</div>
+<div class="caidan">
+	<a href="index.html">
+		<div class="caidan_1">
+			<div class="caidan_1_1">
+				<img src="images/sc2.png" alt="">
+			</div>
+			<h1 class="caidan_2_2">
+			商城
+			</h1>
+		</div>
+	</a>
+	<a href="">
+		<div class="caidan_1">
+			<div class="caidan_1_1">
+				<img src="images/wz2.png" alt="">
+			</div>
+			<h1 class="caidan_2_2">
+				美文分享
+			</h1>
+		</div>
+	</a>
+	<a href="">
+		<div class="caidan_1">
+			<div class="caidan_1_1">
+				<img src="images/zs2.png" alt="">
+			</div>
+			<h1 class="caidan_2_2">
+				招商中心
+			</h1>
+		</div>
+	</a>
+	<a href="gerenzhongxinfenxiaohuiyuan.html">
+		<div class="caidan_1">
+			<div class="caidan_1_1">
+				<img src="images/grzx1.png" alt="">
+			</div>
+			<h1 class="caidan_2_2">
+				<span class="caidan_1_2">
+				个人中心
+				</span>
+			</h1>
+		</div>
+	</a>
+</div>
+<div class="dingxiangchushou">
+	<div class="dingxiangchushou1">
+		<div class="dingxiangchushou2">是否兑换</div>
+		<div class="dingxiangchushou9">
+			<p>此次兑换需要200豆</p>
+		</div>
+		<button type="submit">确认兑换</button>
+	</div>
+</div>
+<script>
+	var baocun = document.getElementsByClassName('baocun1');
+	var dingxiangchushou = document.getElementsByClassName('dingxiangchushou');
+	baocun[0].onclick=function(){
+		dingxiangchushou[0].style.display = 'block';
+
+	}
+	var dingxiangchushou1 = document.querySelector('.dingxiangchushou1');
+	dingxiangchushou[0].addEventListener('click',function(event){
+		console.log(event.target.classList[0]);
+		if(event.target.classList[0]==='dingxiangchushou'){
+			dingxiangchushou[0].style.display = 'none';
+			return;
+		}else{
+			console.log('未选取遮罩层区域');
+		}
+	})
+	</script>
+</body>
+</html>

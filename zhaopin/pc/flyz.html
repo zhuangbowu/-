@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>法律援助</title>
+<link rel="stylesheet" href="css/index.css"/>
+<link rel="stylesheet" href="css/swiper.min.css">
+<script src="js/swiper.min.js"></script>
+<script src="js/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<link rel="stylesheet" href="css/daili.css">
+</head>
+
+<body>
+<div class="header-t">
+   <div class="inner">
+	   <ul>
+		   <li>
+			   <a href="dlym.html">登录</a>
+		   </li>
+		   <li>
+			   <a href="grzc.html">个人注册</a>
+		   </li>
+		   <li>
+			   <a href="qyzc.html">会员注册</a>
+		   </li>
+		   <li>
+			  <a href="dlzc.html">代理注册</a>
+		   </li>
+		   <li id="dianjishijian" style="position: relative;">
+				<a href="#" style="padding-left: 18%">
+				<img src="images/header-t_06.jpg" class="img2">
+				　 微信
+				</a>
+				<div class="erweimaxianshi" id="xianshierweima"><img src="images/footer_29.jpg" alt=""></div>
+			</li>
+	   </ul>
+   </div>
+</div>
+<div class="header-b">
+   <div class="inner">
+	   <a href="index.html">
+		<div class="logo">
+		   <img src="images/header_03.jpg">
+	   </div>
+	  </a>
+	   <div class="tel" style="float: right;">
+		   <img src="images/header_14.jpg">
+	   </div>
+   </div>
+</div> 
+<div class="daohang">
+	<ul class="daohang1">
+		<a href="index.html"><li>首页</li></a>
+	  <a href="zzgz.html"><li>查找工作</li></a>
+	  <a href="xmhz.html"><li>项目合作</li></a>
+	  <a href="gr-jindu.html"><li>会员中心</li></a>
+	  <a href="flyz.html"><li class="xuanzhong">法律援助</li></a>
+	  <a href="sqdk.html"><li>申请贷款</li></a>
+	  <a href="zzfw.html"><li>增值服务</li></a>
+		<div class="clearfix"></div>	
+	</ul>
+</div>
+<div class="banner-b">
+   <div class="banner" style="height: 400px;">
+   <img src="images/banner_1.jpg">
+   </div>
+</div>
+<div class="yz_gaodu"></div>
+<div class="inner">
+	<div class="yz">
+		<img src="images/flyz.jpg" alt="">
+	</div>
+	<div class="falvwenti">
+		<div class="falvwenti1">
+		</div>
+		<div class="falvwenti2">
+			<img src="images/wuxuzhuce.jpg" alt="">
+		</div>
+		<form action="http://taobao.com" onSubmit="return check()">
+			<table width="470" class="flyz">
+				<tr>
+					<td class="falvwenti3" valign="top">
+						问题：
+					</td>
+					<td class="falvwenti4" valign="top">
+						<img src="images/xie.jpg" alt="">
+					</td>
+					<td class="falvwenti5">
+						<textarea name="输入" class="falvwenti6" id="Textarea" cols="30" rows="10" placeholder="点击这里输入问题内容，问题说明越详细，律师回复越准确"></textarea>
+						<div class="falvwenti7">500字以内</div>
+					</td>
+				</tr>
+				<tr>
+					<td class="falvwenti31" valign="top">
+						姓名：
+					</td>
+					<td class="falvwenti41" valign="top">
+						<img src="images/tx.jpg" alt="">
+					</td>
+					<td class="falvwenti5">
+						<input type="text" placeholder="请输入您的姓名" id="name">
+					</td>
+				</tr>
+				<tr>
+					<td class="falvwenti31" valign="top">
+						手机：
+					</td>
+					<td class="falvwenti41" valign="top">
+						<img src="images/sj.jpg" alt="">
+					</td>
+					<td class="falvwenti5">
+						<input type="number" placeholder="请输入您的联系电话" id="telephone">
+					</td>
+				</tr>
+				<tr>
+				<td class="flyz1" align="center">
+					<input type="submit" value="提交法律问题">
+				</td>
+				</tr>
+			</table>
+	 </form>
+</div>
+	<div class="clearfix"></div>
+<div class="yz_gaodu"></div>
+</div> 
+<div class="dibu">
+		<div class="dibu1">
+			<div class="dibu2">
+				<img src="images/footer_29.jpg" alt="">
+			</div>
+			<div class="dibu3">
+				<div>网站资质　|　备案　|　法律声明　｜　<a href="yinsiquan.html">隐私权政策</a></div>
+				<div>未经同意，不得转载本网站之所有招聘信息及作品　|　火星人才网版权所有©2017-3017</div>
+				<div>地址：沈阳市沈河区　服务热线：400-024-5880　邮箱：175969151@163.com</div>
+			</div>
+		<div class="clearfix"></div>
+		</div>
+	</div>
+<script>
+	$('#dianjishijian').click(function(){
+		if($('#xianshierweima').is(":hidden")){
+			$('#xianshierweima').show();
+		}else{
+			$('#xianshierweima').hide();
+		};
+	});
+</script>
+<script type="text/javascript">
+	function check(){
+		var Textarea=document.getElementById('Textarea').value;
+		var name=document.getElementById('name').value;
+		var telephone=document.getElementById('telephone').value;
+			if(Textarea==""){
+				alert('内容不能为空');
+				return false;
+			}else if(Textarea.length>500){
+				alert('内容超出');
+				return false;
+			}else if(name==""){
+				alert('姓名不能为空');
+				return false;
+			}else if(telephone==""){
+				alert('联系方式不能为空');
+				return false;
+			}else if(telephone.length!==11){
+				alert('联系方式不正确');
+				return false;
+			}else{
+				return true;
+			}
+	}
+</script>
+</body>
+</html>

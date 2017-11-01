@@ -1,0 +1,222 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi "> 
+<title>商城首页</title>
+<link rel="stylesheet" href="css/shangcheng.css">
+<script src="js/jquery.js"></script>
+</head>
+
+<body>
+<div class="dage_1">
+	<div class="gaodu"></div>
+	<ul class="header">
+		<li class="header_left">
+			<a href="">
+				<img src="images/guanbi.png" alt="">
+			</a>
+		</li>
+		<li class="header_center">
+			河南中移铁通固话充值
+		</li>
+		<li class="header_right">
+			<a href="">
+				<img src="images/gengduo.png" alt="">
+			</a>
+		</li>
+		<div class="clearfix"></div>
+	</ul>
+	<div class="gouwuche">
+		<a href="javascript:history.go(-1);">
+			<div class="gouwuche1">
+				<img src="images/fanhui.png" alt="">
+			</div>
+		</a>
+		<div class="gouwuche2">代付款订单</div>
+	</div>
+	<a href="ReceiveGoods.html">
+		<div class="shouhuodizhi">
+			<div class="shouhuodizhi1"><img src="images/xinzengshouhuodizhi.png" alt=""></div>
+			<div class="shouhuodizhi2">新增收货地址</div>
+			<div class="shouhuodizhi3"><img src="images/zhankai.png" alt=""></div>
+			<div class="clearfix"></div>
+		</div>
+	</a>
+	
+	<div class="quanxuan">
+		<div class="quanxuan1">
+			<img src="images/xuankuang2.png" alt="">
+		</div>
+		<div class="quanxuan2">全选</div>
+		<div class="quanxuan3">删除</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="xuanze">
+		<div class="xuanze1">
+			<img src="images/xuankuang2.png" alt="">
+		</div>
+		<div class="xuanze2">
+			<img src="images/shouye2.png" alt="">
+		</div>
+		<div class="xuanze3">
+			<div class="xuanze4">
+				OPPO R11 全网通前后2...
+			</div>
+			<div class="xuanze5">
+				<div class="xuanze6">
+					￥2999.00
+				</div>
+				<div class="jiage2_1">
+					<div class="jiage3_1">
+						<img src="images/jian.png" alt="">
+					</div>
+					<input type="text" value="1" class="jiage4_1">
+					<div class="jiage5_1">
+						<img src="images/jia.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="jiange_1"></div>
+	<div class="xuanze">
+		<div class="xuanze1">
+			<img src="images/xuankuang2.png" alt="">
+		</div>
+		<div class="xuanze2">
+			<img src="images/shouye3.png" alt="">
+		</div>
+		<div class="xuanze3">
+			<div class="xuanze4">
+				乐视S3爵迹版 4GB+32G...
+			</div>
+			<div class="xuanze5">
+				<div class="xuanze6">
+					￥1999.00
+				</div>
+				<div class="jiage2">
+					<div class="jiage3">
+						<img src="images/jian.png" alt="">
+					</div>
+					<input type="text" value="1" class="jiage4">
+					<div class="jiage5">
+						<img src="images/jia.png" alt="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="jiange_1"></div>
+	<div class="xuanze">
+		<div class="peisong">
+			配送方式
+		</div>
+		<div class="peisong2">
+			快递 免邮
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="xian"></div>
+	<div class="xuanze">
+		<div class="peisong">
+			合计
+		</div>
+		<div class="peisong3">
+			￥346.00
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="gaidu1"></div>
+	<div class="gaodu"></div>
+</div>
+<div class="jiesuan_1">
+	<div class="jiesuan1">
+		<div class="quanxuan1">
+			<img src="images/xuankuang2.png" alt="">
+		</div>
+		<div class="jiesuan2">
+			全选
+		</div>
+		<div class="jiesuan3">
+		合计：
+		<span class="jiesuan4">
+			￥6666.00
+		</span>
+		</div>
+	</div>
+	<div class="jiesuan5">
+		结算
+	</div>
+	<div class="clearfix"></div>
+</div>
+<div class="zhezhao">
+	<div class="zhezhao1" style="">微信安全支付</div>
+</div>
+<script>
+		$(document).ready(function(){
+//获得文本框对象
+   var t = $(".jiage4");
+//初始化数量为1,并失效减
+$('.jjiage3').attr('disabled',true);
+    //数量增加操作
+    $(".jiage5").click(function(){ 
+//			alert(1);
+        t.val(parseInt(t.val())+1)
+        if (parseInt(t.val())!=1){
+            $('.jiage3').attr('disabled',false);
+        }
+
+    }) 
+    //数量减少操作
+    $(".jiage3").click(function(){
+        if (parseInt(t.val())==1){
+//				alert(1);
+           $('.jiage3').attr('disabled',true);
+				return;
+        }
+			t.val(parseInt(t.val())-1);
+
+    })
+
+});
+
+</script>  
+<script>
+		$(document).ready(function(){
+//获得文本框对象
+   var t = $(".jiage4_1");
+//初始化数量为1,并失效减
+$('.jjiage3_1').attr('disabled',true);
+    //数量增加操作
+    $(".jiage5_1").click(function(){ 
+//			alert(1);
+        t.val(parseInt(t.val())+1)
+        if (parseInt(t.val())!=1){
+            $('.jiage3_1').attr('disabled',false);
+        }
+
+    }) 
+    //数量减少操作
+    $(".jiage3_1").click(function(){
+        if (parseInt(t.val())==1){
+//				alert(1);
+           $('.jiage3_1').attr('disabled',true);
+				return;
+        }
+			t.val(parseInt(t.val())-1);
+
+    })
+
+});
+
+</script>
+<script>
+	$(".jiesuan5").click(function(){
+		$(".zhezhao").css("display","block");
+	});
+	</script>
+</body>
+</html>

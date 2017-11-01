@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi "> 
+<title>填写开户信息</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.js"></script>
+</head>
+
+<body>
+<div class="page">
+	<ul class="header">
+		<li class="header_left"><a href=""><img src="images/guanbi.png" alt=""></a></li>
+		<li class="header_center">填写开户信息</li>
+		<li class="header_right"><a href=""><img src="images/gengduo.png" alt=""></a></li>
+		<div class="clearfix"></div>
+	</ul>
+	<ul class="tianxie">
+		<li class="tianxie_right_1">填写开户信息</li>
+	</ul>
+	<ul class="sjhm_1">
+		<li class="sjhm_tb"><img src="images/xinghao.jpg" alt=""></li>
+		<li class="sjhm_left">铁通号码</li>
+		<li class="sjhm_right"><input type="text" value="88888888" class="yishangchuan"></li>
+		<div class="clearfix"></div>
+	</ul>
+	<ul class="sjhm_1">
+		<li class="sjhm_tb"><img src="images/xinghao.jpg" alt=""></li>
+		<li class="sjhm_left">身份证正面</li>
+		<li class="sjhm_right"><input type="text" value="已上传" class="yishangchuan" readonly></li>
+		<li class="sjhm_xiala_3"><img src="images/shangchuan.png" alt="" id="one"></li>
+		<input type="file" id="one1" style="display: none;" accept="image/*">
+		<div class="clearfix"></div>
+	</ul>
+	<ul class="sjhm_1">
+		<li class="sjhm_tb"><img src="images/xinghao.jpg" alt=""></li>
+		<li class="sjhm_left">身份证反面</li>
+		<li class="sjhm_right"><input type="text" placeholder="请上传身份证反面"></li>
+		<li class="sjhm_xiala_3"><img src="images/shangchuan.png" alt="" id="two"></li>
+		<input type="file" id="two1" style="display: none;" accept="image/*">
+		<div class="clearfix"></div>
+	</ul>
+	<ul class="sjhm_1">
+		<li class="sjhm_tb"><img src="images/xinghao.jpg" alt=""></li>
+		<li class="sjhm_left">手持身份证</li>
+		<li class="sjhm_right"><input type="text" placeholder="请上传手持身份证"></li>
+		<li class="sjhm_xiala_3"><img src="images/shangchuan.png" alt="" id="three"></li>
+		<input type="file" id="three1" style="display: none;" accept="image/*">
+		<div class="clearfix"></div>
+	</ul>
+	<ul class="sjhm_1">
+		<li class="sjhm_tb"><img src="images/xinghao.jpg" alt=""></li>
+		<li class="sjhm_left">详细地址</li>
+		<li class="sjhm_right"><input type="text" placeholder="请输入详细地址"></li>
+		<div class="clearfix"></div>
+	</ul>
+	<ul class="sjhm_1">
+		<li class="sjhm_tb"><img src="images/xinghao.jpg" alt=""></li>
+		<li class="sjhm_left">SIM卡号</li>
+		<li class="sjhm_right"><input type="text" placeholder="请填写20为SIM卡号"></li>
+		<div class="clearfix"></div>
+	</ul>
+	<ul class="sjhm_1">
+		<li class="sjhm_tb"><img src="images/xinghao.jpg" alt=""></li>
+		<li class="sjhm_left">开通套餐</li>
+		<li class="sjhm_right"><input type="text" value="实名专用" class="yishangchuan"></li>
+		<div class="clearfix"></div>
+	</ul>
+	<ul class="sjhm_1">
+		<li class="sjhm_left">营销ID</li>
+		<li class="sjhm_right"><input type="text" placeholder="请填写营销ID"></li>
+		<div class="clearfix"></div>
+	</ul>
+	<ul class="sjhm_1">
+		<li class="sjhm_tb"><img src="images/xinghao.jpg" alt=""></li>
+		<li class="sjhm_left">联系手机</li>
+		<li class="sjhm_right"><input type="text" placeholder="请填写第二联系手机号"></li>
+		<div class="clearfix"></div>
+	</ul>
+	<div class="chongixnxuan">
+	<form action="">
+		<a href=""><input type="button" value="重新选" class="chongxinxuan_1"></a>
+		<a href=""><input type="button" value="确定" class="chongxinxuan_2"></a>
+		<div class="clearfix"></div>
+	</form>
+	</div>
+</div>
+<script>
+	$('#one').click(function(){
+		$('#one1').click();
+	});
+	$('#two').click(function(){
+		$('#two1').click();
+	});
+	$('#three').click(function(){
+		$('#three1').click();
+	});
+</script>
+</body>
+</html>

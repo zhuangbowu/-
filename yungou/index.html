@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi "> 
+<title>众创云购</title>
+<link rel="stylesheet" href="css/zhongchuangyungou.css">
+<link rel="stylesheet" href="css/grab.css">
+<script src="js/jquery.min.js"></script>
+<style>
+
+</style>
+</head>
+<body>
+<div class="tongping_1" style="background: #fff;">
+	<div class="dingbu">
+		<div class="fukuan">
+			抢豆
+		</div>
+		<div class="fanhui_1">
+			<a href="javascript:history.go(-1);">
+				<img src="images/fh3.png" alt="">
+			</a>
+		</div>
+		<a href="grab-record.html">
+			<div class="grab">
+				收益记录
+			</div>
+		</a>
+	</div>
+	<div class="grab-bj">
+		<ul class="frequency">
+			<li>抢豆次数：<span><img src="images/qiangdoucishu.png" alt="" id="imgg"></span></li>
+		</ul>
+		<ul class="qiang">
+			<li id="times" class="div">抢</li>
+		</ul>
+		<p class="grab-size">今日豆包大小：100豆</p>
+		<div class="jixu div"></div>
+		<ul class="rule">
+			<li>活动规则</li>
+			<li>1.每日抢豆时间为上午9:00。</li>
+			<li>2.每日抢豆成功数量为100增值豆。</li>
+			<li>3.金币不足50将无法抢豆，确保账户金币≥100金币。</li>
+		</ul>
+	</div>
+</div>
+<audio id="beep-one" controls preload="auto" style="display: none;">
+	<source src="video/shengyin.mp3">
+	<source src="video/shengyin.mp3">
+	Your browser isn&#39;t invited for super fun time.
+</audio>
+<!--
+<script>
+	$('#times').click(function(){
+		var num=0;
+		var num=num+1;
+		$('.num').html(num);
+		$('.grab-bj').css({"background":"url(images/qiangdouchenggongbj.png) no-repeat left top","backgroundSize":"100% 100%"});
+		$('#times').css("display","none");
+		$('.qiang').append('<li class="qiangdou">恭喜抢豆成功</li><br><li class="qiangdou"><span>50</span>豆</li>');
+		$('.grab-size').css("display","none");
+		$('.jixu').append('<img src="images/jixuqiang.png" alt="">');
+	});
+	$('.jixu').click(function(){
+		$('.qiangdou span').html("80");
+	});
+	var beepOne = $("#beep-one")[0];
+	$(".div").click(function() {
+		beepOne.play();
+	});
+</script>
+-->
+<script>
+	var beepOne = $("#beep-one")[0];
+		$(".div").mousedown(function() {
+		beepOne.play();
+//			$("#imgg").css({"width":"50px"});
+//			$(".frequency li").css({"font-size":"20px","line-height":"50px"});
+			$("#times").stop(true);
+			$("#imgg").stop(true);
+			$(".frequency li").stop(true);
+			$("#times").animate({"font-size":"72px"});
+			$("#times").animate({"font-size":"70px"});
+			$("#imgg").animate({"width":"40px"});
+			$("#imgg").animate({"width":"0px"});
+			$(".frequency li").animate({"font-size":"20px","line-height":"40px"});
+			$(".frequency li").animate({"font-size":"16px","line-height":"30px"});
+	});
+	
+	
+</script>
+</body>
+</html>

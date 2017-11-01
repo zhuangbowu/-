@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi ">
+<title>收货地址2</title>
+<link rel="stylesheet" href="css/shangcheng.css">
+<script src="jq/jquery.js"></script>
+<script src="js/picker.min.js"></script>
+<script src="js/city.js"></script>
+</head>
+<body style="background: #eee;">
+	<div class="page">
+		<div class="gaodu"></div>
+		<div class="dade">
+			<!-- 顶部公用样式 -->
+			<ul class="header">
+				<li class="header_left">
+					<a href="">
+						<img src="images/guanbi.png" alt="">
+					</a>
+				</li>
+				<li class="header_center">河南中移铁通商城</li>
+				<li class="header_right">
+					<a href="">
+						<img src="images/gengduo.png" alt="">
+					</a>
+				</li>
+				<div class="clearfix"></div>
+			</ul>
+			<div class="gaodu2">
+				<a href="javascript:history.back();">
+					<img src="images/fanhui.png" alt="">
+				</a>
+				<span>收货地址</span>
+			</div>
+			<!-- 中间样式 -->
+			<div class="beijing">
+				<form action="" method="post">
+					<div class="box">
+						<div class="box_1">
+							<span>收货人:</span>
+							<input type="text" placeholder="" value="Angela" name="Angela">
+						</div>
+						<div class="box_1">
+							<span>联系电话:</span>
+							<input type="text" placeholder="" value="15805391234" name="Angela">
+						</div>
+						<div class="box_1">
+							<span class="diqu">选择地区:</span>
+							<a href="#" class="active top" role="button" id="sel_city">山东&nbsp&nbsp临沂&nbsp&nbsp兰山</a>
+			   				<img src="images/xiala.png">
+			   				<input type="hidden" value="" id="hide">
+						</div>
+						<div class="box_1 box_2">
+							<span>详细地址:</span>
+							<input type="text" placeholder="" value="通达路与北园路交回东南角城建时代广场" name="Angela">
+						</div>
+						<div class="box_1">
+							<span>邮政编码:</span>
+							<input type="text" placeholder="(选填)" value="" name="Angela">
+						</div>
+					</div>
+					<div class="btn_group">
+						<button type="submit">保存</button>
+						<button type="button">删除收货地址</button>
+					</div>
+				</form>
+			</div>
+			<!-- 底部公用样式 -->
+			<div class="caidan">
+				<a href="shouye.html">
+					<div class="caidan_1">
+						<div class="caidan_1_1"><img src="images/sc1.png" alt=""></div>
+						<div class="caidan_1_2_1">商城</div>
+					</div>
+				</a>
+				<a href="gwc.html">
+					<div class="caidan_1">
+						<div class="caidan_1_1"><img src="images/gwc2.png" alt=""></div>
+						<div class="caidan_1_2">购物车</div>
+					</div>
+				</a>
+				<a href="grzx.html">
+					<div class="caidan_1">
+						<div class="caidan_1_1"><img src="images/gerenzhongxin2.png" alt=""></div>
+						<div class="caidan_1_2">个人中心</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<script>
+	window.onload=function(){
+		var nameEl = document.getElementById('sel_city');
+		var first = []; /* 省，直辖市 */
+		var second = []; /* 市 */
+		var third = []; /* 镇 */
+		var selectedIndex = [0, 0, 0]; /* 默认选中的地区 */
+		var checked = [0, 0, 0]; /* 已选选项 */
+		function creatList(obj, list){
+		  obj.forEach(function(item, index, arr){
+		  var temp = new Object();
+		  temp.text = item.name;
+		  temp.value = index;
+		  list.push(temp);
+		  })
+		}
+		creatList(city, first);
+		if (city[selectedIndex[0]].hasOwnProperty('sub')) {
+		  creatList(city[selectedIndex[0]].sub, second);
+		} else {
+		  second = [{text: '', value: 0}];
+		}
+
+		if (city[selectedIndex[0]].sub[selectedIndex[1]].hasOwnProperty('sub')) {
+		  creatList(city[selectedIndex[0]].sub[selectedIndex[1]].sub, third);
+		} else {
+		  third = [{text: '', value: 0}];
+		}
+
+		var picker = new Picker({
+		    data: [first, second, third],
+		  selectedIndex: selectedIndex,
+		    title: '地址选择'
+		});
+
+		picker.on('picker.select', function (selectedVal, selectedIndex) {
+		  var text1 = first[selectedIndex[0]].text;
+		  var text2 = second[selectedIndex[1]].text;
+		  var text3 = third[selectedIndex[2]] ? third[selectedIndex[2]].text : '';
+		  var inputHidden = document.getElementById('hide');
+		    nameEl.innerText = text1 + ' ' + text2 + ' ' + text3;
+		   inputHidden.value = nameEl.innerText
+		});
+
+		picker.on('picker.change', function (index, selectedIndex) {
+		  if (index === 0){
+		    firstChange();
+		  } else if (index === 1) {
+		    secondChange();
+		  }
+
+		  function firstChange() {
+		    second = [];
+		    third = [];
+		    checked[0] = selectedIndex;
+		    var firstCity = city[selectedIndex];
+		    if (firstCity.hasOwnProperty('sub')) {
+		      creatList(firstCity.sub, second);
+
+		      var secondCity = city[selectedIndex].sub[0]
+		      if (secondCity.hasOwnProperty('sub')) {
+		        creatList(secondCity.sub, third);
+		      } else {
+		        third = [{text: '', value: 0}];
+		        checked[2] = 0;
+		      }
+		    } else {
+		      second = [{text: '', value: 0}];
+		      third = [{text: '', value: 0}];
+		      checked[1] = 0;
+		      checked[2] = 0;
+		    }
+
+		    picker.refillColumn(1, second);
+		    picker.refillColumn(2, third);
+		    picker.scrollColumn(1, 0)
+		    picker.scrollColumn(2, 0)
+		  }
+
+		  function secondChange() {
+		    third = [];
+		    checked[1] = selectedIndex;
+		    var first_index = checked[0];
+		    if (city[first_index].sub[selectedIndex].hasOwnProperty('sub')) {
+		      var secondCity = city[first_index].sub[selectedIndex];
+		      creatList(secondCity.sub, third);
+		      picker.refillColumn(2, third);
+		      picker.scrollColumn(2, 0)
+		    } else {
+		      third = [{text: '', value: 0}];
+		      checked[2] = 0;
+		      picker.refillColumn(2, third);
+		      picker.scrollColumn(2, 0)
+		    }
+		  }
+
+		});
+
+		picker.on('picker.valuechange', function (selectedVal, selectedIndex) {
+		  console.log(selectedVal);
+		  console.log(selectedIndex);
+		});
+
+		nameEl.addEventListener('click', function () {
+		    picker.show();
+		});
+	}
+	</script>
+</body>
+</html>

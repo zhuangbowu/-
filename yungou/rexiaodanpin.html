@@ -1,0 +1,196 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi "> 
+<title>众创云购</title>
+<link rel="stylesheet" href="css/zhongchuangyungou.css">
+<script src="js/swiper.min.js"></script>
+<link rel="stylesheet" href="css/swiper.min.css">
+</head>
+
+<body>
+<div class="tongping">
+
+
+<div class="dingbu">
+<div class="fukuan">热销单品</div>
+<div class="fanhui_1"><a href="javascript:history.go(-1);"><img src="images/fh3.png" alt=""></a></div>
+</div>
+<div class="gaodu_1"></div>
+<div class="liuxing">
+	<div class="liuxing_1">
+		<h1>流行</h1>
+	</div>
+	<div class="liuxing_1">
+		<h1>新款</h1>
+	</div>
+	<div class="liuxing_1">
+		<h1>精选</h1>
+	</div>
+	<div class="clearfix"></div>
+</div>
+<div class="chanpin_da">
+	<div class="chanpin_left">
+	<a href="xiangqingye.html"><div class="chanpin"><img src="images/tupian1-1.png" alt=""></div></a>
+	<div class="chanpin_wenzi">
+	<h1>流苏系带收腰V领球球连...</h1>
+	<h2 class="chanpin_wenzi_left">￥68.00</h2>
+	<h2 class="chanpin_wenzi_right">22</h2>
+	<div class="chanpin_jifen"><img src="images/jf.png" alt=""></div>
+	<div class="clearfix"></div>
+	</div>
+	</div>
+	<div class="chanpin_right">
+	<a href=""><div class="chanpin"><img src="images/tupian1-2.png" alt=""></div></a>
+	<div class="chanpin_wenzi">
+	<h1>夏季新款波西米亚刺绣流...</h1>
+	<h2 class="chanpin_wenzi_left">￥68.00</h2>
+	<h2 class="chanpin_wenzi_right">22</h2>
+	<div class="chanpin_jifen"><img src="images/jf.png" alt=""></div>
+	<div class="clearfix"></div>
+	</div>
+	</div>
+	<div class="clearfix"></div>
+</div>
+<div class="chanpin_da">
+	<div class="chanpin_left">
+	<a href=""><div class="chanpin"><img src="images/tupian1-3.png" alt=""></div></a>
+	<div class="chanpin_wenzi">
+	<h1>流苏系带收腰V领球球连...</h1>
+	<h2 class="chanpin_wenzi_left">￥68.00</h2>
+	<h2 class="chanpin_wenzi_right">22</h2>
+	<div class="chanpin_jifen"><img src="images/jf.png" alt=""></div>
+	<div class="clearfix"></div>
+	</div>
+	</div>
+	<div class="chanpin_right">
+	<a href=""><div class="chanpin"><img src="images/tupian1-4.png" alt=""></div></a>
+	<div class="chanpin_wenzi">
+	<h1>夏季新款波西米亚刺绣流...</h1>
+	<h2 class="chanpin_wenzi_left">￥68.00</h2>
+	<h2 class="chanpin_wenzi_right">22</h2>
+	<div class="chanpin_jifen"><img src="images/jf.png" alt=""></div>
+	<div class="clearfix"></div>
+	</div>
+	</div>
+	<div class="clearfix"></div>
+</div>
+<div class="gaodu"></div>
+</div>
+<div class="caidan">
+	<div class="caidan_1">
+		<div class="caidan_1_1"><img src="images/sc1.png" alt=""></div>
+		<h1 class="caidan_1_2">商城</h1>
+	</div>
+	<div class="caidan_1">
+		<div class="caidan_1_1"><img src="images/wz2.png" alt=""></div>
+		<h1 class="caidan_2_2">美文分享</h1>
+	</div>
+	<div class="caidan_1">
+		<div class="caidan_1_1"><img src="images/zs2.png" alt=""></div>
+		<h1 class="caidan_2_2">招商中心</h1>
+	</div>
+	<div class="caidan_1">
+		<div class="caidan_1_1"><img src="images/gezx2.png" alt=""></div>
+		<h1 class="caidan_2_2">个人中心</h1>
+	</div>
+</div>
+<script>
+   window.onload=function(){
+	    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        slidesPerView: 4,
+        paginationClickable: true,
+        spaceBetween: 10
+    });
+   }	
+</script>
+<script src="jq/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+        $(document).ready(function() {
+            var length,
+                    currentIndex = 0,
+                    interval,
+                    hasStarted = false, //是否已经开始轮播
+                    t = 3000; //轮播时间间隔
+            length = $('.slider-panel').length;
+            //将除了第一张图片隐藏
+            $('.slider-panel:not(:first)').hide();
+            //将第一个slider-item设为激活状态
+            $('.slider-item:first').addClass('slider-item-selected');
+            //隐藏向前、向后翻按钮
+            $('.slider-page').hide();
+            //鼠标上悬时显示向前、向后翻按钮,停止滑动，鼠标离开时隐藏向前、向后翻按钮，开始滑动
+            $('.slider-panel, .slider-pre, .slider-next').hover(function() {
+                stop();
+                $('.slider-page').show();
+            }, function() {
+                $('.slider-page').hide();
+                start();
+            });
+            $('.slider-item').hover(function(e) {
+                stop();
+                var preIndex = $(".slider-item").filter(".slider-item-selected").index();
+                currentIndex = $(this).index();
+                play(preIndex, currentIndex);
+            }, function() {
+                start();
+            });
+            $('.slider-pre').unbind('click');
+            $('.slider-pre').bind('click', function() {
+                pre();
+            });
+            $('.slider-next').unbind('click');
+            $('.slider-next').bind('click', function() {
+                next();
+            });
+            /**
+             * 向前翻页
+             */
+            function pre() {
+                var preIndex = currentIndex;
+                currentIndex = (--currentIndex + length) % length;
+                play(preIndex, currentIndex);
+            }
+            /**
+             * 向后翻页
+             */
+            function next() {
+                var preIndex = currentIndex;
+                currentIndex = ++currentIndex % length;
+                play(preIndex, currentIndex);
+            }
+            /**
+             * 从preIndex页翻到currentIndex页
+             * preIndex 整数，翻页的起始页
+             * currentIndex 整数，翻到的那页
+             */
+            function play(preIndex, currentIndex) {
+                $('.slider-panel').eq(preIndex).fadeOut(500)
+                        .parent().children().eq(currentIndex).fadeIn(1000);
+                $('.slider-item').removeClass('slider-item-selected');
+                $('.slider-item').eq(currentIndex).addClass('slider-item-selected');
+            }
+            /**
+             * 开始轮播
+             */
+            function start() {
+                if(!hasStarted) {
+                    hasStarted = true;
+                    interval = setInterval(next, t);
+                }
+            }
+            /**
+             * 停止轮播
+             */
+            function stop() {
+                clearInterval(interval);
+                hasStarted = false;
+            }
+            //开始轮播
+            start();
+        });
+    </script>    
+</body>
+</html>

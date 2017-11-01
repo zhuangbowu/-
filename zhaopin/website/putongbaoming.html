@@ -1,0 +1,105 @@
+<head>
+	<meta charset="UTF-8">
+	<!-- 优先使用 IE 最新版本和 Chrome -->
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<!-- 页面描述 -->
+	<meta name="description" content="不超过150个字符" />
+	<!-- 页面关键词 -->
+	<meta name="keywords" content="" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+	<meta name="format-detection" content="telphone=no, email=no" />
+	<title>普通报名简历</title>
+	<link rel="stylesheet" type="text/css" href="css/cssreset.css" />
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+
+<body>
+<div id="findpassword">
+	<div class="erjitoubu">
+		普通报名简历
+		<a href="javascript:history.go(-1);">
+			<img src="images/fanhui.png" alt="">
+		</a>
+		<div class="toubu">
+			小明 <a href="sign.html">退出</a> | <a href="index.html">首页</a>
+		</div>
+	</div>
+			<h3 class="h3"><b class="b02">招聘职位：</b>高薪急聘近海远洋船员包食宿</h3>
+			<ul class="bao_name">
+				<li>
+					<b class="fl">姓名</b><span class="fr">操作</span>
+				</li>
+				<li>
+					<p class="fl"><input type="checkbox" style="vertical-align: middle; margin-right:0.2rem;" />李明</p>
+					<a href="Resume.html"><p class="fr"><button class="btn_see">查看简历</button></p></a>
+				</li>
+				<li>
+					<p class="fl"><input type="checkbox" style="vertical-align: middle; margin-right:0.2rem;" />李明</p>
+					<a href="Resume.html"><p class="fr"><button class="btn_see">查看简历</button></p></a>
+				</li>
+				<li>
+					<p class="fl"><input type="checkbox" style="vertical-align: middle; margin-right:0.2rem;" />李明</p>
+					<a href="Resume.html"><p class="fr"><button class="btn_see">查看简历</button></p></a>
+				</li>
+				<li>
+					<p class="fl"><input type="checkbox" style="vertical-align: middle; margin-right:0.2rem;" />李明</p>
+					<a href="Resume.html"><p class="fr"><button class="btn_see">查看简历</button></p></a>
+				</li>
+			</ul>
+
+			<p class="loading">加载更多……</p>
+
+			<div class="fixed">
+				<input type="checkbox" style="vertical-align: middle;" />全选
+				<a href="#">删除</a>
+			</div>
+	<div class="footer">
+		<p>
+			<a href="#">网站资质</a><span>|</span>
+			<a href="#">备案</a><span>|</span>
+			<a href="#">法律声明</a><span>|</span>
+			<a href="yinsiquan.html">隐私权政策</a>
+		</p>
+		<p>未经同意，不得转载本网站之所有招聘信息及作品</p>
+		<p>火星人才网版权所有©2017-3017  |  地址：沈阳市沈河区</p>
+		<p> 服务热线：400-024-5880  邮箱：175969151@163.com</p>
+	</div>
+
+		</div>
+
+		<div class="kong">
+
+		</div>
+
+		<script src="js/jquery-1.10.2.min.js"></script>
+		<script src="js/index.js"></script>
+		<script type="text/javascript">
+			document.addEventListener('plusready', function() {
+				//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+
+			});
+			var doc = document;
+			var win = window;
+
+			function initFontSize() {
+				var docEl = doc.documentElement;
+				//判断窗口有没有orientationchange这个方法，有就赋值给一个变量，没有就返回resize方法。
+				recalc = function() {
+					var clientWidth = docEl.clientWidth;
+					//获取设计图的尺寸--750px
+					fontSizeRate = (clientWidth / 750);
+					//设置大小--目前的设备大小是
+					var baseFontSize = 100 * fontSizeRate;
+					docEl.style.fontSize = baseFontSize + 'px';
+					//  console.log(baseFontSize);
+				};
+				recalc();
+
+			}
+			initFontSize();
+		</script>
+</body>
+
+</html>

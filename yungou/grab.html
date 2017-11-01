@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi "> 
+<title>众创云购</title>
+<link rel="stylesheet" href="css/zhongchuangyungou.css">
+<link rel="stylesheet" href="css/grab.css">
+<style>
+
+</style>
+</head>
+<body>
+<div class="tongping_1" style="background: #fff;">
+	<div class="dingbu">
+		<div class="fukuan">
+			抢豆
+		</div>
+		<div class="fanhui_1">
+			<a href="javascript:history.go(-1);">
+				<img src="images/fh3.png" alt="">
+			</a>
+		</div>
+		<a href="grab-record.html">
+			<div class="grab">
+				收益记录
+			</div>
+		</a>
+	</div>
+	<div class="grab-bj">
+		<ul class="frequency">
+			<li>抢豆次数：<span>66</span></li>
+			<li>成功次数：<span>39</span></li>
+		</ul>
+		<ul class="time">
+			<li>开抢倒计时：</li>
+			<li id="times">20时20分20秒</li>
+			<li>今日开抢时间：09:00</li>
+		</ul>
+		<p class="grab-size">今日豆包大小：100豆</p>
+		<ul class="rule">
+			<li>活动规则</li>
+			<li>1.每日抢豆时间为上午9:00。</li>
+			<li>2.每日抢豆成功数量为100增值豆。</li>
+			<li>3.金币不足50将无法抢豆，确保账户金币≥100金币。</li>
+		</ul>
+	</div>
+</div>
+<script>
+    function fresh()
+    {
+	var endtime=new Date("Mar 33, 09:00:00");//这里设置预制时间
+	var nowtime = new Date();
+	var leftsecond=parseInt((endtime.getTime()-nowtime.getTime())/1000);
+	if(leftsecond<0){leftsecond=0;}
+	h=parseInt((leftsecond/3600)%24);
+	m=parseInt((leftsecond/60)%60);
+	s=parseInt(leftsecond%60);
+	document.getElementById("times").innerHTML=h+"小时"+m+"分"+s+"秒";
+    }
+    fresh()
+    setInterval(fresh,1000);
+</script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+<head>
+<meta charset="UTF-8">
+<!-- 优先使用 IE 最新版本和 Chrome -->
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<!-- 页面描述 -->
+<meta name="description" content="不超过150个字符"/>
+<!-- 页面关键词 -->
+<meta name="keywords" content=""/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+<meta name="format-detection" content="telphone=no, email=no"/>
+<title>简历管理</title>
+<link rel="stylesheet" type="text/css" href="css/cssreset.css"/>
+<link rel="stylesheet" type="text/css" href="css/index.css"/>
+<script src="js/area.js"></script>
+<script src="js/select.js"></script>
+</head>
+<body>
+	<div id="findpassword">
+	<div class="erjitoubu">
+		简历管理
+		<a href="javascript:history.go(-1);">
+			<img src="images/fanhui.png" alt="">
+		</a>
+		<div class="toubu">
+			小明 <a href="sign.html">退出</a> | <a href="index.html">首页</a>
+		</div>
+	</div>
+		<div class="list">
+			<p>
+				<a href="#">火星人才网</a><span>》</span>
+				<a href="#">会员中心  </a><span>》</span>
+				<a href="#" class="gray">简历管理 </a>      
+			</p>
+		</div>
+		<div class="head clearfix">
+			<div class="head_l fl">
+				<img src="images/touxiang.png" style="width: 1.6rem; height: 1.6rem; margin-top:0.3rem; margin-left: 0.2rem;"/>
+			</div>
+			<div class="head_r fr">
+				<p>
+					<span style="font-size: 0.28rem;">尚泽</span>
+					男   |   28岁  |
+					<img src="images/dingwei.png" style="width: 0.3rem; height:0.3rem; vertical-align: middle;"/>山东省临沂市兰山区XXX
+				</p>
+				<div class="img1 fl">
+					<img src="images/shouji.png" style="width:0.3rem; height: 0.35rem;" />
+				</div>
+				<div class="tel fl">
+					<span>15589645123</span>	
+				</div>
+				<div class="img1 fl" style="margin-left: 0.2rem;">
+					<img src="images/weixing_03.png" style="width:0.4rem; height: 0.33rem;"/>
+				</div>
+				<div class="tel01 fl">
+					<input type="text" value="15589645123" readonly id="beigai"><div id="xiugai">[修改]</div>	<div id="baocun" style="display: none">[保存]</div>	
+				</div>
+			</div>
+		</div>
+		<div class="person">
+			  个人简历
+		</div>
+		<div class="xinxi">
+	
+			<div class="fl"><img src="images/xinxi_07.png" style="width: 2.07rem; height: 0.94rem; display: inline-block; " /></div>
+			<p class="fl">基本信息</p>
+		</div>
+		<div class="table clearfix">
+			<ul class="age fl">
+				<li>姓名</li>
+				<li>年龄</li>
+				<li>身高</li>
+				<li>专业</li>
+				<li>血型</li>
+			</ul>
+			<ul class="name fl">
+				<li> <input type="text" /> </li>
+				<li> <input type="text" /> </li>
+				<li> <input type="text" /> </li>
+				<li> <input type="text" /> </li>
+				<li> <input type="text" /> </li>
+			</ul>
+			<ul class="zhaopian fl">
+				<input type="file" />
+				<p>上传照片</p>
+			</ul>
+		</div>
+		<div class="sex">
+			<label for="sex">性别:</label>
+			<input type="radio" name="sex" style="vertical-align: middle;" />男
+			<input type="radio" name="sex" style="vertical-align: middle;" />女
+		</div>
+		<div class="wraps">
+			<label for="zhong">体重:</label>
+			<input type="text" class="input_a"/>
+		</div>
+		<div class="wraps">
+			<label for="zhong">QQ号:</label>
+			<input type="text" class="input_a"/>
+		</div>
+		<!--籍贯-->
+		<div class="wraps">
+			<label for="zhong">籍贯:</label>
+			<select id="s_province" name="s_province">
+			</select>
+			<select id="s_city" name="s_city">
+			</select>
+			<select id="s_county" name="s_county">
+			</select>
+			<script type="text/javascript">_init_area();</script>
+		</div>
+		<!--民族-->
+		<div class="wraps">
+			<label for="zhong">民族:</label>
+			<input type="text" class="input_a"/>
+		</div>
+		<div class="wraps01">
+			<label for="zhong">学历:</label>
+			<select name="jiguan">
+				<option value=""></option>
+			</select>
+		</div>
+		<div class="sex">
+			<label for="sex">政治面貌:</label>
+			<input type="radio" name="sex" style="vertical-align: middle;" id="man" checked="checked"/>群众
+			<input type="radio" name="sex" style="vertical-align: middle;" id="women"/>团员
+			<input type="radio" name="sex" style="vertical-align: middle;" id="women"/>党员
+		</div>
+		
+		<div class="wraps">
+			<label for="zhong">婚姻状况:</label>
+			<input type="text" class="input_a"/>
+		</div>
+		<div class="wraps">
+			<label for="zhong">电子邮箱:</label>
+			<input type="text" class="input_a"/>
+		</div>
+		<div class="wraps">
+			<label for="zhong">健康状况:</label>
+			<input type="text" class="input_a"/>
+		</div>
+		<div class="button">
+			<button>保存</button>
+			<button>修改</button>
+		</div>
+		<div class="ye">
+			<a href="jianliguanli2.html">下一页</a> 
+		</div>
+		<div class="sub">
+			<p>承诺简历为本人亲自填写，所述内容全部真实有效。</p>
+			<p>承诺因简历内容存在虚假之处所带来的后果自愿由本人承担全部责任</p>
+		</div>
+	
+	<div class="k"></div>
+		<div class="footer">
+			<p>
+				<a href="#">网站资质</a><span>|</span>
+				<a href="#">备案</a><span>|</span>
+				<a href="#">法律声明</a><span>|</span>
+				<a href="yinsiquan.html">隐私权政策</a>
+			</p>
+			<p>未经同意，不得转载本网站之所有招聘信息及作品</p>
+			<p>火星人才网版权所有©2017-3017  |  地址：北京朝阳区</p>
+			<p> 服务热线：400-024-5880  邮箱：123456789@qq.com</p>
+		</div>	
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script src="js/style.js"></script>
+	<script type="text/javascript">
+    	
+   		document.addEventListener('plusready', function(){
+   			//console.log("所有plus api都应该在此事件发生后调用，否则会出现plus is undefined。"
+   			
+   		});
+   		 var doc = document;
+        var win = window;
+        function initFontSize(){
+            var docEl = doc.documentElement;
+           //判断窗口有没有orientationchange这个方法，有就赋值给一个变量，没有就返回resize方法。
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                //获取设计图的尺寸--750px
+                fontSizeRate = (clientWidth / 750);
+                //设置大小--目前的设备大小是
+                var baseFontSize = 100*fontSizeRate;
+                docEl.style.fontSize = baseFontSize + 'px';
+              //  console.log(baseFontSize);
+            };
+            recalc();
+         
+        }
+        initFontSize();
+        
+    </script>
+    <script type="text/javascript">
+		$(function(){
+			$("#date").selectDate()
+			
+			$("#days").focusout(function(){
+				var year = $("#year option:selected").html()
+				var month = $("#month option:selected").html()
+				var day = $("#days option:selected").html()
+				console.log(year+month+day)
+			})
+			
+		})
+		
+	</script>
+<script>
+		var xiugai=document.getElementById('xiugai');
+		var beigai=document.getElementById('beigai');
+		var baocun=document.getElementById('baocun');
+		var dian=function(){
+		beigai.readOnly=false;
+		beigai.style.borderBottom="solid 1px #aaa";
+		xiugai.style.display="none";
+		baocun.style.display="block"; 
+	}
+	var ji=function(){
+		beigai.style="readOnly";
+		beigai.style.borderBottom="none";
+		xiugai.style.display="block";
+		baocun.style.display="none";
+	}
+	xiugai.onclick=function(){
+		dian()
+	}
+	beigai.onblur=function(){
+		if(beigai.value.length<11){
+			alert('请输入号码');
+		}else if(beigai.value.length>11){
+			alert('请输入正确的号码');
+		}else{
+		ji();
+		}
+	}
+</script>
+
+</body>
+</html>

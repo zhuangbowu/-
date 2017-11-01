@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi ">
+<title>找回密码</title>
+<link rel="stylesheet" href="css/swiper.min.css">
+<script src="js/swiper.min.js"></script>
+<script src="js/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div style="min-height:100%">
+	<!--头部-->
+	<div class="erjitoubu">
+		找回密码
+		<a href="javascript:history.go(-1);">
+			<img src="images/fanhui.png" alt="">
+		</a>
+	</div>
+	<div class="zhuce_gaodu"></div>
+	<!--找回密码-->
+	<div class="retrieval">
+		<div class="retrieval_yanzhen">
+			<div class="retrieval_yanzhen_text">
+				<img src="images/yuan_03.png">
+				<p>验证账户</p>
+			</div>
+			<div class="line"></div>
+			<div class="retrieval_yanzhen_text">
+				<img src="images/yuan_05.png">
+				<p>重置密码</p>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="tw">
+		<div>
+			<input type="text" placeholder="请输入手机号码" class="tw_top">
+		</div>
+			<div class="tw_bd">
+				<div class="tw_bd_br">
+					<input type="text" placeholder="图形验证码" size="13" class="tw_bd_input" />
+					<img src="images/yanzhenma.png" alt="" class="tw_bd_img">
+				</div>
+				<div class="tw_bd_kan">看不清，换一张</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="tw_bd2">
+				<input type="text" placeholder="短信验证码" class="tw_bd_input2"/>
+				<input type="button" class="tw_bd_input3" value="获取短信验证码" id="btn">
+				<div class="clearfix"></div>
+			</div>
+			<button type="submit" class="tw_bd_input4">提交</button>
+		</div>
+	</div>
+</div>
+<!--底部通用-->
+<div class="home-bottom">
+	<div class="home-bottom3">
+		网站资质  |  备案   |   法律声明 ｜ <a href="yinsiquan.html">隐私权政策</a><br>
+		未经同意，不得转载本网站之所有招聘信息及作品<br>
+		火星人才网版权所有©2017-3017  |  地址：沈阳市沈河区<br>
+		服务热线：400-024-5880  邮箱：175969151@163.com
+	</div>
+</div>
+<!--js-->
+<script type="text/javascript">  
+var wait=60;  
+function time(o) {  
+        if (wait == 0) {  
+            o.removeAttribute("disabled");            
+            o.value="免费获取验证码";  
+            wait = 60;  
+        } else {  
+            o.setAttribute("disabled", true);  
+            o.value="重新发送(" + wait + ")";  
+            wait--;  
+            setTimeout(function() {  
+                time(o)  
+            },  
+            1000)  
+        }  
+    }  
+document.getElementById("btn").onclick=function(){time(this);}  
+</script> 
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi ">
+<title>代理会员中心-密码管理</title>
+<link rel="stylesheet" href="css/swiper.min.css">
+<script src="js/swiper.min.js"></script>
+<script src="js/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<div style="min-height:100%">
+	<!--头部-->
+	<div class="erjitoubu">
+		密码管理
+		<a href="javascript:history.go(-1);">
+			<img src="images/fanhui.png" alt="">
+		</a>
+		<div class="toubu">
+			小明 <a href="sign.html">退出</a> | <a href="index.html">首页</a>
+		</div>
+	</div>
+	<!--会员中心通用页面-->
+	<div class="modification_nav">
+		<div class="modification_nav_text">
+			火星人才网
+		</div>
+		<div class="modification_nav_img">
+			<img src="images/xiayi.png" alt="">
+		</div>
+		<div class="modification_nav_text">
+			会员中心
+		</div>
+		<div class="modification_nav_img">
+			<img src="images/xiayi.png" alt="">
+		</div>
+		<div class="modification_nav_a">
+			密码管理
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="modification_portrait">
+		<div class="modification_img">
+			<img src="images/touxiang.png" alt="">
+		</div>
+		<div class="modification_data">
+			<div class="modification_data_one">
+				尚泽       
+			</div>
+			<div class="modification_data_two">
+				男 | 28岁 
+			</div>
+			<div class="clearfix"></div>
+			<div class="modification_data_img">
+				<img src="images/dingwei.png" alt="">
+			</div>
+			<div class="modification_data_four">
+				山东省临沂市兰山区XXX
+			</div>
+			<div class="clearfix"></div>
+			<div class="modification_sj">
+				<div class="modification_sj1">
+					<img src="images/sj.png" alt="">
+				</div>
+				<div class="modification_sj2">
+					15589645123
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="modification_wx">
+				<div class="modification_wx1">
+					<img src="images/wx.png" alt="">
+				</div>
+				<input type="text" class="modification_wx2" value="15589645123" readonly id="beigai">
+				<span class="modification_wx3" id="xiugai">[修改]</span>
+				<span class="modification_wx3" style="display: none;" id="baocun">[保存]</span>
+				<div class="clearfix"></div>
+			</div>
+			<div class="modification_tjh">
+				推荐码：123456
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<!--密码修改-->
+	<div class="back_one">
+		密码修改
+	</div>
+	<div class="back_two">
+		<div class="back_two_mm">
+			<div class="back_two_mm1">
+				旧密码：
+			</div>
+			<input type="text" class="back_two_mm2">
+			<div class="clearfix"></div>
+		</div>
+		<div class="back_two_mm">
+			<div class="back_two_mm1">
+				新密码：
+			</div>
+			<input type="text" class="back_two_mm2">
+			<div class="clearfix"></div>
+		</div>
+		<div class="back_two_mm">
+			<div class="back_two_mm1">
+				再次输入新密码：
+			</div>
+			<input type="text" class="back_two_mm2">
+			<div class="clearfix"></div>
+		</div>
+		<div class="modification_complete">完 成</div>
+		<a href="retrieval.html"><div class="modification_complete2">忘记旧密码？</div></a>
+		<div class="clearfix"></div>
+	</div>
+</div>
+<!--底部通用-->
+<div class="home-bottom">
+	<div class="home-bottom3">
+		网站资质  |  备案   |   法律声明 ｜ <a href="yinsiquan.html">隐私权政策</a><br>
+		未经同意，不得转载本网站之所有招聘信息及作品<br>
+		火星人才网版权所有©2017-3017  |  地址：沈阳市沈河区<br>
+		服务热线：400-024-5880  邮箱：175969151@163.com
+	</div>
+</div>
+<!--修改号码-->
+<script>
+		var xiugai=document.getElementById('xiugai');
+		var beigai=document.getElementById('beigai');
+		var baocun=document.getElementById('baocun');
+		var dian=function(){
+		beigai.readOnly=false;
+		beigai.style.borderBottom="solid 1px #aaa";
+		xiugai.style.display="none";
+		baocun.style.display="block"; 
+	}
+	var ji=function(){
+		beigai.style="readOnly";
+		beigai.style.borderBottom="none";
+		xiugai.style.display="block";
+		baocun.style.display="none";
+	}
+	xiugai.onclick=function(){
+		dian()
+	}
+	beigai.onblur=function(){
+		if(beigai.value.length<11){
+			alert('请输入号码');
+		}else if(beigai.value.length>11){
+			alert('请输入正确的号码');
+		}else{
+		ji();
+		}
+	}
+</script>
+</body>
+</html>

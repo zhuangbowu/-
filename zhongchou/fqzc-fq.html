@@ -1,0 +1,466 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,height=device-height, user-scalable=no,initial-scale=1, minimum-scale=1, maximum-scale=1,target-densitydpi=device-dpi "> 
+<title>发起众筹</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="js/jquery.js"></script>
+</head>
+
+<body>
+	<header class="header">
+		<div class="header_left">
+			<img src="images/guanbi.png" alt="">
+		</div>
+		<div class="header_zi">
+			心连心爱心筹
+		</div>
+		<div class="header_right">
+			<img src="images/gengduo.png" alt="">
+		</div>
+	</header>
+	<div class="header_gaodu"></div>
+	<form action="">
+		<div class="fqzc_je">
+			目标金额：
+		</div>
+		<input name="请填写目标金额：" class="fqzc_je1" type="text" placeholder="请填写目标金额：">
+		<div class="fqzc_je">
+			筹款标题：
+		</div>
+		<input name="请填写筹款标题好的标题筹款更快" class="fqzc_je1" type="text" placeholder="请填写筹款标题好的标题筹款更快">
+		<div class="fqzc_je">
+			求助说明：
+		</div>
+		<textarea name="请详细填写筹款原因、筹款目的、求助这状况和善款用途等信息" id="" cols="" rows="" placeholder="请详细填写筹款原因、筹款目的、求助这状况和善款用途等信息" class="fqzc_xxsm"></textarea>
+		<div class="fqzc_je">
+			添加图片：
+		</div>
+		<div class="shangchuan">
+			<div class="shangchuan1">
+				<div class="shangchuan2" id="preview">
+					<img src="images/sc.png" alt="" id="imghead" border="0" onClick="$('#previewImg').click();" width="50" height="50">
+				</div>
+				<input type="file" onChange="previewImage(this)" class="shangchuan3" id="previewImg">
+			</div>
+			<div class="shangchuan1">
+				<div class="shangchuan2" id="preview1">
+					<img src="images/sc.png" alt="" id="imghead1" border="0" onClick="$('#previewImg1').click();" width="50" height="50">
+				</div>
+				<input type="file" onChange="previewImage1(this)" class="shangchuan3" id="previewImg1">
+			</div>
+			<div class="shangchuan1">
+				<div class="shangchuan2" id="preview2">
+					<img src="images/sc.png" alt="" id="imghead2" border="0" onClick="$('#previewImg2').click();" width="50" height="50">
+				</div>
+				<input type="file" onChange="previewImage2(this)" class="shangchuan3" id="previewImg2">
+			</div>
+			<div class="shangchuan1">
+				<div class="shangchuan2" id="preview3">
+					<img src="images/sc.png" alt="" id="imghead3" border="0" onClick="$('#previewImg3').click();" width="50" height="50">
+				</div>
+				<input type="file" onChange="previewImage3(this)" class="shangchuan3" id="previewImg3">
+			</div>
+			<div class="shangchuan1">
+				<div class="shangchuan2" id="preview4">
+					<img src="images/sc.png" alt="" id="imghead4" border="0" onClick="$('#previewImg4').click();" width="50" height="50">
+				</div>
+				<input type="file" onChange="previewImage4(this)" class="shangchuan3" id="previewImg4">
+			</div>
+			<div class="shangchuan1">
+				<div class="shangchuan2" id="preview5">
+					<img src="images/sc.png" alt="" id="imghead5" border="0" onClick="$('#previewImg5').click();" width="50" height="50">
+				</div>
+				<input type="file" onChange="previewImage5(this)" class="shangchuan3" id="previewImg5">
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="fqzc_je">
+			发起人电话：
+		</div>
+		<input name="请输入您的电话号码" class="fqzc_je1" type="text" placeholder="请输入您的电话号码">
+		<div class="yitongyi">
+			<div class="yitongyi1">
+				<img src="images/xz-4.png" alt="" id="dl" onClick="dianji()">
+			</div>
+			<div class="yitongyi2">
+				已阅读并同意<span>《心连心爱心筹》</span>及<span>《发起人承诺书》</span>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<button type="submit" class="tijiao">提交</button>
+	</form>
+	<div class="header_gaodu"></div>
+	<div class="footer">
+		<a href="index.html">
+			<div class="footer1">
+				<div class="footer2">
+					<img src="images/aixinchou-1.png" alt="">
+				</div>
+				<div class="footer3">
+					爱心筹
+				</div>
+			</div>
+		</a>
+		<a href="fqzc.html">
+			<div class="footer1">
+				<div class="footer2">
+					<img src="images/fq-1.png" alt="">
+				</div>
+				<div class="footer3_1">
+					发起众筹
+				</div>
+			</div>
+		</a>
+		<a href="grzx.html">
+			<div class="footer1">
+				<div class="footer2">
+					<img src="images/grzx-2.png" alt="">
+				</div>
+				<div class="footer3">
+					个人中心
+				</div>
+			</div>
+		</a>
+		<div class="clearfix"></div>
+	</div>
+	<script>
+	  //图片上传预览    IE是用了滤镜。
+		function previewImage(file)
+		{
+		  var MAXWIDTH  = 50; 
+		  var MAXHEIGHT = 50;
+		  var div = document.getElementById('preview');
+		  if (file.files && file.files[0])
+		  {
+			  div.innerHTML ='<img id=imghead onclick=$("#previewImg").click()>';
+			  var img = document.getElementById('imghead');
+			  img.onload = function(){
+				var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+				img.width  =  rect.width;
+				img.height =  rect.height;
+	//                 img.style.marginLeft = rect.left+'px';
+				img.style.marginTop = rect.top+'px';
+			  }
+			  var reader = new FileReader();
+			  reader.onload = function(evt){img.src = evt.target.result;}
+			  reader.readAsDataURL(file.files[0]);
+		  }
+		  else //兼容IE
+		  {
+			var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
+			file.select();
+			var src = document.selection.createRange().text;
+			div.innerHTML = '<img id=imghead>';
+			var img = document.getElementById('imghead');
+			img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;
+			var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+			status =('rect:'+rect.top+','+rect.left+','+rect.width+','+rect.height);
+			div.innerHTML = "<div id=divhead style='width:"+rect.width+"px;height:"+rect.height+"px;margin-top:"+rect.top+"px;"+sFilter+src+"\"'></div>";
+		  }
+		}
+		function clacImgZoomParam( maxWidth, maxHeight, width, height ){
+			var param = {top:0, left:0, width:width, height:height};
+			if( width>maxWidth || height>maxHeight ){
+				rateWidth = width / maxWidth;
+				rateHeight = height / maxHeight;
+
+				if( rateWidth > rateHeight ){
+					param.width =  maxWidth;
+					param.height = Math.round(height / rateWidth);
+				}else{
+					param.width = Math.round(width / rateHeight);
+					param.height = maxHeight;
+				}
+			}
+			param.left = Math.round((maxWidth - param.width) / 2);
+			param.top = Math.round((maxHeight - param.height) / 2);
+			return param;
+		}
+	</script>
+	<script>
+	  //图片上传预览    IE是用了滤镜。
+		function previewImage1(file)
+		{
+		  var MAXWIDTH  = 50; 
+		  var MAXHEIGHT = 50;
+		  var div = document.getElementById('preview1');
+		  if (file.files && file.files[0])
+		  {
+			  div.innerHTML ='<img id=imghead1 onclick=$("#previewImg1").click()>';
+			  var img = document.getElementById('imghead1');
+			  img.onload = function(){
+				var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+				img.width  =  rect.width;
+				img.height =  rect.height;
+	//                 img.style.marginLeft = rect.left+'px';
+				img.style.marginTop = rect.top+'px';
+			  }
+			  var reader = new FileReader();
+			  reader.onload = function(evt){img.src = evt.target.result;}
+			  reader.readAsDataURL(file.files[0]);
+		  }
+		  else //兼容IE
+		  {
+			var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
+			file.select();
+			var src = document.selection.createRange().text;
+			div.innerHTML = '<img id=imghead1>';
+			var img = document.getElementById('imghead1');
+			img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;
+			var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+			status =('rect:'+rect.top+','+rect.left+','+rect.width+','+rect.height);
+			div.innerHTML = "<div id=divhead style='width:"+rect.width+"px;height:"+rect.height+"px;margin-top:"+rect.top+"px;"+sFilter+src+"\"'></div>";
+		  }
+		}
+		function clacImgZoomParam( maxWidth, maxHeight, width, height ){
+			var param = {top:0, left:0, width:width, height:height};
+			if( width>maxWidth || height>maxHeight ){
+				rateWidth = width / maxWidth;
+				rateHeight = height / maxHeight;
+
+				if( rateWidth > rateHeight ){
+					param.width =  maxWidth;
+					param.height = Math.round(height / rateWidth);
+				}else{
+					param.width = Math.round(width / rateHeight);
+					param.height = maxHeight;
+				}
+			}
+			param.left = Math.round((maxWidth - param.width) / 2);
+			param.top = Math.round((maxHeight - param.height) / 2);
+			return param;
+		}
+	</script>
+	<script>
+	  //图片上传预览    IE是用了滤镜。
+		function previewImage2(file)
+		{
+		  var MAXWIDTH  = 50; 
+		  var MAXHEIGHT = 50;
+		  var div = document.getElementById('preview2');
+		  if (file.files && file.files[0])
+		  {
+			  div.innerHTML ='<img id=imghead2 onclick=$("#previewImg2").click()>';
+			  var img = document.getElementById('imghead2');
+			  img.onload = function(){
+				var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+				img.width  =  rect.width;
+				img.height =  rect.height;
+	//                 img.style.marginLeft = rect.left+'px';
+				img.style.marginTop = rect.top+'px';
+			  }
+			  var reader = new FileReader();
+			  reader.onload = function(evt){img.src = evt.target.result;}
+			  reader.readAsDataURL(file.files[0]);
+		  }
+		  else //兼容IE
+		  {
+			var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
+			file.select();
+			var src = document.selection.createRange().text;
+			div.innerHTML = '<img id=imghead2>';
+			var img = document.getElementById('imghead2');
+			img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;
+			var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+			status =('rect:'+rect.top+','+rect.left+','+rect.width+','+rect.height);
+			div.innerHTML = "<div id=divhead style='width:"+rect.width+"px;height:"+rect.height+"px;margin-top:"+rect.top+"px;"+sFilter+src+"\"'></div>";
+		  }
+		}
+		function clacImgZoomParam( maxWidth, maxHeight, width, height ){
+			var param = {top:0, left:0, width:width, height:height};
+			if( width>maxWidth || height>maxHeight ){
+				rateWidth = width / maxWidth;
+				rateHeight = height / maxHeight;
+
+				if( rateWidth > rateHeight ){
+					param.width =  maxWidth;
+					param.height = Math.round(height / rateWidth);
+				}else{
+					param.width = Math.round(width / rateHeight);
+					param.height = maxHeight;
+				}
+			}
+			param.left = Math.round((maxWidth - param.width) / 2);
+			param.top = Math.round((maxHeight - param.height) / 2);
+			return param;
+		}
+	</script>
+	<script>
+	  //图片上传预览    IE是用了滤镜。
+		function previewImage3(file)
+		{
+		  var MAXWIDTH  = 50; 
+		  var MAXHEIGHT = 50;
+		  var div = document.getElementById('preview3');
+		  if (file.files && file.files[0])
+		  {
+			  div.innerHTML ='<img id=imghead3 onclick=$("#previewImg3").click()>';
+			  var img = document.getElementById('imghead3');
+			  img.onload = function(){
+				var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+				img.width  =  rect.width;
+				img.height =  rect.height;
+	//                 img.style.marginLeft = rect.left+'px';
+				img.style.marginTop = rect.top+'px';
+			  }
+			  var reader = new FileReader();
+			  reader.onload = function(evt){img.src = evt.target.result;}
+			  reader.readAsDataURL(file.files[0]);
+		  }
+		  else //兼容IE
+		  {
+			var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
+			file.select();
+			var src = document.selection.createRange().text;
+			div.innerHTML = '<img id=imghead3>';
+			var img = document.getElementById('imghead3');
+			img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;
+			var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+			status =('rect:'+rect.top+','+rect.left+','+rect.width+','+rect.height);
+			div.innerHTML = "<div id=divhead style='width:"+rect.width+"px;height:"+rect.height+"px;margin-top:"+rect.top+"px;"+sFilter+src+"\"'></div>";
+		  }
+		}
+		function clacImgZoomParam( maxWidth, maxHeight, width, height ){
+			var param = {top:0, left:0, width:width, height:height};
+			if( width>maxWidth || height>maxHeight ){
+				rateWidth = width / maxWidth;
+				rateHeight = height / maxHeight;
+
+				if( rateWidth > rateHeight ){
+					param.width =  maxWidth;
+					param.height = Math.round(height / rateWidth);
+				}else{
+					param.width = Math.round(width / rateHeight);
+					param.height = maxHeight;
+				}
+			}
+			param.left = Math.round((maxWidth - param.width) / 2);
+			param.top = Math.round((maxHeight - param.height) / 2);
+			return param;
+		}
+	</script>
+	<script>
+	  //图片上传预览    IE是用了滤镜。
+		function previewImage4(file)
+		{
+		  var MAXWIDTH  = 50; 
+		  var MAXHEIGHT = 50;
+		  var div = document.getElementById('preview4');
+		  if (file.files && file.files[0])
+		  {
+			  div.innerHTML ='<img id=imghead4 onclick=$("#previewImg4).click()>';
+			  var img = document.getElementById('imghead4');
+			  img.onload = function(){
+				var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+				img.width  =  rect.width;
+				img.height =  rect.height;
+	//                 img.style.marginLeft = rect.left+'px';
+				img.style.marginTop = rect.top+'px';
+			  }
+			  var reader = new FileReader();
+			  reader.onload = function(evt){img.src = evt.target.result;}
+			  reader.readAsDataURL(file.files[0]);
+		  }
+		  else //兼容IE
+		  {
+			var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
+			file.select();
+			var src = document.selection.createRange().text;
+			div.innerHTML = '<img id=imghead4>';
+			var img = document.getElementById('imghead4');
+			img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;
+			var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+			status =('rect:'+rect.top+','+rect.left+','+rect.width+','+rect.height);
+			div.innerHTML = "<div id=divhead style='width:"+rect.width+"px;height:"+rect.height+"px;margin-top:"+rect.top+"px;"+sFilter+src+"\"'></div>";
+		  }
+		}
+		function clacImgZoomParam( maxWidth, maxHeight, width, height ){
+			var param = {top:0, left:0, width:width, height:height};
+			if( width>maxWidth || height>maxHeight ){
+				rateWidth = width / maxWidth;
+				rateHeight = height / maxHeight;
+
+				if( rateWidth > rateHeight ){
+					param.width =  maxWidth;
+					param.height = Math.round(height / rateWidth);
+				}else{
+					param.width = Math.round(width / rateHeight);
+					param.height = maxHeight;
+				}
+			}
+			param.left = Math.round((maxWidth - param.width) / 2);
+			param.top = Math.round((maxHeight - param.height) / 2);
+			return param;
+		}
+	</script>
+	<script>
+	  //图片上传预览    IE是用了滤镜。
+		function previewImage5(file)
+		{
+		  var MAXWIDTH  = 50; 
+		  var MAXHEIGHT = 50;
+		  var div = document.getElementById('preview5');
+		  if (file.files && file.files[0])
+		  {
+			  div.innerHTML ='<img id=imghead5 onclick=$("#previewImg5).click()>';
+			  var img = document.getElementById('imghead5');
+			  img.onload = function(){
+				var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+				img.width  =  rect.width;
+				img.height =  rect.height;
+	//                 img.style.marginLeft = rect.left+'px';
+				img.style.marginTop = rect.top+'px';
+			  }
+			  var reader = new FileReader();
+			  reader.onload = function(evt){img.src = evt.target.result;}
+			  reader.readAsDataURL(file.files[0]);
+		  }
+		  else //兼容IE
+		  {
+			var sFilter='filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src="';
+			file.select();
+			var src = document.selection.createRange().text;
+			div.innerHTML = '<img id=imghead5>';
+			var img = document.getElementById('imghead5');
+			img.filters.item('DXImageTransform.Microsoft.AlphaImageLoader').src = src;
+			var rect = clacImgZoomParam(MAXWIDTH, MAXHEIGHT, img.offsetWidth, img.offsetHeight);
+			status =('rect:'+rect.top+','+rect.left+','+rect.width+','+rect.height);
+			div.innerHTML = "<div id=divhead style='width:"+rect.width+"px;height:"+rect.height+"px;margin-top:"+rect.top+"px;"+sFilter+src+"\"'></div>";
+		  }
+		}
+		function clacImgZoomParam( maxWidth, maxHeight, width, height ){
+			var param = {top:0, left:0, width:width, height:height};
+			if( width>maxWidth || height>maxHeight ){
+				rateWidth = width / maxWidth;
+				rateHeight = height / maxHeight;
+
+				if( rateWidth > rateHeight ){
+					param.width =  maxWidth;
+					param.height = Math.round(height / rateWidth);
+				}else{
+					param.width = Math.round(width / rateHeight);
+					param.height = maxHeight;
+				}
+			}
+			param.left = Math.round((maxWidth - param.width) / 2);
+			param.top = Math.round((maxHeight - param.height) / 2);
+			return param;
+		}
+	</script>
+	<script type="text/javascript">
+		function dianji(){
+			box=document.getElementById("dl")
+			if (box.src.match("xz-4"))
+			{
+				box.src="images/xz-3.png";
+			}
+			else
+			{
+				box.src="images/xz-4.png";
+			}
+		}
+	</script>
+</body>
+</html>

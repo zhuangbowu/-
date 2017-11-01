@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>找回密码</title>
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="css/daili.css">
+<script src="js/jquery-2.2.0.min.js"></script>
+</head>
+
+<body>
+<div class="zhmm">
+	<div class="inner">
+		<div style="float: right;">
+			<a href="index.html"><div class="zhmm_one">
+				首页　｜
+			</div></a>
+			<a href="dlym.html"><div class="zhmm_one">
+				　登录　｜　
+			</div></a>
+			<a href="grzc.html"><div class="zhmm_one">
+				注册
+			</div></a>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+<div class="inner">
+	<div class="sign_top">
+		<div class="sign_top_logo">
+		<a href="index.html">
+			<img src="images/logo2.png" alt="">
+		</a>
+		</div>
+	</div>
+	<div class="sign_top_right">
+		<img src="images/header_14.jpg" alt="">
+	</div>
+	<div class="clearfix"></div>
+</div>
+<div style="width: 100%;padding-top: 100px;padding-bottom: 100px;border-top: solid 1px #aaa;">
+	<div style="width: 500px;margin: 0 auto;" id="zhaohui">
+		<div class="mima-zh" style="display: block;">
+			<div style="font-size: 18px;color: #333;">
+				密码找回
+			</div>
+			<div class="zh-1">
+				<div class="zh-1-n wc">
+					<img src="images/yuan_03.jpg">
+					<p>验证账户</p>
+				</div>
+				<div class="zh-xian"></div>
+				<div class="zh-1-n">
+					<img src="images/yuan_05.png">
+					<p>重置密码</p>
+				</div>
+			</div>
+			<div class="zh-2">
+				<div>
+					<input type="text" placeholder="请输入手机号码">
+				</div>
+				<div class="zh-2-n1">
+					<input type="text" placeholder="图形验证码" style="float: left" />
+					<img src="images/yanzhengma.png" alt="" style="float: left;padding-top: 22px;">
+					<span style="float: left;padding-top: 28px;">看不清，换一张</span>
+					<div class="clearfix"></div>
+				</div>
+				<div class="zh-2-n2">
+					<input type="text" placeholder="短信验证码" />
+					<input type="button" id="btn" class="zh-2-n2_input" value="获取短信验证码">
+				</div>
+				<button class="zh-btn" id="tijiao">提交</button>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div style="width: 500px;margin: 0 auto;display: none;" id="chongzhi">
+		<div class="mima-zh" style="display: block;">
+			<div style="font-size: 18px;color: #333;">
+				密码找回
+			</div>
+			<div class="zh-1">
+				<div class="zh-1-n">
+					<img src="images/yuan_1.png">
+					<p>验证账户</p>
+				</div>
+				<div class="zh-xian"></div>
+				<div class="zh-1-n wc">
+					<img src="images/yuan_2.png">
+					<p>重置密码</p>
+				</div>
+			</div>
+			<div class="zh-2">
+				<div>
+					<div style="float: left;width: 150px;text-align: right;margin-top: 20px;height: 35px;line-height: 35px;font-size: 16px;color: #666;">
+						请输入密码：
+					</div>
+					<input type="text" placeholder="请输入密码" style="float: left;width: 200px;">
+					<div class="clearfix"></div>
+				</div>
+				<div>
+					<div style="float: left;width: 150px;text-align: right;margin-top: 20px;height: 35px;line-height: 35px;font-size: 16px;color: #666;">
+						请再次输入密码：
+					</div>
+					<input type="text" placeholder="请再次输入密码" style="float: left;width: 200px;">
+				</div>
+				<button class="zh-btn">提交</button>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+<div class="dibu">
+		<div class="dibu1">
+			<div class="dibu2">
+				<img src="images/footer_29.jpg" alt="">
+			</div>
+			<div class="dibu3">
+				<div>网站资质　|　备案　|　法律声明　｜　<a href="yinsiquan.html">隐私权政策</a></div>
+				<div>未经同意，不得转载本网站之所有招聘信息及作品　|　火星人才网版权所有©2017-3017</div>
+				<div>地址：沈阳市沈河区　服务热线：400-024-5880　邮箱：175969151@163.com</div>
+			</div>
+		<div class="clearfix"></div>
+		</div>
+	</div>
+<script type="text/javascript">  
+var wait=60;  
+function time(o) {  
+        if (wait == 0) {  
+            o.removeAttribute("disabled");            
+            o.value="免费获取验证码";  
+            wait = 60;  
+        } else {  
+            o.setAttribute("disabled", true);  
+            o.value="重新发送(" + wait + ")";  
+            wait--;  
+            setTimeout(function() {  
+                time(o)  
+            },  
+            1000)  
+        }  
+    }  
+document.getElementById("btn").onclick=function(){time(this);}  
+</script>
+<script>
+	$('#tijiao').click(function(){
+		$('#zhaohui').hide();
+		$('#chongzhi').show();
+	})
+</script>
+</body>
+</html>

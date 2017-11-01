@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/daili.css">
+<script type="text/javascript">   
+	function check(){ 
+	   var email = document.getElementById("email").value;  
+	   var password = document.getElementById("password").value;    
+	   var name = document.getElementById("name").value;
+		var new_email=email.trim();
+		var new_password=password.trim();
+		var new_name=name.trim(); 
+		
+	   var emailinfo = document.getElementById("emailinfo");  
+	   var passwordinfo = document.getElementById("passwordinfo");    
+	   var nameinfo = document.getElementById("nameinfo");  
+
+	   if(email == ""){
+		  emailinfo.innerHTML = "账户名不能为空";  
+		   return false;
+	   }else if(!/[\u4e00-\u9fa5]+/.test(new_email)){
+			emailinfo.innerHTML = "账户名格式输入错误";
+		   return false;
+		}else{
+		  emailinfo.innerHTML = "输入正确"; 
+		   emailinfo.style.color = "green"; 
+	   }
+		
+		if(password==""){
+			passwordinfo.innerHTML = "银行卡卡号不能为空";  
+		   return false;
+		}else if(password.length > 20||password.length < 15) {
+		 passwordinfo.innerHTML = "银行卡卡号格式不正确";  
+		 return false; 
+		}else if(!/^\d*$/.test(new_password)){
+			 passwordinfo.innerHTML = "银行卡卡号格式不正确";  
+		 return false; 
+		}else{
+			passwordinfo.innerHTML = "输入正确"; 
+			passwordinfo.style.color = "green"; 
+		}
+		
+		 if(name==""){
+			nameinfo.innerHTML = "开户行地址不能为空";  
+		   return false;
+		}else if(!/[\u4e00-\u9fa5]+/.test(new_name)){
+			nameinfo.innerHTML = "开户行地址格式输入错误";  
+		   return false;
+		}else{
+			nameinfo.innerHTML = "输入正确"; 
+			nameinfo.style.color = "green"; 
+		}
+	}
+
+	function checkEmail() {  //账户名
+	  	var emailinfo = document.getElementById("emailinfo");
+	   var email = document.getElementById('email').value;
+		var new_email=email.trim(); 
+	  if(email == ""){
+		  emailinfo.innerHTML = "账户名不能为空";  
+		   return false;
+	   }else if(!/[\u4e00-\u9fa5]+/.test(new_email)){
+			emailinfo.innerHTML = "账户名格式输入错误";
+		   return false;
+		}else{
+		  emailinfo.innerHTML = "输入正确"; 
+		   emailinfo.style.color = "green"; 
+	   } 
+	}
+
+	function checkPassword() {  //银行卡卡号 
+	   var passwordinfo = document.getElementById("passwordinfo"); 
+	  var password = document.getElementById('password').value;
+		var new_password=password.trim();
+	  if(password==""){
+			passwordinfo.innerHTML = "银行卡卡号不能为空";  
+		   return false;
+		}else if(password.length > 20||password.length < 15) {
+		 passwordinfo.innerHTML = "银行卡卡号格式不正确";  
+		 return false; 
+		}else if(!/^\d*$/.test(new_password)){
+			 passwordinfo.innerHTML = "银行卡卡号格式不正确";  
+		 return false; 
+		}else{
+			passwordinfo.innerHTML = "输入正确"; 
+			passwordinfo.style.color = "green"; 
+		}
+	  }  
+
+	function checkName() {  //开户行地址
+	   var nameinfo = document.getElementById("nameinfo");
+	   var name = document.getElementById('name').value;
+		var new_name=name.trim();
+	   if(name==""){
+			nameinfo.innerHTML = "开户行地址不能为空";  
+		   return false;
+		}else if(!/[\u4e00-\u9fa5]+/.test(new_name)){
+			nameinfo.innerHTML = "开户行地址格式输入错误";  
+		   return false;
+		}else{
+			nameinfo.innerHTML = "输入正确"; 
+			nameinfo.style.color = "green"; 
+		}  
+	}   
+</script>
+<style>
+	.yh-caiwu .caiwu6 span{font-size: 12px;color: red;margin-left: 10px;line-height: 36px;}
+	.yh-caiwu .caiwu6 input{width:250px;}
+</style>
+</head>
+
+<body>
+<form action="http://taobao.com" method="post" onsubmit="return check()">
+	<div class="yh-caiwu">
+		<div class="caiwu6">
+			<div class="caiwu7">
+				账户名：
+			</div>
+			<div class="caiwu8" style="border: solid 1px #aaa;">
+				<input type="text" placeholder="请输入账户名" name="bank_name" id="email" onblur="checkEmail();">
+			</div>
+			<span id="emailinfo"></span>
+			<div class="clearfix"></div>
+		</div>
+		<div class="caiwu6">
+			<div class="caiwu7">
+				银行卡卡号：
+			</div>
+			<div class="caiwu8" style="border: solid 1px #aaa;">
+				<input type="text" placeholder="请输入银行卡卡号" name="bank_card" id="password" onblur="checkPassword();">
+			</div>
+			<span id="passwordinfo"></span>
+			<div class="clearfix"></div>
+		</div>
+		<div class="caiwu6">
+			<div class="caiwu7">
+				开户行地址：
+			</div>
+			<div class="caiwu8" style="border: solid 1px #aaa;">
+				<input type="text" placeholder="请输入开户行地址" name="bank_address" id="name" onblur="checkName();">
+			</div>
+			<span id="nameinfo"></span>
+			<div class="clearfix"></div>
+		</div>
+		<div class="querenxiugai">
+			<div class="qurenxiugai1">
+			<button type="submit" id="tijiao">提交</button>
+	<!--			<?= Html::submitButton('提交', ['class' => 'btn btn-primary', 'name' => 'signup-button']) ?>-->
+			</div>
+		</div>
+		<div class="qurenxiugai2">银行卡绑定修改后三天内不得进行退款操作</div>
+	</div>	
+</form>
+
+<!--
+<script>
+	var zhanghu=document.getElementById('zhanghu');
+	var yhk=document.getElementById('yhk');
+	var dizhi=document.getElementById('dizhi');
+	var tijiao=document.getElementById('tijiao');
+	 function IsNum(num){
+ 	var reNum=/^\d*$/;
+		 return(reNum.test(num));
+	 };
+	function IssNum(nuum){
+ 	var reeNum=/[\u4e00-\u9fa5]+/;
+		 return(reeNum.test(nuum));
+	 };
+	function yanzheng(){
+		if(zhanghu.value.length==0){
+			alert("输入信息不能为空");
+		}else if(!IssNum(zhanghu.value)){
+			alert("请输入正确的账户信息");
+			return false;
+		}
+	};
+	function yanzheng2(){
+		if(yhk.value.length<16){
+			alert("请输入正确的银行卡号");
+		}else if(yhk.value.length>20){
+			alert("请输入正确的银行卡号");
+		}else if(!IsNum(yhk.value)){
+			alert("请输入正确的银行卡号");
+			return false;
+		}
+	};
+	function yanzheng3(){
+		if(dizhi.value.length==0){
+			alert("输入信息不能为空");
+		}else if(!IssNum(dizhi.value)){
+			alert("请输入正确住址");
+			return false;
+		}
+	};
+	zhanghu.onblur=function(){
+		yanzheng()
+	};
+	yhk.onblur=function(){
+		yanzheng2()
+	};
+	dizhi.onblur=function(){
+		yanzheng3()
+	};
+	tijiao.onclick=function(){
+		yanzheng();	
+	};
+</script>
+-->
+</body>
+</html>
